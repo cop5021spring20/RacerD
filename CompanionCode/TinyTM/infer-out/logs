@@ -1,0 +1,179 @@
+[11813][environment] CWD = /home/marioman/Downloads/Companion Material/ch18
+[11813][environment] No .inferconfig file found
+[11813][environment] Project root = /home/marioman/Downloads/Companion Material/ch18
+[11813][environment] INFER_ARGS =   @/tmp/args.tmp.56751e  ++Contents of '/tmp/args.tmp.56751e':
+[11813][environment]                                         --racerd-only
+[11813][environment]                                       
+[11813][environment] command line arguments:   infer --racerd-only -- ant jarActive checkers: RacerD (C/C++/ObjC, Java)
+[11813][environment] Infer log identifier is 
+Infer version v0.17.0
+[11813][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[11813][environment] 
+[11813][   progress] Capturing in ant mode...
+
+[11930][environment] CWD = /home/marioman/Downloads/Companion Material/ch18
+[11930][environment] No .inferconfig file found
+[11930][environment] Project root = /home/marioman/Downloads/Companion Material/ch18
+[11930][environment] INFER_ARGS =   @/tmp/args.tmp.5d305d  ++Contents of '/tmp/args.tmp.5d305d':
+[11930][environment]                                         @/tmp/args.tmp.56751e capture
+[11930][environment]                                         --continue
+[11930][environment]                                         ++Contents of '/tmp/args.tmp.56751e':
+[11930][environment]                                           --racerd-only
+[11930][environment]                                         
+[11930][environment]                                       
+[11930][environment] command line arguments:   /opt/infer-linux64-v0.17.0/lib/infer/infer/lib/python/inferlib/../../../bin/infer
+[11930][environment]                           capture --continue -- javac -deprecation -d
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/build/classes
+[11930][environment]                           -classpath
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/build/classes
+[11930][environment]                           -sourcepath
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/build/empty
+[11930][environment]                           -target 1.5 -encoding UTF-8 -g -Xlint:unchecked
+[11930][environment]                           -source 1.5
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/AtomicArray.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/AtomicObject.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/Benchmark.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/Copyable.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/Defaults.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/RBTree/Color.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/RBTree/RBNode.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/RBTree/SRBNode.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/RBTree/TRBNode.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/ReadSet.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/TThread.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/ThreadID.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/Transaction.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/atomic.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/contention/BackoffManager.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/contention/ContentionManager.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/exceptions/AbortedException.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/exceptions/PanicException.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/list/INode.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/list/SNode.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/list/locking/List.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/list/locking/TNode.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/list/ofree/List.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/list/ofree/TNode.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/locking/BloomFilter.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/locking/LockObject.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/locking/OnAbort.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/locking/OnCommit.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/locking/OnStart.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/locking/OnValidate.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/locking/ReadSet.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/locking/VersionClock.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/locking/WriteSet.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/ofree/FreeObject.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/ofree/example/TNode.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/skiplistset/SSkipNode.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/skiplistset/SkipNode.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/skiplistset/locking/SkipListSet.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/skiplistset/locking/TSkipNode.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/skiplistset/ofree/SkipListSet.java
+[11930][environment]                           /home/marioman/Downloads/Companion Material/ch18/src/TinyTM/skiplistset/ofree/TSkipNode.javaActive checkers: RacerD (C/C++/ObjC, Java)
+[11930][      debug] Current working directory: '/home/marioman/Downloads/Companion Material/ch18'
+[11930][      debug] Trying to execute: javac '-J-Duser.language=en' '@/tmp/args_.tmp.467787' 2>'/tmp/javac.tmp.81296f.out'
+[11930][      debug] *** Success. Logs:
+[11930][      debug] Translating 35 source files (65 classes)
+[11930][      debug] Tenv.store: global tenv has size 1491576 bytes.
+[11930][      debug] Tenv.store: canonicalized tenv has size 630488 bytes.
+[11930][      debug] done capturing all files
+[11930][environment] Infer log identifier is 
+[11813][   progress] Found 41 source files to analyze in /home/marioman/Downloads/Companion Material/ch18/infer-out
+[11813][environment] Parallel jobs: 8
+[11954][   progress] src/TinyTM/skiplistset/ofree/TSkipNode.java starting
+[11956][   progress] src/TinyTM/TThread.java starting
+[11957][   progress] src/TinyTM/contention/ContentionManager.java starting
+[11958][   progress] src/TinyTM/locking/OnValidate.java starting
+[11959][   progress] src/TinyTM/list/locking/TNode.java starting
+[11961][   progress] src/TinyTM/ofree/example/TNode.java starting
+[11960][   progress] src/TinyTM/skiplistset/SkipNode.java starting
+[11960][   progress] src/TinyTM/skiplistset/SkipNode.java DONE
+[11960][   progress] src/TinyTM/RBTree/TRBNode.java starting
+[11955][   progress] src/TinyTM/list/INode.java starting
+[11955][   progress] src/TinyTM/list/INode.java DONE
+[11955][   progress] src/TinyTM/AtomicObject.java starting
+[11955][   progress] src/TinyTM/AtomicObject.java DONE
+[11955][   progress] src/TinyTM/exceptions/AbortedException.java starting
+[11955][   progress] src/TinyTM/exceptions/AbortedException.java DONE
+[11957][   progress] src/TinyTM/contention/ContentionManager.java DONE
+[11959][   progress] src/TinyTM/list/locking/TNode.java DONE
+[11961][   progress] src/TinyTM/ofree/example/TNode.java DONE
+[11956][   progress] src/TinyTM/TThread.java DONE
+[11956][   progress] src/TinyTM/skiplistset/locking/SkipListSet.java starting
+[11957][   progress] src/TinyTM/ReadSet.java starting
+[11961][   progress] src/TinyTM/Defaults.java starting
+[11961][   progress] src/TinyTM/Defaults.java DONE
+[11955][   progress] src/TinyTM/Benchmark.java starting
+[11961][   progress] src/TinyTM/locking/OnAbort.java starting
+[11954][   progress] src/TinyTM/skiplistset/ofree/TSkipNode.java DONE
+[11961][   progress] src/TinyTM/locking/OnAbort.java DONE
+[11959][   progress] src/TinyTM/Copyable.java starting
+[11959][   progress] src/TinyTM/Copyable.java DONE
+[11960][   progress] src/TinyTM/RBTree/TRBNode.java DONE
+[11960][   progress] src/TinyTM/locking/LockObject.java starting
+[11961][   progress] src/TinyTM/locking/VersionClock.java starting
+[11959][   progress] src/TinyTM/ofree/FreeObject.java starting
+[11954][   progress] src/TinyTM/locking/WriteSet.java starting
+[11958][   progress] src/TinyTM/locking/OnValidate.java DONE
+[11958][   progress] src/TinyTM/skiplistset/ofree/SkipListSet.java starting
+[11957][   progress] src/TinyTM/ReadSet.java DONE
+[11957][   progress] src/TinyTM/locking/BloomFilter.java starting
+[11961][   progress] src/TinyTM/locking/VersionClock.java DONE
+[11961][   progress] src/TinyTM/locking/OnCommit.java starting
+[11960][   progress] src/TinyTM/locking/LockObject.java DONE
+[11954][   progress] src/TinyTM/locking/WriteSet.java DONE
+[11957][   progress] src/TinyTM/locking/BloomFilter.java DONE
+[11961][   progress] src/TinyTM/locking/OnCommit.java DONE
+[11957][   progress] src/TinyTM/AtomicArray.java starting
+[11954][   progress] src/TinyTM/list/ofree/TNode.java starting
+[11961][   progress] src/TinyTM/list/SNode.java starting
+[11960][   progress] src/TinyTM/contention/BackoffManager.java starting
+[11960][   progress] src/TinyTM/contention/BackoffManager.java DONE
+[11960][   progress] src/TinyTM/RBTree/RBNode.java starting
+[11960][   progress] src/TinyTM/RBTree/RBNode.java DONE
+[11960][   progress] src/TinyTM/atomic.java starting
+[11960][   progress] src/TinyTM/atomic.java DONE
+[11960][   progress] src/TinyTM/Transaction.java starting
+[11961][   progress] src/TinyTM/list/SNode.java DONE
+[11961][   progress] src/TinyTM/exceptions/PanicException.java starting
+[11959][   progress] src/TinyTM/ofree/FreeObject.java DONE
+[11954][   progress] src/TinyTM/list/ofree/TNode.java DONE
+[11957][   progress] src/TinyTM/AtomicArray.java DONE
+[11961][   progress] src/TinyTM/exceptions/PanicException.java DONE
+[11957][   progress] src/TinyTM/list/ofree/List.java starting
+[11959][   progress] src/TinyTM/locking/OnStart.java starting
+[11961][   progress] src/TinyTM/RBTree/SRBNode.java starting
+[11954][   progress] src/TinyTM/ThreadID.java starting
+[11959][   progress] src/TinyTM/locking/OnStart.java DONE
+[11959][   progress] src/TinyTM/skiplistset/SSkipNode.java starting
+[11956][   progress] src/TinyTM/skiplistset/locking/SkipListSet.java DONE
+[11961][   progress] src/TinyTM/RBTree/SRBNode.java DONE
+[11956][   progress] src/TinyTM/list/locking/List.java starting
+[11961][   progress] src/TinyTM/skiplistset/locking/TSkipNode.java starting
+[11959][   progress] src/TinyTM/skiplistset/SSkipNode.java DONE
+[11958][   progress] src/TinyTM/skiplistset/ofree/SkipListSet.java DONE
+[11960][   progress] src/TinyTM/Transaction.java DONE
+[11958][   progress] src/TinyTM/locking/ReadSet.java starting
+[11959][   progress] src/TinyTM/RBTree/Color.java starting
+[11959][   progress] src/TinyTM/RBTree/Color.java DONE
+[11958][   progress] src/TinyTM/locking/ReadSet.java DONE
+[11954][   progress] src/TinyTM/ThreadID.java DONE
+[11957][   progress] src/TinyTM/list/ofree/List.java DONE
+[11955][   progress] src/TinyTM/Benchmark.java DONE
+[11961][   progress] src/TinyTM/skiplistset/locking/TSkipNode.java DONE
+[11956][   progress] src/TinyTM/list/locking/List.java DONE
+[11813][   progress] 
+[11813][   progress] Analysis finished in 2.605ss
+[11813][      debug] collected stats:
+[11813][      debug] Backend stats:
+[11813][      debug]   summary_file_try_load= 7255
+[11813][      debug]   summary_read_from_disk= 163
+[11813][      debug]   summary_cache_hits= 2239 (37%)
+[11813][      debug]   summary_cache_misses= 3709
+[11813][      debug]   summary_has_model_queries= 0
+[11813][      debug]   ondemand_procs_analyzed= 297
+[11813][      debug]   ondemand_local_cache_hits= 755 (53%)
+[11813][      debug]   ondemand_local_cache_misses= 664
+[11813][      debug]   
+[11813][      debug] 

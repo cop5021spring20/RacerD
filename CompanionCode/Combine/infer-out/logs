@@ -1,0 +1,65 @@
+[10722][environment] CWD = /home/marioman/Downloads/Companion Material/ch12/Combine
+[10722][environment] No .inferconfig file found
+[10722][environment] Project root = /home/marioman/Downloads/Companion Material/ch12/Combine
+[10722][environment] INFER_ARGS =   @/tmp/args.tmp.d97383  ++Contents of '/tmp/args.tmp.d97383':
+[10722][environment]                                         --racerd-only
+[10722][environment]                                       
+[10722][environment] command line arguments:   infer --racerd-only -- ant jarActive checkers: RacerD (C/C++/ObjC, Java)
+[10722][environment] Infer log identifier is 
+Infer version v0.17.0
+[10722][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[10722][environment] 
+[10722][   progress] Capturing in ant mode...
+
+[10839][environment] CWD = /home/marioman/Downloads/Companion Material/ch12/Combine
+[10839][environment] No .inferconfig file found
+[10839][environment] Project root = /home/marioman/Downloads/Companion Material/ch12/Combine
+[10839][environment] INFER_ARGS =   @/tmp/args.tmp.079c26  ++Contents of '/tmp/args.tmp.079c26':
+[10839][environment]                                         @/tmp/args.tmp.d97383 capture
+[10839][environment]                                         --continue
+[10839][environment]                                         ++Contents of '/tmp/args.tmp.d97383':
+[10839][environment]                                           --racerd-only
+[10839][environment]                                         
+[10839][environment]                                       
+[10839][environment] command line arguments:   /opt/infer-linux64-v0.17.0/lib/infer/infer/lib/python/inferlib/../../../bin/infer
+[10839][environment]                           capture --continue -- javac -d
+[10839][environment]                           /home/marioman/Downloads/Companion Material/ch12/Combine/build/classes
+[10839][environment]                           -classpath
+[10839][environment]                           /home/marioman/Downloads/Companion Material/ch12/Combine/build/classes
+[10839][environment]                           -target 1.5 -encoding UTF-8 -g -source 1.5
+[10839][environment]                           /home/marioman/Downloads/Companion Material/ch12/Combine/src/Combine/Node.java
+[10839][environment]                           /home/marioman/Downloads/Companion Material/ch12/Combine/src/Combine/PanicException.java
+[10839][environment]                           /home/marioman/Downloads/Companion Material/ch12/Combine/src/Combine/ThreadID.java
+[10839][environment]                           /home/marioman/Downloads/Companion Material/ch12/Combine/src/Combine/Tree.javaActive checkers: RacerD (C/C++/ObjC, Java)
+[10839][      debug] Current working directory: '/home/marioman/Downloads/Companion Material/ch12/Combine'
+[10839][      debug] Trying to execute: javac '-J-Duser.language=en' '@/tmp/args_.tmp.61065f' 2>'/tmp/javac.tmp.d4c375.out'
+[10839][      debug] *** Success. Logs:
+[10839][      debug] Translating 4 source files (7 classes)
+[10839][      debug] Tenv.store: global tenv has size 887176 bytes.
+[10839][      debug] Tenv.store: canonicalized tenv has size 378128 bytes.
+[10839][      debug] done capturing all files
+[10839][environment] Infer log identifier is 
+[10722][   progress] Found 4 source files to analyze in /home/marioman/Downloads/Companion Material/ch12/Combine/infer-out
+[10722][environment] Parallel jobs: 8
+[10863][   progress] src/Combine/PanicException.java starting
+[10866][   progress] src/Combine/Tree.java starting
+[10865][   progress] src/Combine/ThreadID.java starting
+[10867][   progress] src/Combine/Node.java starting
+[10863][   progress] src/Combine/PanicException.java DONE
+[10865][   progress] src/Combine/ThreadID.java DONE
+[10867][   progress] src/Combine/Node.java DONE
+[10866][   progress] src/Combine/Tree.java DONE
+[10722][   progress] 
+[10722][   progress] Analysis finished in 1.728ss
+[10722][      debug] collected stats:
+[10722][      debug] Backend stats:
+[10722][      debug]   summary_file_try_load= 777
+[10722][      debug]   summary_read_from_disk= 9
+[10722][      debug]   summary_cache_hits= 127 (24%)
+[10722][      debug]   summary_cache_misses= 393
+[10722][      debug]   summary_has_model_queries= 0
+[10722][      debug]   ondemand_procs_analyzed= 23
+[10722][      debug]   ondemand_local_cache_hits= 44 (42%)
+[10722][      debug]   ondemand_local_cache_misses= 59
+[10722][      debug]   
+[10722][      debug] 

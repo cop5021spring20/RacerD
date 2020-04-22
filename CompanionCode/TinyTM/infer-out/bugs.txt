@@ -1,0 +1,41 @@
+Found 4 issues
+
+src/TinyTM/AtomicArray.java:129: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `Transaction AtomicArray.writeConflict(Transaction)` writes to field `this.version` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  127.         if (writer.getStatus() == Status.ABORTED) {
+  128.           restore();
+  129. >         version++;
+  130.           writer = Transaction.COMMITTED;
+  131.         }
+
+src/TinyTM/AtomicArray.java:130: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `Transaction AtomicArray.writeConflict(Transaction)` writes to field `this.writer` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  128.           restore();
+  129.           version++;
+  130. >         writer = Transaction.COMMITTED;
+  131.         }
+  132.         return null;
+
+src/TinyTM/AtomicArray.java:145: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `Transaction AtomicArray.writeConflict(Transaction)` indirectly writes to field `this.readers.next` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  143.         }
+  144.       }
+  145. >     readers.clear();
+  146.       switch (writer.getStatus()) {
+  147.         case ACTIVE:
+
+src/TinyTM/AtomicArray.java:137: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Transaction AtomicArray.writeConflict(Transaction)` reads without synchronization from `this.writer`. Potentially races with write in method `AtomicArray.set(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  135.         throw new AbortedException();
+  136.       }
+  137. >     if (me == writer) {
+  138.         return null;
+  139.       }
+
+Summary of the reports
+
+  THREAD_SAFETY_VIOLATION: 4

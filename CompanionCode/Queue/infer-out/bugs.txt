@@ -1,0 +1,50 @@
+Found 5 issues
+
+src/queue/SynchronousQueue.java:37: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Object SynchronousQueue.deq()` reads with synchronization from `this.item`. Potentially races with unsynchronized write in method `SynchronousQueue.enq(...)`.
+ Reporting because this access may occur on a background thread.
+  35.       lock.lock();
+  36.       try {
+  37. >       while (item == null) {
+  38.           condition.await();
+  39.         }
+
+src/queue/SynchronousQueue.java:55: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void SynchronousQueue.enq(Object)` writes to field `this.item` outside of synchronization.
+ Reporting because this access may occur on a background thread.
+  53.         }
+  54.         enqueuing = true; // my turn starts
+  55. >       item = value;
+  56.         condition.signalAll();
+  57.         while (item != null) {
+
+src/queue/SynchronousQueue.java:54: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void SynchronousQueue.enq(Object)` writes to field `this.enqueuing` outside of synchronization.
+ Reporting because this access may occur on a background thread.
+  52.           condition.await();
+  53.         }
+  54. >       enqueuing = true; // my turn starts
+  55.         item = value;
+  56.         condition.signalAll();
+
+src/queue/SynchronousQueue.java:51: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void SynchronousQueue.enq(Object)` reads without synchronization from `this.enqueuing`. Potentially races with write in method `SynchronousQueue.enq(...)`.
+ Reporting because this access may occur on a background thread.
+  49.       if (value == null) throw new NullPointerException();
+  50.       try {
+  51. >       while (enqueuing) { // another enqueuer's turn
+  52.           condition.await();
+  53.         }
+
+src/queue/SynchronousQueue.java:57: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void SynchronousQueue.enq(Object)` reads without synchronization from `this.item`. Potentially races with write in method `SynchronousQueue.enq(...)`.
+ Reporting because this access may occur on a background thread.
+  55.         item = value;
+  56.         condition.signalAll();
+  57. >       while (item != null) {
+  58.           condition.await();
+  59.         }
+
+Summary of the reports
+
+  THREAD_SAFETY_VIOLATION: 5

@@ -1,0 +1,17 @@
+[INFO] output of locale.getdefaultlocale(): ('en_US', 'UTF-8')
+[INFO] encoding we chose in the end: UTF-8
+[INFO] Running command /opt/infer-linux64-v0.17.0/lib/infer/infer/bin/../lib/python/infer.py -j 8 --project-root /home/marioman/Downloads/Companion Material/ch10/Queue --out /home/marioman/Downloads/Companion Material/ch10/Queue/infer-out -- ant jar
+[INFO] Path to infer script /opt/infer-linux64-v0.17.0/lib/infer/infer/bin/../lib/python/infer.py (/opt/infer-linux64-v0.17.0/lib/infer/infer/lib/python/infer.py)
+[INFO] Platform: Linux-4.15.0-96-generic-x86_64-with-Ubuntu-18.04-bionic
+[INFO] PATH=/usr/loacl/include/:/home/marioman/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+[INFO] SHELL=/bin/bash
+[INFO] PWD=/home/marioman/Downloads/Companion Material/ch10/Queue
+[INFO] java versions:
+openjdk version "1.8.0_242"
+OpenJDK Runtime Environment (build 1.8.0_242-8u242-b08-0ubuntu3~18.04-b08)
+OpenJDK 64-Bit Server VM (build 25.242-b08, mixed mode)
+javac 1.8.0_242
+
+[INFO] Apache Ant(TM) version 1.10.5 compiled on March 28 2019
+
+[INFO] Capture phase was successful

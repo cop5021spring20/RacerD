@@ -1,0 +1,23 @@
+Found 2 issues
+
+src/priority/FineGrainedHeap.java:159: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void FineGrainedHeap.sanityCheck()` reads without synchronization from `this.next`. Potentially races with write in method `FineGrainedHeap.add(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  157.   
+  158.     public void sanityCheck() {
+  159. >     int stop = next;
+  160.       for (int i = ROOT; i < stop; i++) {
+  161.         int left = i * 2;
+
+src/priority/FineGrainedHeap.java:163: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void FineGrainedHeap.sanityCheck()` reads without synchronization from `this.heap.[_].score`. Potentially races with write in method `FineGrainedHeap.add(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  161.         int left = i * 2;
+  162.         int right = (i * 2) + 1;
+  163. >       if (left < stop && heap[left].score < heap[i].score) {
+  164.           System.out.println("Heap property violated:");
+  165.           System.out.printf("\theap[%d] = %d, left child heap[%d] = %d\n", i, heap[i].score, left, heap[left].score);
+
+Summary of the reports
+
+  THREAD_SAFETY_VIOLATION: 2

@@ -1,0 +1,77 @@
+[9652][environment] CWD = /home/marioman/Downloads/Companion Material/ch02/Mutex
+[9652][environment] No .inferconfig file found
+[9652][environment] Project root = /home/marioman/Downloads/Companion Material/ch02/Mutex
+[9652][environment] INFER_ARGS =   @/tmp/args.tmp.0196d3  ++Contents of '/tmp/args.tmp.0196d3':
+[9652][environment]                                         --racerd-only
+[9652][environment]                                       
+[9652][environment] command line arguments:   infer --racerd-only -- ant jarActive checkers: RacerD (C/C++/ObjC, Java)
+[9652][environment] Infer log identifier is 
+Infer version v0.17.0
+[9652][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[9652][environment] 
+[9652][   progress] Capturing in ant mode...
+
+[9770][environment] CWD = /home/marioman/Downloads/Companion Material/ch02/Mutex
+[9770][environment] No .inferconfig file found
+[9770][environment] Project root = /home/marioman/Downloads/Companion Material/ch02/Mutex
+[9770][environment] INFER_ARGS =   @/tmp/args.tmp.aea3a7  ++Contents of '/tmp/args.tmp.aea3a7':
+[9770][environment]                                         @/tmp/args.tmp.0196d3 capture
+[9770][environment]                                         --continue
+[9770][environment]                                         ++Contents of '/tmp/args.tmp.0196d3':
+[9770][environment]                                           --racerd-only
+[9770][environment]                                         
+[9770][environment]                                       
+[9770][environment] command line arguments:   /opt/infer-linux64-v0.17.0/lib/infer/infer/lib/python/inferlib/../../../bin/infer
+[9770][environment]                           capture --continue -- javac -d
+[9770][environment]                           /home/marioman/Downloads/Companion Material/ch02/Mutex/build/classes
+[9770][environment]                           -classpath
+[9770][environment]                           /home/marioman/Downloads/Companion Material/ch02/Mutex/build/classes
+[9770][environment]                           -target 1.5 -encoding UTF-8 -g -source 1.5
+[9770][environment]                           /home/marioman/Downloads/Companion Material/ch02/Mutex/src/mutex/Bakery.java
+[9770][environment]                           /home/marioman/Downloads/Companion Material/ch02/Mutex/src/mutex/Filter.java
+[9770][environment]                           /home/marioman/Downloads/Companion Material/ch02/Mutex/src/mutex/LockFreeQueue.java
+[9770][environment]                           /home/marioman/Downloads/Companion Material/ch02/Mutex/src/mutex/LockOne.java
+[9770][environment]                           /home/marioman/Downloads/Companion Material/ch02/Mutex/src/mutex/LockTwo.java
+[9770][environment]                           /home/marioman/Downloads/Companion Material/ch02/Mutex/src/mutex/Peterson.java
+[9770][environment]                           /home/marioman/Downloads/Companion Material/ch02/Mutex/src/mutex/Queue.java
+[9770][environment]                           /home/marioman/Downloads/Companion Material/ch02/Mutex/src/mutex/ThreadID.javaActive checkers: RacerD (C/C++/ObjC, Java)
+[9770][      debug] Current working directory: '/home/marioman/Downloads/Companion Material/ch02/Mutex'
+[9770][      debug] Trying to execute: javac '-J-Duser.language=en' '@/tmp/args_.tmp.9ae540' 2>'/tmp/javac.tmp.4ce99f.out'
+[9770][      debug] *** Success. Logs:
+[9770][      debug] Translating 8 source files (12 classes)
+[9770][      debug] Tenv.store: global tenv has size 602432 bytes.
+[9770][      debug] Tenv.store: canonicalized tenv has size 261520 bytes.
+[9770][      debug] done capturing all files
+[9770][environment] Infer log identifier is 
+[9652][   progress] Found 8 source files to analyze in /home/marioman/Downloads/Companion Material/ch02/Mutex/infer-out
+[9652][environment] Parallel jobs: 8
+[9796][   progress] src/mutex/ThreadID.java starting
+[9794][   progress] src/mutex/LockOne.java starting
+[9797][   progress] src/mutex/LockTwo.java starting
+[9798][   progress] src/mutex/Peterson.java starting
+[9799][   progress] src/mutex/Filter.java starting
+[9801][   progress] src/mutex/Queue.java starting
+[9800][   progress] src/mutex/LockFreeQueue.java starting
+[9795][   progress] src/mutex/Bakery.java starting
+[9800][   progress] src/mutex/LockFreeQueue.java DONE
+[9796][   progress] src/mutex/ThreadID.java DONE
+[9801][   progress] src/mutex/Queue.java DONE
+[9794][   progress] src/mutex/LockOne.java DONE
+[9797][   progress] src/mutex/LockTwo.java DONE
+[9799][   progress] src/mutex/Filter.java DONE
+[9798][   progress] src/mutex/Peterson.java DONE
+[9795][   progress] src/mutex/Bakery.java DONE
+[9652][   progress] 
+[9652][   progress] Analysis finished in 1.516ss
+[9652][      debug] collected stats:
+[9652][      debug] Backend stats:
+[9652][      debug]   summary_file_try_load= 1002
+[9652][      debug]   summary_read_from_disk= 4
+[9652][      debug]   summary_cache_hits= 285 (36%)
+[9652][      debug]   summary_cache_misses= 503
+[9652][      debug]   summary_has_model_queries= 0
+[9652][      debug]   ondemand_procs_analyzed= 59
+[9652][      debug]   ondemand_local_cache_hits= 111 (56%)
+[9652][      debug]   ondemand_local_cache_misses= 87
+[9652][      debug]   
+[9652][      debug] 

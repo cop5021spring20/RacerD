@@ -1,0 +1,92 @@
+[9986][environment] CWD = /home/marioman/Downloads/Companion Material/ch07/Spin
+[9986][environment] No .inferconfig file found
+[9986][environment] Project root = /home/marioman/Downloads/Companion Material/ch07/Spin
+[9986][environment] INFER_ARGS =   @/tmp/args.tmp.ad3bbb  ++Contents of '/tmp/args.tmp.ad3bbb':
+[9986][environment]                                         --racerd-only
+[9986][environment]                                       
+[9986][environment] command line arguments:   infer --racerd-only -- ant jarActive checkers: RacerD (C/C++/ObjC, Java)
+[9986][environment] Infer log identifier is 
+Infer version v0.17.0
+[9986][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[9986][environment] 
+[9986][   progress] Capturing in ant mode...
+
+[10103][environment] CWD = /home/marioman/Downloads/Companion Material/ch07/Spin
+[10103][environment] No .inferconfig file found
+[10103][environment] Project root = /home/marioman/Downloads/Companion Material/ch07/Spin
+[10103][environment] INFER_ARGS =   @/tmp/args.tmp.b5c16d  ++Contents of '/tmp/args.tmp.b5c16d':
+[10103][environment]                                         @/tmp/args.tmp.ad3bbb capture
+[10103][environment]                                         --continue
+[10103][environment]                                         ++Contents of '/tmp/args.tmp.ad3bbb':
+[10103][environment]                                           --racerd-only
+[10103][environment]                                         
+[10103][environment]                                       
+[10103][environment] command line arguments:   /opt/infer-linux64-v0.17.0/lib/infer/infer/lib/python/inferlib/../../../bin/infer
+[10103][environment]                           capture --continue -- javac -d
+[10103][environment]                           /home/marioman/Downloads/Companion Material/ch07/Spin/build/classes
+[10103][environment]                           -classpath
+[10103][environment]                           /home/marioman/Downloads/Companion Material/ch07/Spin/build/classes
+[10103][environment]                           -target 1.5 -encoding UTF-8 -g -source 1.5
+[10103][environment]                           /home/marioman/Downloads/Companion Material/ch07/Spin/src/spin/ALock.java
+[10103][environment]                           /home/marioman/Downloads/Companion Material/ch07/Spin/src/spin/Backoff.java
+[10103][environment]                           /home/marioman/Downloads/Companion Material/ch07/Spin/src/spin/BackoffLock.java
+[10103][environment]                           /home/marioman/Downloads/Companion Material/ch07/Spin/src/spin/CLHLock.java
+[10103][environment]                           /home/marioman/Downloads/Companion Material/ch07/Spin/src/spin/CompositeFastPathLock.java
+[10103][environment]                           /home/marioman/Downloads/Companion Material/ch07/Spin/src/spin/CompositeLock.java
+[10103][environment]                           /home/marioman/Downloads/Companion Material/ch07/Spin/src/spin/HBOLock.java
+[10103][environment]                           /home/marioman/Downloads/Companion Material/ch07/Spin/src/spin/HCLHLock.java
+[10103][environment]                           /home/marioman/Downloads/Companion Material/ch07/Spin/src/spin/MCSLock.java
+[10103][environment]                           /home/marioman/Downloads/Companion Material/ch07/Spin/src/spin/TASLock.java
+[10103][environment]                           /home/marioman/Downloads/Companion Material/ch07/Spin/src/spin/TOLock.java
+[10103][environment]                           /home/marioman/Downloads/Companion Material/ch07/Spin/src/spin/TTASLock.java
+[10103][environment]                           /home/marioman/Downloads/Companion Material/ch07/Spin/src/spin/ThreadID.javaActive checkers: RacerD (C/C++/ObjC, Java)
+[10103][      debug] Current working directory: '/home/marioman/Downloads/Companion Material/ch07/Spin'
+[10103][      debug] Trying to execute: javac '-J-Duser.language=en' '@/tmp/args_.tmp.83daf6' 2>'/tmp/javac.tmp.d97c48.out'
+[10103][      debug] *** Success. Logs:
+[10103][      debug] Translating 13 source files (29 classes)
+[10103][      debug] Tenv.store: global tenv has size 1006672 bytes.
+[10103][      debug] Tenv.store: canonicalized tenv has size 427776 bytes.
+[10103][      debug] done capturing all files
+[10103][environment] Infer log identifier is 
+[9986][   progress] Found 13 source files to analyze in /home/marioman/Downloads/Companion Material/ch07/Spin/infer-out
+[9986][environment] Parallel jobs: 8
+[10127][   progress] src/spin/TASLock.java starting
+[10129][   progress] src/spin/CompositeLock.java starting
+[10130][   progress] src/spin/ThreadID.java starting
+[10131][   progress] src/spin/MCSLock.java starting
+[10132][   progress] src/spin/CompositeFastPathLock.java starting
+[10133][   progress] src/spin/BackoffLock.java starting
+[10134][   progress] src/spin/ALock.java starting
+[10128][   progress] src/spin/CLHLock.java starting
+[10130][   progress] src/spin/ThreadID.java DONE
+[10127][   progress] src/spin/TASLock.java DONE
+[10131][   progress] src/spin/MCSLock.java DONE
+[10134][   progress] src/spin/ALock.java DONE
+[10133][   progress] src/spin/BackoffLock.java DONE
+[10130][   progress] src/spin/TTASLock.java starting
+[10133][   progress] src/spin/HBOLock.java starting
+[10134][   progress] src/spin/HCLHLock.java starting
+[10131][   progress] src/spin/TOLock.java starting
+[10128][   progress] src/spin/CLHLock.java DONE
+[10132][   progress] src/spin/CompositeFastPathLock.java DONE
+[10130][   progress] src/spin/TTASLock.java DONE
+[10127][   progress] src/spin/Backoff.java starting
+[10127][   progress] src/spin/Backoff.java DONE
+[10133][   progress] src/spin/HBOLock.java DONE
+[10129][   progress] src/spin/CompositeLock.java DONE
+[10131][   progress] src/spin/TOLock.java DONE
+[10134][   progress] src/spin/HCLHLock.java DONE
+[9986][   progress] 
+[9986][   progress] Analysis finished in 1.962ss
+[9986][      debug] collected stats:
+[9986][      debug] Backend stats:
+[9986][      debug]   summary_file_try_load= 2941
+[9986][      debug]   summary_read_from_disk= 15
+[9986][      debug]   summary_cache_hits= 715 (32%)
+[9986][      debug]   summary_cache_misses= 1478
+[9986][      debug]   summary_has_model_queries= 0
+[9986][      debug]   ondemand_procs_analyzed= 138
+[9986][      debug]   ondemand_local_cache_hits= 285 (52%)
+[9986][      debug]   ondemand_local_cache_misses= 254
+[9986][      debug]   
+[9986][      debug] 

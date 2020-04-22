@@ -1,0 +1,92 @@
+[11181][environment] CWD = /home/marioman/Downloads/Companion Material/ch14/Steal
+[11181][environment] No .inferconfig file found
+[11181][environment] Project root = /home/marioman/Downloads/Companion Material/ch14/Steal
+[11181][environment] INFER_ARGS =   @/tmp/args.tmp.c6f062  ++Contents of '/tmp/args.tmp.c6f062':
+[11181][environment]                                         --racerd-only
+[11181][environment]                                       
+[11181][environment] command line arguments:   infer --racerd-only -- ant jarActive checkers: RacerD (C/C++/ObjC, Java)
+[11181][environment] Infer log identifier is 
+Infer version v0.17.0
+[11181][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[11181][environment] 
+[11181][   progress] Capturing in ant mode...
+
+[11298][environment] CWD = /home/marioman/Downloads/Companion Material/ch14/Steal
+[11298][environment] No .inferconfig file found
+[11298][environment] Project root = /home/marioman/Downloads/Companion Material/ch14/Steal
+[11298][environment] INFER_ARGS =   @/tmp/args.tmp.3920cb  ++Contents of '/tmp/args.tmp.3920cb':
+[11298][environment]                                         @/tmp/args.tmp.c6f062 capture
+[11298][environment]                                         --continue
+[11298][environment]                                         ++Contents of '/tmp/args.tmp.c6f062':
+[11298][environment]                                           --racerd-only
+[11298][environment]                                         
+[11298][environment]                                       
+[11298][environment] command line arguments:   /opt/infer-linux64-v0.17.0/lib/infer/infer/lib/python/inferlib/../../../bin/infer
+[11298][environment]                           capture --continue -- javac -d
+[11298][environment]                           /home/marioman/Downloads/Companion Material/ch14/Steal/build/classes
+[11298][environment]                           -classpath
+[11298][environment]                           /home/marioman/Downloads/Companion Material/ch14/Steal/build/classes
+[11298][environment]                           -target 1.5 -encoding UTF-8 -g -source 1.5
+[11298][environment]                           /home/marioman/Downloads/Companion Material/ch14/Steal/src/steal/ArraySum.java
+[11298][environment]                           /home/marioman/Downloads/Companion Material/ch14/Steal/src/steal/BDEQueue.java
+[11298][environment]                           /home/marioman/Downloads/Companion Material/ch14/Steal/src/steal/DEQueue.java
+[11298][environment]                           /home/marioman/Downloads/Companion Material/ch14/Steal/src/steal/FibTask.java
+[11298][environment]                           /home/marioman/Downloads/Companion Material/ch14/Steal/src/steal/FibThread.java
+[11298][environment]                           /home/marioman/Downloads/Companion Material/ch14/Steal/src/steal/MMThread.java
+[11298][environment]                           /home/marioman/Downloads/Companion Material/ch14/Steal/src/steal/MatrixTask.java
+[11298][environment]                           /home/marioman/Downloads/Companion Material/ch14/Steal/src/steal/MatrixVectorTask.java
+[11298][environment]                           /home/marioman/Downloads/Companion Material/ch14/Steal/src/steal/PolynomialTask.java
+[11298][environment]                           /home/marioman/Downloads/Companion Material/ch14/Steal/src/steal/ThreadID.java
+[11298][environment]                           /home/marioman/Downloads/Companion Material/ch14/Steal/src/steal/UDEQueue.java
+[11298][environment]                           /home/marioman/Downloads/Companion Material/ch14/Steal/src/steal/WorkSharingThread.java
+[11298][environment]                           /home/marioman/Downloads/Companion Material/ch14/Steal/src/steal/WorkStealingThread.javaActive checkers: RacerD (C/C++/ObjC, Java)
+[11298][      debug] Current working directory: '/home/marioman/Downloads/Companion Material/ch14/Steal'
+[11298][      debug] Trying to execute: javac '-J-Duser.language=en' '@/tmp/args_.tmp.509d1b' 2>'/tmp/javac.tmp.f03152.out'
+[11298][      debug] *** Success. Logs:
+[11298][      debug] Translating 13 source files (29 classes)
+[11298][      debug] Tenv.store: global tenv has size 863168 bytes.
+[11298][      debug] Tenv.store: canonicalized tenv has size 367088 bytes.
+[11298][      debug] done capturing all files
+[11298][environment] Infer log identifier is 
+[11181][   progress] Found 13 source files to analyze in /home/marioman/Downloads/Companion Material/ch14/Steal/infer-out
+[11181][environment] Parallel jobs: 8
+[11323][   progress] src/steal/MMThread.java starting
+[11325][   progress] src/steal/PolynomialTask.java starting
+[11328][   progress] src/steal/ArraySum.java starting
+[11324][   progress] src/steal/WorkStealingThread.java starting
+[11327][   progress] src/steal/DEQueue.java starting
+[11326][   progress] src/steal/FibThread.java starting
+[11329][   progress] src/steal/FibTask.java starting
+[11326][   progress] src/steal/FibThread.java DONE
+[11323][   progress] src/steal/MMThread.java DONE
+[11329][   progress] src/steal/FibTask.java DONE
+[11323][   progress] src/steal/BDEQueue.java starting
+[11327][   progress] src/steal/DEQueue.java DONE
+[11328][   progress] src/steal/ArraySum.java DONE
+[11326][   progress] src/steal/WorkSharingThread.java starting
+[11329][   progress] src/steal/UDEQueue.java starting
+[11324][   progress] src/steal/WorkStealingThread.java DONE
+[11324][   progress] src/steal/MatrixTask.java starting
+[11327][   progress] src/steal/MatrixVectorTask.java starting
+[11323][   progress] src/steal/BDEQueue.java DONE
+[11322][   progress] src/steal/ThreadID.java starting
+[11329][   progress] src/steal/UDEQueue.java DONE
+[11326][   progress] src/steal/WorkSharingThread.java DONE
+[11324][   progress] src/steal/MatrixTask.java DONE
+[11322][   progress] src/steal/ThreadID.java DONE
+[11327][   progress] src/steal/MatrixVectorTask.java DONE
+[11325][   progress] src/steal/PolynomialTask.java DONE
+[11181][   progress] 
+[11181][   progress] Analysis finished in 2.12ss
+[11181][      debug] collected stats:
+[11181][      debug] Backend stats:
+[11181][      debug]   summary_file_try_load= 3572
+[11181][      debug]   summary_read_from_disk= 2
+[11181][      debug]   summary_cache_hits= 718 (28%)
+[11181][      debug]   summary_cache_misses= 1787
+[11181][      debug]   summary_has_model_queries= 0
+[11181][      debug]   ondemand_procs_analyzed= 105
+[11181][      debug]   ondemand_local_cache_hits= 405 (68%)
+[11181][      debug]   ondemand_local_cache_misses= 183
+[11181][      debug]   
+[11181][      debug] 

@@ -1,0 +1,84 @@
+[11348][environment] CWD = /home/marioman/Downloads/Companion Material/ch15/priority
+[11348][environment] No .inferconfig file found
+[11348][environment] Project root = /home/marioman/Downloads/Companion Material/ch15/priority
+[11348][environment] INFER_ARGS =   @/tmp/args.tmp.545f07  ++Contents of '/tmp/args.tmp.545f07':
+[11348][environment]                                         --racerd-only
+[11348][environment]                                       
+[11348][environment] command line arguments:   infer --racerd-only -- ant jarActive checkers: RacerD (C/C++/ObjC, Java)
+[11348][environment] Infer log identifier is 
+Infer version v0.17.0
+[11348][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[11348][environment] 
+[11348][   progress] Capturing in ant mode...
+
+[11465][environment] CWD = /home/marioman/Downloads/Companion Material/ch15/priority
+[11465][environment] No .inferconfig file found
+[11465][environment] Project root = /home/marioman/Downloads/Companion Material/ch15/priority
+[11465][environment] INFER_ARGS =   @/tmp/args.tmp.278200  ++Contents of '/tmp/args.tmp.278200':
+[11465][environment]                                         @/tmp/args.tmp.545f07 capture
+[11465][environment]                                         --continue
+[11465][environment]                                         ++Contents of '/tmp/args.tmp.545f07':
+[11465][environment]                                           --racerd-only
+[11465][environment]                                         
+[11465][environment]                                       
+[11465][environment] command line arguments:   /opt/infer-linux64-v0.17.0/lib/infer/infer/lib/python/inferlib/../../../bin/infer
+[11465][environment]                           capture --continue -- javac -d
+[11465][environment]                           /home/marioman/Downloads/Companion Material/ch15/priority/build/classes
+[11465][environment]                           -classpath
+[11465][environment]                           /home/marioman/Downloads/Companion Material/ch15/priority/build/classes
+[11465][environment]                           -target 1.5 -encoding UTF-8 -g -Xlint:unchecked
+[11465][environment]                           -source 1.5
+[11465][environment]                           /home/marioman/Downloads/Companion Material/ch15/priority/src/priority/Bin.java
+[11465][environment]                           /home/marioman/Downloads/Companion Material/ch15/priority/src/priority/BitReversedCounter.java
+[11465][environment]                           /home/marioman/Downloads/Companion Material/ch15/priority/src/priority/FineGrainedHeap.java
+[11465][environment]                           /home/marioman/Downloads/Companion Material/ch15/priority/src/priority/PQueue.java
+[11465][environment]                           /home/marioman/Downloads/Companion Material/ch15/priority/src/priority/PrioritySkipList.java
+[11465][environment]                           /home/marioman/Downloads/Companion Material/ch15/priority/src/priority/SequentialHeap.java
+[11465][environment]                           /home/marioman/Downloads/Companion Material/ch15/priority/src/priority/SimpleLinear.java
+[11465][environment]                           /home/marioman/Downloads/Companion Material/ch15/priority/src/priority/SimpleTree.java
+[11465][environment]                           /home/marioman/Downloads/Companion Material/ch15/priority/src/priority/SkipQueue.java
+[11465][environment]                           /home/marioman/Downloads/Companion Material/ch15/priority/src/priority/ThreadID.javaActive checkers: RacerD (C/C++/ObjC, Java)
+[11465][      debug] Current working directory: '/home/marioman/Downloads/Companion Material/ch15/priority'
+[11465][      debug] Trying to execute: javac '-J-Duser.language=en' '@/tmp/args_.tmp.733a18' 2>'/tmp/javac.tmp.a7475d.out'
+[11465][      debug] *** Success. Logs:
+[11465][      debug] Translating 10 source files (20 classes)
+[11465][      debug] Tenv.store: global tenv has size 957400 bytes.
+[11465][      debug] Tenv.store: canonicalized tenv has size 408472 bytes.
+[11465][      debug] done capturing all files
+[11465][environment] Infer log identifier is 
+[11348][   progress] Found 10 source files to analyze in /home/marioman/Downloads/Companion Material/ch15/priority/infer-out
+[11348][environment] Parallel jobs: 8
+[11491][   progress] src/priority/SimpleTree.java starting
+[11489][   progress] src/priority/BitReversedCounter.java starting
+[11492][   progress] src/priority/Bin.java starting
+[11493][   progress] src/priority/PQueue.java starting
+[11494][   progress] src/priority/PrioritySkipList.java starting
+[11495][   progress] src/priority/SequentialHeap.java starting
+[11496][   progress] src/priority/ThreadID.java starting
+[11493][   progress] src/priority/PQueue.java DONE
+[11493][   progress] src/priority/SimpleLinear.java starting
+[11490][   progress] src/priority/SkipQueue.java starting
+[11492][   progress] src/priority/Bin.java DONE
+[11492][   progress] src/priority/FineGrainedHeap.java starting
+[11489][   progress] src/priority/BitReversedCounter.java DONE
+[11493][   progress] src/priority/SimpleLinear.java DONE
+[11496][   progress] src/priority/ThreadID.java DONE
+[11491][   progress] src/priority/SimpleTree.java DONE
+[11495][   progress] src/priority/SequentialHeap.java DONE
+[11494][   progress] src/priority/PrioritySkipList.java DONE
+[11490][   progress] src/priority/SkipQueue.java DONE
+[11492][   progress] src/priority/FineGrainedHeap.java DONE
+[11348][   progress] 
+[11348][   progress] Analysis finished in 1.981ss
+[11348][      debug] collected stats:
+[11348][      debug] Backend stats:
+[11348][      debug]   summary_file_try_load= 1500
+[11348][      debug]   summary_read_from_disk= 10
+[11348][      debug]   summary_cache_hits= 511 (40%)
+[11348][      debug]   summary_cache_misses= 755
+[11348][      debug]   summary_has_model_queries= 0
+[11348][      debug]   ondemand_procs_analyzed= 75
+[11348][      debug]   ondemand_local_cache_hits= 247 (64%)
+[11348][      debug]   ondemand_local_cache_misses= 136
+[11348][      debug]   
+[11348][      debug] 

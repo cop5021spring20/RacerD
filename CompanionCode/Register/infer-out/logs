@@ -1,0 +1,105 @@
+[88111][environment] CWD = /home/marioman/Downloads/Companion Material/ch04/Register
+[88111][environment] No .inferconfig file found
+[88111][environment] Project root = /home/marioman/Downloads/Companion Material/ch04/Register
+[88111][environment] INFER_ARGS =   @/tmp/args.tmp.34c1b6  ++Contents of '/tmp/args.tmp.34c1b6':
+[88111][environment]                                         --racerd-only
+[88111][environment]                                       
+[88111][environment] command line arguments:   infer --racerd-only -- ant jarActive checkers: RacerD (C/C++/ObjC, Java)
+[88111][environment] Infer log identifier is 
+Infer version v0.17.0
+[88111][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[88111][environment] 
+[88111][   progress] Capturing in ant mode...
+
+[88228][environment] CWD = /home/marioman/Downloads/Companion Material/ch04/Register
+[88228][environment] No .inferconfig file found
+[88228][environment] Project root = /home/marioman/Downloads/Companion Material/ch04/Register
+[88228][environment] INFER_ARGS =   @/tmp/args.tmp.7571b2  ++Contents of '/tmp/args.tmp.7571b2':
+[88228][environment]                                         @/tmp/args.tmp.34c1b6 capture
+[88228][environment]                                         --continue
+[88228][environment]                                         ++Contents of '/tmp/args.tmp.34c1b6':
+[88228][environment]                                           --racerd-only
+[88228][environment]                                         
+[88228][environment]                                       
+[88228][environment] command line arguments:   /opt/infer-linux64-v0.17.0/lib/infer/infer/lib/python/inferlib/../../../bin/infer
+[88228][environment]                           capture --continue -- javac -deprecation -d
+[88228][environment]                           /home/marioman/Downloads/Companion Material/ch04/Register/build/classes
+[88228][environment]                           -classpath
+[88228][environment]                           /home/marioman/Downloads/Companion Material/ch04/Register/build/classes
+[88228][environment]                           -target 1.5 -encoding UTF-8 -g -Xlint:unchecked
+[88228][environment]                           -source 1.5
+[88228][environment]                           /home/marioman/Downloads/Companion Material/ch04/Register/src/register/AtomicMRMWRegister.java
+[88228][environment]                           /home/marioman/Downloads/Companion Material/ch04/Register/src/register/AtomicMRSWRegister.java
+[88228][environment]                           /home/marioman/Downloads/Companion Material/ch04/Register/src/register/AtomicSRSWRegister.java
+[88228][environment]                           /home/marioman/Downloads/Companion Material/ch04/Register/src/register/AtomicSWMRRegister.java
+[88228][environment]                           /home/marioman/Downloads/Companion Material/ch04/Register/src/register/RegBooleanMRSWRegister.java
+[88228][environment]                           /home/marioman/Downloads/Companion Material/ch04/Register/src/register/RegMRSWRegister.java
+[88228][environment]                           /home/marioman/Downloads/Companion Material/ch04/Register/src/register/Register.java
+[88228][environment]                           /home/marioman/Downloads/Companion Material/ch04/Register/src/register/SafeBooleanMRSWRegister.java
+[88228][environment]                           /home/marioman/Downloads/Companion Material/ch04/Register/src/register/SafeBooleanSRSWRegister.java
+[88228][environment]                           /home/marioman/Downloads/Companion Material/ch04/Register/src/register/SeqSnapshot.java
+[88228][environment]                           /home/marioman/Downloads/Companion Material/ch04/Register/src/register/SequentialRegister.java
+[88228][environment]                           /home/marioman/Downloads/Companion Material/ch04/Register/src/register/SimpleSnapshot.java
+[88228][environment]                           /home/marioman/Downloads/Companion Material/ch04/Register/src/register/Snapshot.java
+[88228][environment]                           /home/marioman/Downloads/Companion Material/ch04/Register/src/register/StampedSnap.java
+[88228][environment]                           /home/marioman/Downloads/Companion Material/ch04/Register/src/register/StampedValue.java
+[88228][environment]                           /home/marioman/Downloads/Companion Material/ch04/Register/src/register/ThreadID.java
+[88228][environment]                           /home/marioman/Downloads/Companion Material/ch04/Register/src/register/WFSnapshot.javaActive checkers: RacerD (C/C++/ObjC, Java)
+[88228][      debug] Current working directory: '/home/marioman/Downloads/Companion Material/ch04/Register'
+[88228][      debug] Trying to execute: javac '-J-Duser.language=en' '@/tmp/args_.tmp.e0ec86' 2>'/tmp/javac.tmp.4e4c30.out'
+[88228][      debug] *** Success. Logs:
+[88228][      debug] Translating 17 source files (23 classes)
+[88228][      debug] Tenv.store: global tenv has size 573584 bytes.
+[88228][      debug] Tenv.store: canonicalized tenv has size 228808 bytes.
+[88228][      debug] done capturing all files
+[88228][environment] Infer log identifier is 
+[88111][   progress] Found 17 source files to analyze in /home/marioman/Downloads/Companion Material/ch04/Register/infer-out
+[88111][environment] Parallel jobs: 8
+[88252][   progress] src/register/RegMRSWRegister.java starting
+[88254][   progress] src/register/SeqSnapshot.java starting
+[88255][   progress] src/register/RegBooleanMRSWRegister.java starting
+[88256][   progress] src/register/AtomicSWMRRegister.java starting
+[88257][   progress] src/register/SimpleSnapshot.java starting
+[88258][   progress] src/register/AtomicMRMWRegister.java starting
+[88259][   progress] src/register/WFSnapshot.java starting
+[88253][   progress] src/register/Register.java starting
+[88253][   progress] src/register/Register.java DONE
+[88253][   progress] src/register/StampedSnap.java starting
+[88256][   progress] src/register/AtomicSWMRRegister.java DONE
+[88256][   progress] src/register/AtomicSRSWRegister.java starting
+[88254][   progress] src/register/SeqSnapshot.java DONE
+[88254][   progress] src/register/AtomicMRSWRegister.java starting
+[88258][   progress] src/register/AtomicMRMWRegister.java DONE
+[88257][   progress] src/register/SimpleSnapshot.java DONE
+[88258][   progress] src/register/SafeBooleanMRSWRegister.java starting
+[88253][   progress] src/register/StampedSnap.java DONE
+[88253][   progress] src/register/SafeBooleanSRSWRegister.java starting
+[88257][   progress] src/register/Snapshot.java starting
+[88257][   progress] src/register/Snapshot.java DONE
+[88257][   progress] src/register/ThreadID.java starting
+[88252][   progress] src/register/RegMRSWRegister.java DONE
+[88259][   progress] src/register/WFSnapshot.java DONE
+[88255][   progress] src/register/RegBooleanMRSWRegister.java DONE
+[88253][   progress] src/register/SafeBooleanSRSWRegister.java DONE
+[88258][   progress] src/register/SafeBooleanMRSWRegister.java DONE
+[88257][   progress] src/register/ThreadID.java DONE
+[88256][   progress] src/register/AtomicSRSWRegister.java DONE
+[88254][   progress] src/register/AtomicMRSWRegister.java DONE
+[88252][   progress] src/register/StampedValue.java starting
+[88253][   progress] src/register/SequentialRegister.java starting
+[88252][   progress] src/register/StampedValue.java DONE
+[88253][   progress] src/register/SequentialRegister.java DONE
+[88111][   progress] 
+[88111][   progress] Analysis finished in 1.763ss
+[88111][      debug] collected stats:
+[88111][      debug] Backend stats:
+[88111][      debug]   summary_file_try_load= 1453
+[88111][      debug]   summary_read_from_disk= 21
+[88111][      debug]   summary_cache_hits= 434 (37%)
+[88111][      debug]   summary_cache_misses= 737
+[88111][      debug]   summary_has_model_queries= 0
+[88111][      debug]   ondemand_procs_analyzed= 76
+[88111][      debug]   ondemand_local_cache_hits= 159 (53%)
+[88111][      debug]   ondemand_local_cache_misses= 138
+[88111][      debug]   
+[88111][      debug] 

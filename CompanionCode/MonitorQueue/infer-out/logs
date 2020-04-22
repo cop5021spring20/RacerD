@@ -1,0 +1,68 @@
+[11988][environment] CWD = /home/marioman/Downloads/Companion Material/appendix1/Software
+[11988][environment] No .inferconfig file found
+[11988][environment] Project root = /home/marioman/Downloads/Companion Material/appendix1/Software
+[11988][environment] INFER_ARGS =   @/tmp/args.tmp.2deced  ++Contents of '/tmp/args.tmp.2deced':
+[11988][environment]                                         --racerd-only
+[11988][environment]                                       
+[11988][environment] command line arguments:   infer --racerd-only -- ant jarActive checkers: RacerD (C/C++/ObjC, Java)
+[11988][environment] Infer log identifier is 
+Infer version v0.17.0
+[11988][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[11988][environment] 
+[11988][   progress] Capturing in ant mode...
+
+[12105][environment] CWD = /home/marioman/Downloads/Companion Material/appendix1/Software
+[12105][environment] No .inferconfig file found
+[12105][environment] Project root = /home/marioman/Downloads/Companion Material/appendix1/Software
+[12105][environment] INFER_ARGS =   @/tmp/args.tmp.52c291  ++Contents of '/tmp/args.tmp.52c291':
+[12105][environment]                                         @/tmp/args.tmp.2deced capture
+[12105][environment]                                         --continue
+[12105][environment]                                         ++Contents of '/tmp/args.tmp.2deced':
+[12105][environment]                                           --racerd-only
+[12105][environment]                                         
+[12105][environment]                                       
+[12105][environment] command line arguments:   /opt/infer-linux64-v0.17.0/lib/infer/infer/lib/python/inferlib/../../../bin/infer
+[12105][environment]                           capture --continue -- javac -d
+[12105][environment]                           /home/marioman/Downloads/Companion Material/appendix1/Software/build/classes
+[12105][environment]                           -classpath
+[12105][environment]                           /home/marioman/Downloads/Companion Material/appendix1/Software/build/classes
+[12105][environment]                           -target 1.5 -encoding UTF-8 -g -source 1.5
+[12105][environment]                           /home/marioman/Downloads/Companion Material/appendix1/Software/src/software/HelloWorld.java
+[12105][environment]                           /home/marioman/Downloads/Companion Material/appendix1/Software/src/software/Monitor.java
+[12105][environment]                           /home/marioman/Downloads/Companion Material/appendix1/Software/src/software/MonitorQueue.java
+[12105][environment]                           /home/marioman/Downloads/Companion Material/appendix1/Software/src/software/Queue.java
+[12105][environment]                           /home/marioman/Downloads/Companion Material/appendix1/Software/src/software/ThreadID.javaActive checkers: RacerD (C/C++/ObjC, Java)
+[12105][      debug] Current working directory: '/home/marioman/Downloads/Companion Material/appendix1/Software'
+[12105][      debug] Trying to execute: javac '-J-Duser.language=en' '@/tmp/args_.tmp.a58d42' 2>'/tmp/javac.tmp.bdb433.out'
+[12105][      debug] *** Success. Logs:
+[12105][      debug] Translating 5 source files (9 classes)
+[12105][      debug] Tenv.store: global tenv has size 980480 bytes.
+[12105][      debug] Tenv.store: canonicalized tenv has size 415536 bytes.
+[12105][      debug] done capturing all files
+[12105][environment] Infer log identifier is 
+[11988][   progress] Found 5 source files to analyze in /home/marioman/Downloads/Companion Material/appendix1/Software/infer-out
+[11988][environment] Parallel jobs: 8
+[12129][   progress] src/software/Monitor.java starting
+[12132][   progress] src/software/ThreadID.java starting
+[12131][   progress] src/software/Queue.java starting
+[12133][   progress] src/software/MonitorQueue.java starting
+[12130][   progress] src/software/HelloWorld.java starting
+[12131][   progress] src/software/Queue.java DONE
+[12132][   progress] src/software/ThreadID.java DONE
+[12129][   progress] src/software/Monitor.java DONE
+[12133][   progress] src/software/MonitorQueue.java DONE
+[12130][   progress] src/software/HelloWorld.java DONE
+[11988][   progress] 
+[11988][   progress] Analysis finished in 1.71ss
+[11988][      debug] collected stats:
+[11988][      debug] Backend stats:
+[11988][      debug]   summary_file_try_load= 791
+[11988][      debug]   summary_read_from_disk= 3
+[11988][      debug]   summary_cache_hits= 185 (31%)
+[11988][      debug]   summary_cache_misses= 397
+[11988][      debug]   summary_has_model_queries= 0
+[11988][      debug]   ondemand_procs_analyzed= 33
+[11988][      debug]   ondemand_local_cache_hits= 69 (51%)
+[11988][      debug]   ondemand_local_cache_misses= 66
+[11988][      debug]   
+[11988][      debug] 

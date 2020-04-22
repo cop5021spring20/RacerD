@@ -1,0 +1,68 @@
+Found 7 issues
+
+src/software/Queue.java:38: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Object Queue.deq()` reads without synchronization from `this.items.[_]`. Potentially races with write in method `Queue.enq(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  36.         } catch (InterruptedException ex) {}
+  37.       }
+  38. >     T y = (T)items[(head++) % items.length];
+  39.       notify();
+  40.       return y;
+
+src/software/Queue.java:33: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Object Queue.deq()` reads without synchronization from `this.tail`. Potentially races with write in method `Queue.enq(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  31.      */
+  32.     public T deq() {
+  33. >     while (head == tail) {
+  34.         try {
+  35.           wait();
+
+src/software/Monitor.java:44: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void Monitor.enter(Object)` indirectly mutates container `software.Monitor.map` via call to `put` outside of synchronization.
+ Reporting because this access may occur on a background thread.
+  42.     
+  43.     public static void enter(Object object) {
+  44. >     State state = init(object);
+  45.       state.lock.lock();
+  46.     }
+
+src/software/Monitor.java:49: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void Monitor.exit(Object)` indirectly mutates container `software.Monitor.map` via call to `put` outside of synchronization.
+ Reporting because this access may occur on a background thread.
+  47.     
+  48.     public static void exit(Object object) {
+  49. >     State state = init(object);
+  50.       state.lock.unlock();
+  51.     }
+
+src/software/Monitor.java:57: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void Monitor.notify(Object)` indirectly mutates container `software.Monitor.map` via call to `put` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  55.     }
+  56.     public static void notify(Object object) {
+  57. >     State state = init(object);
+  58.       state.condition.signal();
+  59.     }
+
+src/software/Monitor.java:61: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void Monitor.notifyAll(Object)` indirectly mutates container `software.Monitor.map` via call to `put` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  59.     }
+  60.     public static void notifyAll(Object object) {
+  61. >     State state = init(object);
+  62.       state.condition.signalAll();
+  63.     }
+
+src/software/Monitor.java:53: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void Monitor.wait(Object)` indirectly mutates container `software.Monitor.map` via call to `put` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  51.     }
+  52.     public static void wait(Object object) throws InterruptedException {
+  53. >     State state = init(object);
+  54.       state.condition.wait();
+  55.     }
+
+Summary of the reports
+
+  THREAD_SAFETY_VIOLATION: 7

@@ -1,0 +1,96 @@
+[10556][environment] CWD = /home/marioman/Downloads/Companion Material/ch10/Queue
+[10556][environment] No .inferconfig file found
+[10556][environment] Project root = /home/marioman/Downloads/Companion Material/ch10/Queue
+[10556][environment] INFER_ARGS =   @/tmp/args.tmp.b9f1d9  ++Contents of '/tmp/args.tmp.b9f1d9':
+[10556][environment]                                         --racerd-only
+[10556][environment]                                       
+[10556][environment] command line arguments:   infer --racerd-only -- ant jarActive checkers: RacerD (C/C++/ObjC, Java)
+[10556][environment] Infer log identifier is 
+Infer version v0.17.0
+[10556][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[10556][environment] 
+[10556][   progress] Capturing in ant mode...
+
+[10673][environment] CWD = /home/marioman/Downloads/Companion Material/ch10/Queue
+[10673][environment] No .inferconfig file found
+[10673][environment] Project root = /home/marioman/Downloads/Companion Material/ch10/Queue
+[10673][environment] INFER_ARGS =   @/tmp/args.tmp.5191a5  ++Contents of '/tmp/args.tmp.5191a5':
+[10673][environment]                                         @/tmp/args.tmp.b9f1d9 capture
+[10673][environment]                                         --continue
+[10673][environment]                                         ++Contents of '/tmp/args.tmp.b9f1d9':
+[10673][environment]                                           --racerd-only
+[10673][environment]                                         
+[10673][environment]                                       
+[10673][environment] command line arguments:   /opt/infer-linux64-v0.17.0/lib/infer/infer/lib/python/inferlib/../../../bin/infer
+[10673][environment]                           capture --continue -- javac -d
+[10673][environment]                           /home/marioman/Downloads/Companion Material/ch10/Queue/build/classes
+[10673][environment]                           -classpath
+[10673][environment]                           /home/marioman/Downloads/Companion Material/ch10/Queue/build/classes
+[10673][environment]                           -target 1.5 -encoding UTF-8 -g -Xlint:unchecked
+[10673][environment]                           -source 1.5
+[10673][environment]                           /home/marioman/Downloads/Companion Material/ch10/Queue/src/queue/BoundedQueue.java
+[10673][environment]                           /home/marioman/Downloads/Companion Material/ch10/Queue/src/queue/DCASQueue.java
+[10673][environment]                           /home/marioman/Downloads/Companion Material/ch10/Queue/src/queue/EmptyException.java
+[10673][environment]                           /home/marioman/Downloads/Companion Material/ch10/Queue/src/queue/Exchanger.java
+[10673][environment]                           /home/marioman/Downloads/Companion Material/ch10/Queue/src/queue/FullException.java
+[10673][environment]                           /home/marioman/Downloads/Companion Material/ch10/Queue/src/queue/HWQueue.java
+[10673][environment]                           /home/marioman/Downloads/Companion Material/ch10/Queue/src/queue/LockFreeQueue.java
+[10673][environment]                           /home/marioman/Downloads/Companion Material/ch10/Queue/src/queue/LockFreeQueueRecycle.java
+[10673][environment]                           /home/marioman/Downloads/Companion Material/ch10/Queue/src/queue/Pool.java
+[10673][environment]                           /home/marioman/Downloads/Companion Material/ch10/Queue/src/queue/Queue.java
+[10673][environment]                           /home/marioman/Downloads/Companion Material/ch10/Queue/src/queue/SynchronousDualQueue.java
+[10673][environment]                           /home/marioman/Downloads/Companion Material/ch10/Queue/src/queue/SynchronousQueue.java
+[10673][environment]                           /home/marioman/Downloads/Companion Material/ch10/Queue/src/queue/TwoThreadLockFreeQueue.java
+[10673][environment]                           /home/marioman/Downloads/Companion Material/ch10/Queue/src/queue/UnboundedQueue.javaActive checkers: RacerD (C/C++/ObjC, Java)
+[10673][      debug] Current working directory: '/home/marioman/Downloads/Companion Material/ch10/Queue'
+[10673][      debug] Trying to execute: javac '-J-Duser.language=en' '@/tmp/args_.tmp.39d9af' 2>'/tmp/javac.tmp.cde915.out'
+[10673][      debug] *** Success. Logs:
+[10673][      debug] Translating 14 source files (23 classes)
+[10673][      debug] Tenv.store: global tenv has size 1000544 bytes.
+[10673][      debug] Tenv.store: canonicalized tenv has size 424576 bytes.
+[10673][      debug] done capturing all files
+[10673][environment] Infer log identifier is 
+[10556][   progress] Found 14 source files to analyze in /home/marioman/Downloads/Companion Material/ch10/Queue/infer-out
+[10556][environment] Parallel jobs: 8
+[10698][   progress] src/queue/Exchanger.java starting
+[10701][   progress] src/queue/HWQueue.java starting
+[10702][   progress] src/queue/Queue.java starting
+[10704][   progress] src/queue/SynchronousDualQueue.java starting
+[10703][   progress] src/queue/TwoThreadLockFreeQueue.java starting
+[10697][   progress] src/queue/Pool.java starting
+[10699][   progress] src/queue/DCASQueue.java starting
+[10697][   progress] src/queue/Pool.java DONE
+[10700][   progress] src/queue/UnboundedQueue.java starting
+[10697][   progress] src/queue/LockFreeQueueRecycle.java starting
+[10703][   progress] src/queue/TwoThreadLockFreeQueue.java DONE
+[10702][   progress] src/queue/Queue.java DONE
+[10703][   progress] src/queue/SynchronousQueue.java starting
+[10702][   progress] src/queue/FullException.java starting
+[10702][   progress] src/queue/FullException.java DONE
+[10702][   progress] src/queue/EmptyException.java starting
+[10702][   progress] src/queue/EmptyException.java DONE
+[10701][   progress] src/queue/HWQueue.java DONE
+[10701][   progress] src/queue/BoundedQueue.java starting
+[10702][   progress] src/queue/LockFreeQueue.java starting
+[10703][   progress] src/queue/SynchronousQueue.java DONE
+[10700][   progress] src/queue/UnboundedQueue.java DONE
+[10702][   progress] src/queue/LockFreeQueue.java DONE
+[10699][   progress] src/queue/DCASQueue.java DONE
+[10697][   progress] src/queue/LockFreeQueueRecycle.java DONE
+[10698][   progress] src/queue/Exchanger.java DONE
+[10701][   progress] src/queue/BoundedQueue.java DONE
+[10704][   progress] src/queue/SynchronousDualQueue.java DONE
+[10556][   progress] 
+[10556][   progress] Analysis finished in 1.913ss
+[10556][      debug] collected stats:
+[10556][      debug] Backend stats:
+[10556][      debug]   summary_file_try_load= 2676
+[10556][      debug]   summary_read_from_disk= 4
+[10556][      debug]   summary_cache_hits= 320 (19%)
+[10556][      debug]   summary_cache_misses= 1340
+[10556][      debug]   summary_has_model_queries= 0
+[10556][      debug]   ondemand_procs_analyzed= 59
+[10556][      debug]   ondemand_local_cache_hits= 256 (64%)
+[10556][      debug]   ondemand_local_cache_misses= 142
+[10556][      debug]   
+[10556][      debug] 
