@@ -1,0 +1,33 @@
+     100 files     200 files     300 files     400 files     500 files     600 files     700 files     800 files     900 files    1000 files    1100 files    1200 files    1300 files    1400 files    1500 files    1600 files    1700 files    1800 files    1900 files    2000 files    2100 files    2200 files    2300 files    2400 files    2500 files    2600 files    2700 files    2800 files    2900 files    3000 files    3100 files    3200 files    3300 files    3400 files    3500 files    3600 files    3700 files    3800 files    3900 files    4000 files    4100 files    4200 files    4300 files    4400 files    4500 files    4600 files    4700 files    4800 files    4900 files    5000 files    5100 files    5200 files    5254 text files.
+classified 5245 filesDuplicate file check 5245 files (4025 known unique)Unique:      100 files                                          Unique:      200 files                                          Unique:      300 files                                          Unique:      400 files                                          Unique:      500 files                                          Unique:      600 files                                          Unique:      700 files                                          Unique:      800 files                                          Unique:      900 files                                          Unique:     1000 files                                          Unique:     1100 files                                          Unique:     1200 files                                          Unique:     1300 files                                          Unique:     1400 files                                          Unique:     1500 files                                          Unique:     1600 files                                          Unique:     1700 files                                          Unique:     1800 files                                          Unique:     1900 files                                          Unique:     2000 files                                          Unique:     2100 files                                          Unique:     2200 files                                          Unique:     2300 files                                          Unique:     2400 files                                          Unique:     2500 files                                          Unique:     2600 files                                          Unique:     2700 files                                          Unique:     2800 files                                          Unique:     2900 files                                          Unique:     3000 files                                          Unique:     3100 files                                          Unique:     3200 files                                          Unique:     3300 files                                          Unique:     3400 files                                          Unique:     3500 files                                          Unique:     3600 files                                          Unique:     3700 files                                          Unique:     3800 files                                          Unique:     3900 files                                          Unique:     4000 files                                              4570 unique files.                              
+Counting:  100Counting:  200Counting:  300Counting:  400Counting:  500Counting:  600Counting:  700Counting:  800Counting:  900Counting:  1000Counting:  1100Counting:  1200Counting:  1300Counting:  1400Counting:  1500Counting:  1600Counting:  1700Counting:  1800Counting:  1900Counting:  2000Counting:  2100Counting:  2200Counting:  2300Counting:  2400Counting:  2500Counting:  2600Counting:  2700Counting:  2800Counting:  2900Counting:  3000Counting:  3100Counting:  3200Counting:  3300Counting:  3400Counting:  3500Counting:  3600Counting:  3700Counting:  3800Counting:  3900Counting:  4000Counting:  4100Counting:  4200Counting:  4300Counting:  4400Counting:  4500     976 files ignored.
+
+github.com/AlDanial/cloc v 1.74  T=18.45 s (232.1 files/s, 118992.0 lines/s)
+--------------------------------------------------------------------------------
+Language                      files          blank        comment           code
+--------------------------------------------------------------------------------
+Java                           1345          60698          64099         533399
+C                               696          44284         128270         311021
+JSON                             96             10              0         246278
+C++                             626          30520          29759         202034
+C/C++ Header                   1028          30146          92574         135887
+Perl                             65           8178           7142          64227
+Go                               80           5065           5068          46014
+Bourne Shell                     15           7281           8146          43848
+XML                             175            232            870          31512
+Assembly                         45           1005           2710          18547
+m4                                6           1072            142           9738
+Python                           41           1800           3106           5890
+Markdown                         19           1341              0           4196
+make                              9            231            152           3402
+CMake                            15            287            292           1870
+Objective C++                    12            228             97           1276
+Groovy                            3             50             39            352
+Objective C                       2             31              9            236
+Bourne Again Shell                1             20             21            123
+CSS                               1             13              0             57
+Prolog                            1              0              0             28
+Dockerfile                        1              3              0             22
+--------------------------------------------------------------------------------
+SUM:                           4282         192495         342496        1659957
+--------------------------------------------------------------------------------

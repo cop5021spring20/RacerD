@@ -1,0 +1,27 @@
+     100 files     200 files     300 files     400 files     500 files     600 files     700 files     800 files     839 text files.
+classified 839 filesDuplicate file check 839 files (696 known unique)Unique:      100 files                                          Unique:      200 files                                          Unique:      300 files                                          Unique:      400 files                                          Unique:      500 files                                          Unique:      600 files                                               821 unique files.                              
+Counting:  100Counting:  200Counting:  300Counting:  400Counting:  500Counting:  600Counting:  700Counting:  800      45 files ignored.
+
+github.com/AlDanial/cloc v 1.74  T=3.33 s (240.0 files/s, 97855.9 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+JSON                            15              4              0         252624
+XML                            457            647            939          30706
+Kotlin                         138           2671           1348          11504
+Java                           104           2546           1612           9905
+Python                          25            669           1099           2900
+HTML                            15            270             48           2389
+YAML                            10             51            159            726
+Markdown                        10            193              0            508
+Groovy                           4             93             75            412
+Bourne Shell                    13            110            137            348
+CSS                              2             36             32            196
+Prolog                           1             30              0            123
+TOML                             1              3              0            107
+DOS Batch                        1             23              2             59
+Dockerfile                       1             34             32             57
+JavaScript                       1              0              1              1
+-------------------------------------------------------------------------------
+SUM:                           798           7380           5484         312565
+-------------------------------------------------------------------------------

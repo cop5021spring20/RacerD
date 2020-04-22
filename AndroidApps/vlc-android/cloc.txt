@@ -1,0 +1,28 @@
+     100 files     200 files     300 files     400 files     500 files     600 files     700 files     800 files     900 files    1000 files    1100 files    1200 files    1300 files    1400 files    1500 files    1600 files    1700 files    1800 files    1886 text files.
+classified 1884 filesDuplicate file check 1884 files (1501 known unique)Unique:      100 files                                          Unique:      200 files                                          Unique:      300 files                                          Unique:      400 files                                          Unique:      500 files                                          Unique:      600 files                                          Unique:      700 files                                          Unique:      800 files                                          Unique:      900 files                                          Unique:     1000 files                                          Unique:     1100 files                                          Unique:     1200 files                                          Unique:     1300 files                                          Unique:     1400 files                                          Unique:     1500 files                                              1862 unique files.                              
+Counting:  100Counting:  200Counting:  300Counting:  400Counting:  500Counting:  600Counting:  700Counting:  800Counting:  900Counting:  1000Counting:  1100Counting:  1200Counting:  1300Counting:  1400Counting:  1500Counting:  1600Counting:  1700Counting:  1800     334 files ignored.
+
+github.com/AlDanial/cloc v 1.74  T=7.77 s (200.5 files/s, 20392.7 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+XML                            950           4149           5677          57601
+Kotlin                         455           8016           8157          45076
+Java                            88           2224           2397          11176
+C++                              5            367             39           3478
+C                                9            671            209           2861
+JSON                             9              0              0           1405
+Bourne Shell                     5            174            168           1173
+Groovy                          14            148            143            893
+HTML                             1            112              0            621
+C/C++ Header                     8             75            132            545
+YAML                             2             21             11            174
+Markdown                         4             94              0            154
+Python                           1             17              0            128
+make                             3             18              9             91
+DOS Batch                        1             23              2             59
+Prolog                           2              5              0             33
+CSS                              2              0              0              2
+-------------------------------------------------------------------------------
+SUM:                          1559          16114          16944         125470
+-------------------------------------------------------------------------------
