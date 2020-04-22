@@ -1,0 +1,6 @@
+/home/marioman/Downloads/vlc-android/application/mediadb/build/generated/source/kapt/debug/org/videolan/vlc/database/ExternalSubDao_Impl.java
+/home/marioman/Downloads/vlc-android/application/mediadb/build/generated/source/kapt/debug/org/videolan/vlc/database/MediaDatabase_Impl.java
+/home/marioman/Downloads/vlc-android/application/mediadb/build/generated/source/kapt/debug/org/videolan/vlc/database/BrowserFavDao_Impl.java
+/home/marioman/Downloads/vlc-android/application/mediadb/build/generated/source/kapt/debug/org/videolan/vlc/database/SlaveDao_Impl.java
+/home/marioman/Downloads/vlc-android/application/mediadb/build/generated/source/kapt/debug/org/videolan/vlc/database/CustomDirectoryDao_Impl.java
+/home/marioman/Downloads/vlc-android/application/mediadb/build/generated/source/buildConfig/debug/org/videolan/vlc/mediadb/BuildConfig.java

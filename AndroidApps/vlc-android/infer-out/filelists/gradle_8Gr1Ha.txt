@@ -1,0 +1,1 @@
+/home/marioman/Downloads/vlc-android/application/live-plot-graph/build/generated/source/buildConfig/debug/org/videolan/liveplotgraph/BuildConfig.java

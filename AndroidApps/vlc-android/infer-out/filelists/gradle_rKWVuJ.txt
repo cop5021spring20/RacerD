@@ -1,0 +1,8 @@
+/home/marioman/Downloads/vlc-android/extension-api/build/generated/aidl_source_output_dir/debug/out/org/videolan/vlc/extensions/api/IExtensionService.java
+/home/marioman/Downloads/vlc-android/extension-api/build/generated/aidl_source_output_dir/debug/out/org/videolan/vlc/extensions/api/IExtensionHost.java
+/home/marioman/Downloads/vlc-android/extension-api/build/generated/source/buildConfig/debug/org/videolan/vlc/plugin/api/BuildConfig.java
+/home/marioman/Downloads/vlc-android/extension-api/src/main/java/org/videolan/vlc/extensions/api/VLCExtensionItem.java
+/home/marioman/Downloads/vlc-android/extension-api/src/main/java/org/videolan/vlc/extensions/api/VLCExtensionService.java
+/home/marioman/Downloads/vlc-android/extension-api/src/main/java/org/videolan/vlc/extensions/api/tools/Dialogs.java
+/home/marioman/Downloads/vlc-android/extension-api/src/main/java/org/videolan/vlc/extensions/api/tools/Helpers.java
+/home/marioman/Downloads/vlc-android/extension-api/src/main/java/org/videolan/vlc/extensions/api/WarningActivity.java

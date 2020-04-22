@@ -1,0 +1,25 @@
+[INFO] output of locale.getdefaultlocale(): ('en_US', 'UTF-8')
+[INFO] encoding we chose in the end: UTF-8
+[INFO] Running command /opt/infer-linux64-v0.17.0/lib/infer/infer/bin/../lib/python/infer.py -j 8 --project-root /home/marioman/Downloads/opencamera-code --out /home/marioman/Downloads/opencamera-code/infer-out -- ./gradlew clean :app:assembleDebug
+[INFO] Path to infer script /opt/infer-linux64-v0.17.0/lib/infer/infer/bin/../lib/python/infer.py (/opt/infer-linux64-v0.17.0/lib/infer/infer/lib/python/infer.py)
+[INFO] Platform: Linux-4.15.0-96-generic-x86_64-with-Ubuntu-18.04-bionic
+[INFO] PATH=/usr/loacl/include/:/home/marioman/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+[INFO] SHELL=/bin/bash
+[INFO] PWD=/home/marioman/Downloads/opencamera-code
+[INFO] Running with:
+
+------------------------------------------------------------
+Gradle 5.4.1
+------------------------------------------------------------
+
+Build time:   2019-04-26 08:14:42 UTC
+Revision:     261d171646b36a6a28d5a19a69676cd098a4c19d
+
+Kotlin:       1.3.21
+Groovy:       2.5.4
+Ant:          Apache Ant(TM) version 1.9.13 compiled on July 10 2018
+JVM:          1.8.0_242 (Private Build 25.242-b08)
+OS:           Linux 4.15.0-96-generic amd64
+
+
+[INFO] Capture phase was successful

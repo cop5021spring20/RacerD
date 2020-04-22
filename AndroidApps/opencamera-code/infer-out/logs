@@ -1,0 +1,371 @@
+[2933][environment] CWD = /home/marioman/Downloads/opencamera-code
+[2933][environment] No .inferconfig file found
+[2933][environment] Project root = /home/marioman/Downloads/opencamera-code
+[2933][environment] INFER_ARGS =   @/tmp/args.tmp.3c25ca  ++Contents of '/tmp/args.tmp.3c25ca':
+[2933][environment]                                         --racerd-only
+[2933][environment]                                       
+[2933][environment] command line arguments:   infer --racerd-only -- ./gradlew clean
+[2933][environment]                           :app:assembleDebugActive checkers: RacerD (C/C++/ObjC, Java)
+[2933][environment] Infer log identifier is 
+Infer version v0.17.0
+[2933][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[2933][environment] 
+[2933][   progress] Capturing in gradle mode...
+
+[3105][environment] CWD = /home/marioman/Downloads/opencamera-code
+[3105][environment] No .inferconfig file found
+[3105][environment] Project root = /home/marioman/Downloads/opencamera-code
+[3105][environment] INFER_ARGS =   @/tmp/args.tmp.f81471  ++Contents of '/tmp/args.tmp.f81471':
+[3105][environment]                                         @/tmp/args.tmp.3c25ca capture
+[3105][environment]                                         --continue
+[3105][environment]                                         ++Contents of '/tmp/args.tmp.3c25ca':
+[3105][environment]                                           --racerd-only
+[3105][environment]                                         
+[3105][environment]                                       
+[3105][environment] command line arguments:   /opt/infer-linux64-v0.17.0/lib/infer/infer/lib/python/inferlib/../../../bin/infer
+[3105][environment]                           capture --continue -- javac -source 1.7 -target 1.7
+[3105][environment]                           -d
+[3105][environment]                           /home/marioman/Downloads/opencamera-code/app/build/intermediates/javac/debug/classes
+[3105][environment]                           -encoding UTF-8 -bootclasspath
+[3105][environment]                           /home/marioman/Android/Sdk/platforms/android-28/android.jar:/home/marioman/Android/Sdk/platforms/android-28/optional/android.test.base.jar:/home/marioman/Android/Sdk/platforms/android-28/optional/android.test.runner.jar
+[3105][environment]                           -g -sourcepath  -proc:none -s
+[3105][environment]                           /home/marioman/Downloads/opencamera-code/app/build/generated/ap_generated_sources/debug/out
+[3105][environment]                           -XDuseUnsharedTable=true -classpath
+[3105][environment]                           /home/marioman/.gradle/caches/transforms-2/files-2.1/69ee415b12564ec70670df83c9fdfa6f/support-v4-28.0.0/jars/classes.jar:/home/marioman/.gradle/caches/transforms-2/files-2.1/d1a6c7ee41fbe72753318d9586f1a513/support-media-compat-28.0.0/jars/classes.jar:/home/marioman/.gradle/caches/transforms-2/files-2.1/59df75d251431efe4d450d41cc6b083b/support-fragment-28.0.0/jars/classes.jar:/home/marioman/.gradle/caches/transforms-2/files-2.1/ee7de4c472f1da0a0213606950b8c4e7/support-core-ui-28.0.0/jars/classes.jar:/home/marioman/.gradle/caches/transforms-2/files-2.1/e6827550b79bb297911c95f109ecf5ac/support-core-utils-28.0.0/jars/classes.jar:/home/marioman/.gradle/caches/transforms-2/files-2.1/e8e201b21520ad3812ed914e69a9b405/loader-28.0.0/jars/classes.jar:/home/marioman/.gradle/caches/transforms-2/files-2.1/00866cffd6a67b64ccbc8d2d951560dc/viewpager-28.0.0/jars/classes.jar:/home/marioman/.gradle/caches/transforms-2/files-2.1/5d3c4801a740528a85d2e670b2dd23b7/coordinatorlayout-28.0.0/jars/classes.jar:/home/marioman/.gradle/caches/transforms-2/files-2.1/109e2debe5d47fa4d8f7fe1f15c611f3/drawerlayout-28.0.0/jars/classes.jar:/home/marioman/.gradle/caches/transforms-2/files-2.1/640954c0bd14789761b1de9b02daedae/slidingpanelayout-28.0.0/jars/classes.jar:/home/marioman/.gradle/caches/transforms-2/files-2.1/8c3534d87178de95eb9cb75f77214055/customview-28.0.0/jars/classes.jar:/home/marioman/.gradle/caches/transforms-2/files-2.1/49f9e7bd74012c3341e4a938529d56fe/swiperefreshlayout-28.0.0/jars/classes.jar:/home/marioman/.gradle/caches/transforms-2/files-2.1/699e03d2cbc668da0d189768d4447a8b/asynclayoutinflater-28.0.0/jars/classes.jar:/home/marioman/.gradle/caches/transforms-2/files-2.1/dd1cf78f22bdd94f550130b281f27c97/support-compat-28.0.0/jars/classes.jar:/home/marioman/.gradle/caches/transforms-2/files-2.1/8bb2478d12c0baf5b421024800cd7dbb/versionedparcelable-28.0.0/jars/classes.jar:/home/marioman/.gradle/caches/modules-2/files-2.1/com.android.support/collections/28.0.0/c1bcdade4d3cc2836130424a3f3e4182c666a745/collections-28.0.0.jar:/home/marioman/.gradle/caches/transforms-2/files-2.1/2a54fb7d4a09e43fd13a659c38a9bf2a/runtime-1.1.1/jars/classes.jar:/home/marioman/.gradle/caches/transforms-2/files-2.1/d86ffcf39ba8aec22a7ebfd4c1172e3f/documentfile-28.0.0/jars/classes.jar:/home/marioman/.gradle/caches/transforms-2/files-2.1/7f3ed6ce49569e0dbf9accf24b63a15b/localbroadcastmanager-28.0.0/jars/classes.jar:/home/marioman/.gradle/caches/transforms-2/files-2.1/707c6356496c3791d321c055fe777af8/print-28.0.0/jars/classes.jar:/home/marioman/.gradle/caches/transforms-2/files-2.1/525bf97e52a2b96ba94f7509a71e8a56/interpolator-28.0.0/jars/classes.jar:/home/marioman/.gradle/caches/transforms-2/files-2.1/406adf1b047a0fb17968819a70f96dd9/cursoradapter-28.0.0/jars/classes.jar:/home/marioman/.gradle/caches/transforms-2/files-2.1/426821499609b124edd91485548e30d0/viewmodel-1.1.1/jars/classes.jar:/home/marioman/.gradle/caches/transforms-2/files-2.1/b5f1a18436322a4d6243b4d563cfece4/livedata-1.1.1/jars/classes.jar:/home/marioman/.gradle/caches/transforms-2/files-2.1/6104c576404b17797d5f42ae60105d1d/livedata-core-1.1.1/jars/classes.jar:/home/marioman/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.1.1/207a6efae6a3555e326de41f76bdadd9a239cbce/common-1.1.1.jar:/home/marioman/.gradle/caches/transforms-2/files-2.1/7c5e711cb7599bc18a19cc1df98bc8d6/runtime-1.1.1/jars/classes.jar:/home/marioman/.gradle/caches/modules-2/files-2.1/android.arch.core/common/1.1.1/e55b70d1f5620db124b3e85a7f4bdc7bd48d9f95/common-1.1.1.jar:/home/marioman/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/28.0.0/ed73f5337a002d1fd24339d5fb08c2c9d9ca60d8/support-annotations-28.0.0.jar
+[3105][environment]                           @/home/marioman/Downloads/opencamera-code/infer-out/filelists/gradle_kh83pk.txt
+[3105][environment]   ++Contents of '/home/marioman/Downloads/opencamera-code/infer-out/filelists/gradle_kh83pk.txt':
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_create_mtb.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/align_mtbBitCode.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_histogram_compute.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/pyramid_blendingBitCode.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_calculate_sharpness.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/histogram_computeBitCode.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/process_avgBitCode.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_feature_detector.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_histogram_adjust.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_pyramid_blending.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/feature_detectorBitCode.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_avg_brighten.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/avg_brightenBitCode.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/create_mtbBitCode.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/process_hdrBitCode.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_align_mtb.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/calculate_sharpnessBitCode.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/histogram_adjustBitCode.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/source/buildConfig/debug/net/sourceforge/opencamera/BuildConfig.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/net/sourceforge/opencamera/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/compat/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/loader/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/slidingpanelayout/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/asynclayoutinflater/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/coreui/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/documentfile/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/coreutils/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/drawerlayout/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/customview/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/coordinatorlayout/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/v4/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/fragment/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/mediacompat/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/cursoradapter/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/interpolator/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/localbroadcastmanager/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/v7/viewpager/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/swiperefreshlayout/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/print/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/android/arch/core/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/android/arch/lifecycle/viewmodel/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/android/arch/lifecycle/livedata/core/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/android/arch/lifecycle/livedata/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/android/arch/lifecycle/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/versionedparcelable/R.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/AudioListener.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/MagneticSensor.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/MyWidgetProviderTakePhoto.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/HDRProcessorException.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/PanoramaProcessor.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/SettingsManager.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/SoundPoolManager.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/PanoramaProcessorException.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/MyDebug.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/PermissionHandler.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/TakePhoto.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/MyWidgetProvider.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/PreferenceKeys.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/TextFormatter.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/SaveLocationHistory.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/MyPreferenceFragment.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/remotecontrol/KrakenGattAttributes.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/remotecontrol/BluetoothRemoteControl.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/remotecontrol/BluetoothLeService.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/remotecontrol/DeviceScanner.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/SpeechControl.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/OpenCameraApplication.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/MyTileServiceFrontCamera.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/StorageUtils.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/HDRProcessor.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/ImageSaver.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/cameracontroller/RawImage.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraControllerException.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraControllerManager1.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController1.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraControllerManager2.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraControllerManager.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/ToastBoxer.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/MyTileService.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/LocationSupplier.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/GyroSensor.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/MainActivity.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/MyAudioTriggerListenerCallback.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/preview/VideoQualityHandler.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/preview/camerasurface/CameraSurface.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/preview/camerasurface/MyTextureView.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/preview/camerasurface/MySurfaceView.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/preview/BasicApplicationInterface.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/preview/VideoProfile.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/preview/Preview.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/preview/ApplicationInterface.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/preview/CanvasView.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/ui/FolderChooserDialog.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/ui/ManualSeekbars.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/ui/DrawPreview.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/ui/MainUI.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/ui/PopupView.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/MyApplicationInterface.java
+[3105][environment]     /home/marioman/Downloads/opencamera-code/app/src/main/java/net/sourceforge/opencamera/MyTileServiceVideo.java
+[3105][environment]   
+[3105][environment] Active checkers: RacerD (C/C++/ObjC, Java)
+[3105][      debug] Current working directory: '/home/marioman/Downloads/opencamera-code'
+[3105][      debug] Trying to execute: javac '-J-Duser.language=en' '@/home/marioman/Downloads/opencamera-code/infer-out/filelists/gradle_kh83pk.txt' '@/tmp/args_.tmp.1b5941' 2>'/tmp/javac.tmp.931430.out'
+[3105][      debug] *** Success. Logs:
+[3105][      debug] Translating 78 source files (535 classes)
+[3105][      debug] Tenv.store: global tenv has size 8635200 bytes.
+[3105][      debug] Tenv.store: canonicalized tenv has size 3965616 bytes.
+[3105][      debug] done capturing all files
+[3105][environment] Infer log identifier is 
+[2933][   progress] Found 103 source files to analyze in /home/marioman/Downloads/opencamera-code/infer-out
+[2933][environment] Parallel jobs: 8
+[3130][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/feature_detectorBitCode.java starting
+[3133][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/arch/lifecycle/livedata/R.java starting
+[3134][   progress] app/src/main/java/net/sourceforge/opencamera/AudioListener.java starting
+[3135][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/arch/core/R.java starting
+[3137][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/process_hdrBitCode.java starting
+[3132][   progress] app/src/main/java/net/sourceforge/opencamera/ui/PopupView.java starting
+[3131][   progress] app/src/main/java/net/sourceforge/opencamera/MyWidgetProvider.java starting
+[3136][   progress] app/src/main/java/net/sourceforge/opencamera/SaveLocationHistory.java starting
+[3133][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/arch/lifecycle/livedata/R.java DONE
+[3135][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/arch/core/R.java DONE
+[3135][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/net/sourceforge/opencamera/R.java starting
+[3133][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/arch/lifecycle/viewmodel/R.java starting
+[3133][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/arch/lifecycle/viewmodel/R.java DONE
+[3133][   progress] app/src/main/java/net/sourceforge/opencamera/remotecontrol/BluetoothLeService.java starting
+[3131][   progress] app/src/main/java/net/sourceforge/opencamera/MyWidgetProvider.java DONE
+[3131][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/cursoradapter/R.java starting
+[3131][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/cursoradapter/R.java DONE
+[3135][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/net/sourceforge/opencamera/R.java DONE
+[3134][   progress] app/src/main/java/net/sourceforge/opencamera/AudioListener.java DONE
+[3131][   progress] app/src/main/java/net/sourceforge/opencamera/GyroSensor.java starting
+[3134][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/versionedparcelable/R.java starting
+[3135][   progress] app/src/main/java/net/sourceforge/opencamera/ToastBoxer.java starting
+[3135][   progress] app/src/main/java/net/sourceforge/opencamera/ToastBoxer.java DONE
+[3134][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/versionedparcelable/R.java DONE
+[3135][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/drawerlayout/R.java starting
+[3134][   progress] app/src/main/java/net/sourceforge/opencamera/MyWidgetProviderTakePhoto.java starting
+[3136][   progress] app/src/main/java/net/sourceforge/opencamera/SaveLocationHistory.java DONE
+[3136][   progress] app/src/main/java/net/sourceforge/opencamera/ui/ManualSeekbars.java starting
+[3135][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/drawerlayout/R.java DONE
+[3135][   progress] app/src/main/java/net/sourceforge/opencamera/PanoramaProcessorException.java starting
+[3135][   progress] app/src/main/java/net/sourceforge/opencamera/PanoramaProcessorException.java DONE
+[3135][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java starting
+[3134][   progress] app/src/main/java/net/sourceforge/opencamera/MyWidgetProviderTakePhoto.java DONE
+[3134][   progress] app/src/main/java/net/sourceforge/opencamera/MyPreferenceFragment.java starting
+[3136][   progress] app/src/main/java/net/sourceforge/opencamera/ui/ManualSeekbars.java DONE
+[3136][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/coreutils/R.java starting
+[3136][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/coreutils/R.java DONE
+[3133][   progress] app/src/main/java/net/sourceforge/opencamera/remotecontrol/BluetoothLeService.java DONE
+[3136][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/customview/R.java starting
+[3133][   progress] app/src/main/java/net/sourceforge/opencamera/PreferenceKeys.java starting
+[3133][   progress] app/src/main/java/net/sourceforge/opencamera/PreferenceKeys.java DONE
+[3136][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/customview/R.java DONE
+[3133][   progress] app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraControllerException.java starting
+[3133][   progress] app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraControllerException.java DONE
+[3133][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_create_mtb.java starting
+[3136][   progress] app/src/main/java/net/sourceforge/opencamera/ui/MainUI.java starting
+[3131][   progress] app/src/main/java/net/sourceforge/opencamera/GyroSensor.java DONE
+[3131][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/asynclayoutinflater/R.java starting
+[3131][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/asynclayoutinflater/R.java DONE
+[3131][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_avg_brighten.java starting
+[3133][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_create_mtb.java DONE
+[3130][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/feature_detectorBitCode.java DONE
+[3133][   progress] app/src/main/java/net/sourceforge/opencamera/TakePhoto.java starting
+[3130][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/coordinatorlayout/R.java starting
+[3130][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/coordinatorlayout/R.java DONE
+[3130][   progress] app/src/main/java/net/sourceforge/opencamera/SpeechControl.java starting
+[3133][   progress] app/src/main/java/net/sourceforge/opencamera/TakePhoto.java DONE
+[3133][   progress] app/build/generated/source/buildConfig/debug/net/sourceforge/opencamera/BuildConfig.java starting
+[3133][   progress] app/build/generated/source/buildConfig/debug/net/sourceforge/opencamera/BuildConfig.java DONE
+[3133][   progress] app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraControllerManager.java starting
+[3133][   progress] app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraControllerManager.java DONE
+[3133][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/arch/lifecycle/R.java starting
+[3133][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/arch/lifecycle/R.java DONE
+[3133][   progress] app/src/main/java/net/sourceforge/opencamera/preview/Preview.java starting
+[3130][   progress] app/src/main/java/net/sourceforge/opencamera/SpeechControl.java DONE
+[3130][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/v7/viewpager/R.java starting
+[3130][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/v7/viewpager/R.java DONE
+[3130][   progress] app/src/main/java/net/sourceforge/opencamera/MyTileService.java starting
+[3130][   progress] app/src/main/java/net/sourceforge/opencamera/MyTileService.java DONE
+[3130][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/pyramid_blendingBitCode.java starting
+[3131][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_avg_brighten.java DONE
+[3131][   progress] app/src/main/java/net/sourceforge/opencamera/StorageUtils.java starting
+[3131][   progress] app/src/main/java/net/sourceforge/opencamera/StorageUtils.java DONE
+[3131][   progress] app/src/main/java/net/sourceforge/opencamera/SettingsManager.java starting
+[3131][   progress] app/src/main/java/net/sourceforge/opencamera/SettingsManager.java DONE
+[3131][   progress] app/src/main/java/net/sourceforge/opencamera/ui/FolderChooserDialog.java starting
+[3131][   progress] app/src/main/java/net/sourceforge/opencamera/ui/FolderChooserDialog.java DONE
+[3131][   progress] app/src/main/java/net/sourceforge/opencamera/remotecontrol/BluetoothRemoteControl.java starting
+[3135][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java DONE
+[3135][   progress] app/src/main/java/net/sourceforge/opencamera/ImageSaver.java starting
+[3137][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/process_hdrBitCode.java DONE
+[3137][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java starting
+[3134][   progress] app/src/main/java/net/sourceforge/opencamera/MyPreferenceFragment.java DONE
+[3134][   progress] app/src/main/java/net/sourceforge/opencamera/preview/camerasurface/CameraSurface.java starting
+[3134][   progress] app/src/main/java/net/sourceforge/opencamera/preview/camerasurface/CameraSurface.java DONE
+[3134][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/interpolator/R.java starting
+[3134][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/interpolator/R.java DONE
+[3134][   progress] app/src/main/java/net/sourceforge/opencamera/MyDebug.java starting
+[3134][   progress] app/src/main/java/net/sourceforge/opencamera/MyDebug.java DONE
+[3134][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/swiperefreshlayout/R.java starting
+[3134][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/swiperefreshlayout/R.java DONE
+[3134][   progress] app/src/main/java/net/sourceforge/opencamera/MyAudioTriggerListenerCallback.java starting
+[3134][   progress] app/src/main/java/net/sourceforge/opencamera/MyAudioTriggerListenerCallback.java DONE
+[3134][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/calculate_sharpnessBitCode.java starting
+[3132][   progress] app/src/main/java/net/sourceforge/opencamera/ui/PopupView.java DONE
+[3132][   progress] app/src/main/java/net/sourceforge/opencamera/MainActivity.java starting
+[3130][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/pyramid_blendingBitCode.java DONE
+[3130][   progress] app/src/main/java/net/sourceforge/opencamera/TextFormatter.java starting
+[3130][   progress] app/src/main/java/net/sourceforge/opencamera/TextFormatter.java DONE
+[3130][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/create_mtbBitCode.java starting
+[3130][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/create_mtbBitCode.java DONE
+[3130][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/mediacompat/R.java starting
+[3130][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/mediacompat/R.java DONE
+[3130][   progress] app/src/main/java/net/sourceforge/opencamera/preview/VideoProfile.java starting
+[3130][   progress] app/src/main/java/net/sourceforge/opencamera/preview/VideoProfile.java DONE
+[3130][   progress] app/src/main/java/net/sourceforge/opencamera/SoundPoolManager.java starting
+[3130][   progress] app/src/main/java/net/sourceforge/opencamera/SoundPoolManager.java DONE
+[3130][   progress] app/src/main/java/net/sourceforge/opencamera/OpenCameraApplication.java starting
+[3130][   progress] app/src/main/java/net/sourceforge/opencamera/OpenCameraApplication.java DONE
+[3130][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/arch/lifecycle/livedata/core/R.java starting
+[3130][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/arch/lifecycle/livedata/core/R.java DONE
+[3130][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/loader/R.java starting
+[3130][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/loader/R.java DONE
+[3130][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/avg_brightenBitCode.java starting
+[3137][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java DONE
+[3137][   progress] app/src/main/java/net/sourceforge/opencamera/MyTileServiceFrontCamera.java starting
+[3137][   progress] app/src/main/java/net/sourceforge/opencamera/MyTileServiceFrontCamera.java DONE
+[3137][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/histogram_computeBitCode.java starting
+[3134][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/calculate_sharpnessBitCode.java DONE
+[3134][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_pyramid_blending.java starting
+[3134][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_pyramid_blending.java DONE
+[3134][   progress] app/src/main/java/net/sourceforge/opencamera/PermissionHandler.java starting
+[3134][   progress] app/src/main/java/net/sourceforge/opencamera/PermissionHandler.java DONE
+[3134][   progress] app/src/main/java/net/sourceforge/opencamera/remotecontrol/DeviceScanner.java starting
+[3130][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/avg_brightenBitCode.java DONE
+[3130][   progress] app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController.java starting
+[3130][   progress] app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController.java DONE
+[3130][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_histogram_compute.java starting
+[3130][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_histogram_compute.java DONE
+[3130][   progress] app/src/main/java/net/sourceforge/opencamera/MyTileServiceVideo.java starting
+[3137][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/histogram_computeBitCode.java DONE
+[3137][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_calculate_sharpness.java starting
+[3130][   progress] app/src/main/java/net/sourceforge/opencamera/MyTileServiceVideo.java DONE
+[3130][   progress] app/src/main/java/net/sourceforge/opencamera/preview/VideoQualityHandler.java starting
+[3130][   progress] app/src/main/java/net/sourceforge/opencamera/preview/VideoQualityHandler.java DONE
+[3130][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_histogram_adjust.java starting
+[3130][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_histogram_adjust.java DONE
+[3137][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_calculate_sharpness.java DONE
+[3137][   progress] app/src/main/java/net/sourceforge/opencamera/cameracontroller/RawImage.java starting
+[3130][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/v4/R.java starting
+[3137][   progress] app/src/main/java/net/sourceforge/opencamera/cameracontroller/RawImage.java DONE
+[3137][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_align_mtb.java starting
+[3134][   progress] app/src/main/java/net/sourceforge/opencamera/remotecontrol/DeviceScanner.java DONE
+[3134][   progress] app/src/main/java/net/sourceforge/opencamera/PanoramaProcessor.java starting
+[3130][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/v4/R.java DONE
+[3130][   progress] app/src/main/java/net/sourceforge/opencamera/preview/CanvasView.java starting
+[3130][   progress] app/src/main/java/net/sourceforge/opencamera/preview/CanvasView.java DONE
+[3130][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/coreui/R.java starting
+[3137][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_align_mtb.java DONE
+[3137][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/print/R.java starting
+[3130][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/coreui/R.java DONE
+[3130][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/histogram_adjustBitCode.java starting
+[3137][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/print/R.java DONE
+[3137][   progress] app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java starting
+[3130][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/histogram_adjustBitCode.java DONE
+[3130][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/slidingpanelayout/R.java starting
+[3130][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/slidingpanelayout/R.java DONE
+[3130][   progress] app/src/main/java/net/sourceforge/opencamera/remotecontrol/KrakenGattAttributes.java starting
+[3130][   progress] app/src/main/java/net/sourceforge/opencamera/remotecontrol/KrakenGattAttributes.java DONE
+[3130][   progress] app/src/main/java/net/sourceforge/opencamera/ui/DrawPreview.java starting
+[3134][   progress] app/src/main/java/net/sourceforge/opencamera/PanoramaProcessor.java DONE
+[3134][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/compat/R.java starting
+[3134][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/compat/R.java DONE
+[3134][   progress] app/src/main/java/net/sourceforge/opencamera/MagneticSensor.java starting
+[3134][   progress] app/src/main/java/net/sourceforge/opencamera/MagneticSensor.java DONE
+[3134][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/fragment/R.java starting
+[3134][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/fragment/R.java DONE
+[3134][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_feature_detector.java starting
+[3134][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_feature_detector.java DONE
+[3134][   progress] app/src/main/java/net/sourceforge/opencamera/preview/BasicApplicationInterface.java starting
+[3135][   progress] app/src/main/java/net/sourceforge/opencamera/ImageSaver.java DONE
+[3134][   progress] app/src/main/java/net/sourceforge/opencamera/preview/BasicApplicationInterface.java DONE
+[3134][   progress] app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraControllerManager2.java starting
+[3135][   progress] app/src/main/java/net/sourceforge/opencamera/MyApplicationInterface.java starting
+[3134][   progress] app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraControllerManager2.java DONE
+[3134][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/localbroadcastmanager/R.java starting
+[3134][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/localbroadcastmanager/R.java DONE
+[3134][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/process_avgBitCode.java starting
+[3131][   progress] app/src/main/java/net/sourceforge/opencamera/remotecontrol/BluetoothRemoteControl.java DONE
+[3131][   progress] app/src/main/java/net/sourceforge/opencamera/preview/camerasurface/MyTextureView.java starting
+[3131][   progress] app/src/main/java/net/sourceforge/opencamera/preview/camerasurface/MyTextureView.java DONE
+[3131][   progress] app/src/main/java/net/sourceforge/opencamera/HDRProcessor.java starting
+[3133][   progress] app/src/main/java/net/sourceforge/opencamera/preview/Preview.java DONE
+[3133][   progress] app/src/main/java/net/sourceforge/opencamera/HDRProcessorException.java starting
+[3133][   progress] app/src/main/java/net/sourceforge/opencamera/HDRProcessorException.java DONE
+[3133][   progress] app/src/main/java/net/sourceforge/opencamera/preview/camerasurface/MySurfaceView.java starting
+[3133][   progress] app/src/main/java/net/sourceforge/opencamera/preview/camerasurface/MySurfaceView.java DONE
+[3133][   progress] app/src/main/java/net/sourceforge/opencamera/preview/ApplicationInterface.java starting
+[3131][   progress] app/src/main/java/net/sourceforge/opencamera/HDRProcessor.java DONE
+[3131][   progress] app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraControllerManager1.java starting
+[3131][   progress] app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraControllerManager1.java DONE
+[3133][   progress] app/src/main/java/net/sourceforge/opencamera/preview/ApplicationInterface.java DONE
+[3133][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/documentfile/R.java starting
+[3131][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/align_mtbBitCode.java starting
+[3133][   progress] app/build/generated/not_namespaced_r_class_sources/debug/r/android/support/documentfile/R.java DONE
+[3133][   progress] app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController1.java starting
+[3136][   progress] app/src/main/java/net/sourceforge/opencamera/ui/MainUI.java DONE
+[3136][   progress] app/src/main/java/net/sourceforge/opencamera/LocationSupplier.java starting
+[3136][   progress] app/src/main/java/net/sourceforge/opencamera/LocationSupplier.java DONE
+[3130][   progress] app/src/main/java/net/sourceforge/opencamera/ui/DrawPreview.java DONE
+[3134][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/process_avgBitCode.java DONE
+[3131][   progress] app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/align_mtbBitCode.java DONE
+[3133][   progress] app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController1.java DONE
+[3135][   progress] app/src/main/java/net/sourceforge/opencamera/MyApplicationInterface.java DONE
+[3132][   progress] app/src/main/java/net/sourceforge/opencamera/MainActivity.java DONE
+[3137][   progress] app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java DONE
+[2933][   progress] 
+[2933][   progress] Analysis finished in 44.205ss
+[2933][      debug] collected stats:
+[2933][      debug] Backend stats:
+[2933][      debug]   summary_file_try_load= 145791
+[2933][      debug]   summary_read_from_disk= 2029
+[2933][      debug]   summary_cache_hits= 29121 (28%)
+[2933][      debug]   summary_cache_misses= 73910
+[2933][      debug]   summary_has_model_queries= 0
+[2933][      debug]   ondemand_procs_analyzed= 3546
+[2933][      debug]   ondemand_local_cache_hits= 17717 (67%)
+[2933][      debug]   ondemand_local_cache_misses= 8624
+[2933][      debug]   
+[2933][      debug] 

@@ -1,0 +1,2104 @@
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./audio/AudioOutput.cpp:19:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./audio/../os/android/AudioOutputAndroid.h:20:15: warning: 'Start' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Start();
+                     ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./audio/../MediaStreamItf.h:25:18: note: overridden virtual function is here
+    virtual void Start() = 0;
+                 ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./audio/AudioOutput.cpp:19:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./audio/../os/android/AudioOutputAndroid.h:21:15: warning: 'Stop' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Stop();
+                     ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./audio/../MediaStreamItf.h:26:18: note: overridden virtual function is here
+    virtual void Stop() = 0;
+                 ^
+2 warnings generated.
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/android/AudioOutputOpenSLES.cpp:12:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/android/../../VoIPController.h:37:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./JitterBuffer.cpp:7:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/VoIPController.h:37:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./OpusDecoder.cpp:19:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/VoIPController.h:37:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+17 warnings generated.
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/android/AudioOutputAndroid.cpp:7:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/android/AudioOutputAndroid.h:20:15: warning: 'Start' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Start();
+                     ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/android/../../audio/../MediaStreamItf.h:25:18: note: overridden virtual function is here
+    virtual void Start() = 0;
+                 ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/android/AudioOutputAndroid.cpp:7:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/android/AudioOutputAndroid.h:21:15: warning: 'Stop' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Stop();
+                     ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/android/../../audio/../MediaStreamItf.h:26:18: note: overridden virtual function is here
+    virtual void Stop() = 0;
+                 ^
+2 warnings generated.
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./CongestionControl.cpp:8:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/VoIPController.h:37:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+17 warnings generated.
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./NetworkSocket.cpp:13:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/NetworkSocketPosix.h:10:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/os/posix/../../NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+17 warnings generated.
+17 warnings generated.
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./MessageThread.cpp:16:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/VoIPController.h:37:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./audio/AudioIO.cpp:19:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./audio/../os/android/AudioOutputAndroid.h:20:15: warning: 'Start' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Start();
+                     ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./audio/../MediaStreamItf.h:25:18: note: overridden virtual function is here
+    virtual void Start() = 0;
+                 ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./audio/AudioIO.cpp:19:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./audio/../os/android/AudioOutputAndroid.h:21:15: warning: 'Stop' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Stop();
+                     ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./audio/../MediaStreamItf.h:26:18: note: overridden virtual function is here
+    virtual void Stop() = 0;
+                 ^
+2 warnings generated.
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/android/VideoRendererAndroid.cpp:87:19: warning: moving a temporary object prevents copy elision [-Wpessimizing-move]
+                Request request=std::move(queue.GetBlocking());
+                                ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/android/VideoRendererAndroid.cpp:87:19: note: remove std::move call here
+                Request request=std::move(queue.GetBlocking());
+                                ^~~~~~~~~~                   ~
+17 warnings generated.
+17 warnings generated.
+1 warning generated.
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/./rlottie/src/vector/vraster.cpp:22:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/tgnet/FileLog.h:12:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/tgnet/Defines.h:135:16: warning: 'ConnectiosManagerDelegate' has virtual functions but non-virtual destructor [-Wnon-virtual-dtor]
+typedef struct ConnectiosManagerDelegate {
+               ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/tgnet/Defines.h:151:16: warning: 'HandshakeDelegate' has virtual functions but non-virtual destructor [-Wnon-virtual-dtor]
+typedef struct HandshakeDelegate {
+               ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./logging.cpp:12:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/VoIPController.h:24:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/video/VideoSource.h:12:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/Buffers.h:19:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./Buffers.cpp:7:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/Buffers.h:19:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+2 warnings generated.
+1 warning generated.
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./BlockingQueue.cpp:7:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/BlockingQueue.h:12:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./TgVoip.cpp:3:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/VoIPController.h:24:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/video/VideoSource.h:12:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/Buffers.h:19:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioInput.cpp:7:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/../../audio/AudioInput.h:13:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./audio/../MediaStreamItf.h:14:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/../../threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioInputOpenSLES.cpp:11:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioInputOpenSLES.h:13:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/AudioInput.h:13:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/../MediaStreamItf.h:14:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./MediaStreamItf.cpp:8:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/MediaStreamItf.h:14:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./VoIPGroupController.cpp:7:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/VoIPController.h:24:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/video/VideoSource.h:12:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/Buffers.h:19:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioOutput.cpp:19:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/AudioOutputAndroid.h:20:15: warning: 'Start' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Start();
+                     ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./audio/../MediaStreamItf.h:24:15: note: overridden virtual function is here
+        virtual void Start()=0;
+                     ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioOutput.cpp:19:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/AudioOutputAndroid.h:21:15: warning: 'Stop' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Stop();
+                     ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./audio/../MediaStreamItf.h:25:15: note: overridden virtual function is here
+        virtual void Stop()=0;
+                     ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./VoIPController.cpp:2120:81: warning: format specifies type 'unsigned int' but the argument has type 'std::__ndk1::vector<unsigned int, std::__ndk1::allocator<unsigned int> >::size_type' (aka 'unsigned long') [-Wformat]
+                                                LOGE("!!!!!!!!!!!!!!11 VIDEO FRAME LOSS DETECTED [1] %u of %u fragments", sentVideoFrames[0].unacknowledgedPackets.size(), sentVideoFrames[0].fragmentCount);
+                                                                                                     ~~                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                                                                     %lu
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/logging.h:32:74: note: expanded from macro 'LOGE'
+#define LOGE(...) {__android_log_print(ANDROID_LOG_ERROR, TAG, _LOG_WRAP(__VA_ARGS__)); tgvoip_log_file_printf('E', __VA_ARGS__);}
+                                                                         ^~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/logging.h:26:24: note: expanded from macro '_LOG_WRAP'
+#define _LOG_WRAP(...) __VA_ARGS__
+                       ^~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./VoIPController.cpp:2129:80: warning: format specifies type 'unsigned int' but the argument has type 'std::__ndk1::vector<unsigned int, std::__ndk1::allocator<unsigned int> >::size_type' (aka 'unsigned long') [-Wformat]
+                                        LOGE("!!!!!!!!!!!!!!11 VIDEO FRAME LOSS DETECTED [2] %u of %u fragments", f->unacknowledgedPackets.size(), f->fragmentCount);
+                                                                                             ~~                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                                                             %lu
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/logging.h:32:74: note: expanded from macro 'LOGE'
+#define LOGE(...) {__android_log_print(ANDROID_LOG_ERROR, TAG, _LOG_WRAP(__VA_ARGS__)); tgvoip_log_file_printf('E', __VA_ARGS__);}
+                                                                         ^~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/logging.h:26:24: note: expanded from macro '_LOG_WRAP'
+#define _LOG_WRAP(...) __VA_ARGS__
+                       ^~~~~~~~~~~
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioOutput.cpp:7:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/../../audio/AudioOutput.h:14:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./audio/../MediaStreamItf.h:14:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+3 warnings generated.
+1 warning generated.
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./OpusEncoder.cpp:7:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/OpusEncoder.h:11:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/MediaStreamItf.h:14:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputOpenSLES.cpp:10:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputOpenSLES.h:13:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/audio/AudioOutput.h:14:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/MediaStreamItf.h:14:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./JitterBuffer.cpp:7:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/VoIPController.h:24:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/video/VideoSource.h:12:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/Buffers.h:19:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+1 warning generated.
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./OpusDecoder.cpp:7:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/OpusDecoder.h:11:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/audio/../MediaStreamItf.h:14:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputAndroid.cpp:7:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputAndroid.h:20:15: warning: 'Start' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Start();
+                     ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/../MediaStreamItf.h:24:15: note: overridden virtual function is here
+        virtual void Start()=0;
+                     ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputAndroid.cpp:7:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputAndroid.h:21:15: warning: 'Stop' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Stop();
+                     ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/../MediaStreamItf.h:25:15: note: overridden virtual function is here
+        virtual void Stop()=0;
+                     ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputAndroid.cpp:7:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioOutputAndroid.h:11:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/AudioOutput.h:14:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/../MediaStreamItf.h:14:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+3 warnings generated.
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioInputAndroid.cpp:7:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/AudioInputAndroid.h:11:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/AudioInput.h:13:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../audio/../MediaStreamItf.h:14:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./CongestionControl.cpp:7:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/CongestionControl.h:12:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./EchoCanceller.cpp:12:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/EchoCanceller.h:10:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./VoIPServerConfig.cpp:7:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/VoIPServerConfig.h:13:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./PacketReassembler.cpp:5:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/PacketReassembler.h:12:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/Buffers.h:19:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./VoIPController.cpp:14:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/VoIPController.h:24:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/video/VideoSource.h:12:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/os/android/../../Buffers.h:19:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/os/android/../../threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./NetworkSocket.cpp:14:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/os/posix/NetworkSocketPosix.h:11:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/Buffers.h:19:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioIO.cpp:19:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/AudioOutputAndroid.h:20:15: warning: 'Start' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Start();
+                     ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./audio/../MediaStreamItf.h:24:15: note: overridden virtual function is here
+        virtual void Start()=0;
+                     ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioIO.cpp:19:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/AudioOutputAndroid.h:21:15: warning: 'Stop' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Stop();
+                     ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./audio/../MediaStreamItf.h:25:15: note: overridden virtual function is here
+        virtual void Stop()=0;
+                     ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/NetworkSocketPosix.cpp:7:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/posix/NetworkSocketPosix.h:11:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/Buffers.h:19:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./MessageThread.cpp:15:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/MessageThread.h:8:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioIO.cpp:8:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./audio/AudioIO.h:11:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/../../audio/AudioInput.h:13:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./audio/../MediaStreamItf.h:14:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./audio/../os/android/../../threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+3 warnings generated.
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./video/VideoRenderer.cpp:5:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./video/../os/android/../../video/VideoRenderer.h:9:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./video/../Buffers.h:19:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+1 warning generated.
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./video/VideoSource.cpp:5:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./video/../os/android/../../video/VideoSource.h:12:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./video/../os/android/../../Buffers.h:19:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+1 warning generated.
+1 warning generated.
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./video/ScreamCongestionController.cpp:23:29: warning: unused variable 'BETA_ECN' [-Wunused-const-variable]
+        /*static*/ constexpr float BETA_ECN=0.9f;
+                                   ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./video/ScreamCongestionController.cpp:7:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/video/ScreamCongestionController.h:8:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/Buffers.h:19:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/VideoRendererAndroid.cpp:87:19: warning: moving a temporary object prevents copy elision [-Wpessimizing-move]
+                Request request=std::move(queue.GetBlocking());
+                                ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/VideoRendererAndroid.cpp:87:19: note: remove std::move call here
+                Request request=std::move(queue.GetBlocking());
+                                ^~~~~~~~~~                   ~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./client/android/org_telegram_messenger_voip_TgVoip.cpp:156:88: warning: adding 'jint' (aka 'int') to a string does not append to the string [-Wstring-plus-int]
+            throwNewJavaIllegalArgumentException(env, "Unknown data saving constant: " + dataSaving);
+                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./client/android/org_telegram_messenger_voip_TgVoip.cpp:156:88: note: use array indexing to silence this warning
+            throwNewJavaIllegalArgumentException(env, "Unknown data saving constant: " + dataSaving);
+                                                                                       ^
+                                                      &                                [           ]
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/VideoRendererAndroid.cpp:5:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/VideoRendererAndroid.h:8:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../video/VideoRenderer.h:9:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../Buffers.h:19:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+2 warnings generated.
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/VideoSourceAndroid.cpp:5:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/VideoSourceAndroid.h:8:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../video/VideoSource.h:12:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./os/android/../../Buffers.h:19:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./client/android/tg_voip_jni.cpp:17:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./client/android/../../os/android/AudioOutputAndroid.h:20:15: warning: 'Start' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Start();
+                     ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/MediaStreamItf.h:24:15: note: overridden virtual function is here
+        virtual void Start()=0;
+                     ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./client/android/tg_voip_jni.cpp:17:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./client/android/../../os/android/AudioOutputAndroid.h:21:15: warning: 'Stop' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Stop();
+                     ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/MediaStreamItf.h:25:15: note: overridden virtual function is here
+        virtual void Stop()=0;
+                     ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./client/android/tg_voip_jni.cpp:24:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./client/android/../../../c_utils.h:9:9: warning: 'LOGI' macro redefined [-Wmacro-redefined]
+#define LOGI(...) __android_log_print(ANDROID_LOG_INFO, LOG_TAG, __VA_ARGS__)
+        ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./client/android/../../logging.h:30:9: note: previous definition is here
+#define LOGI(...) {__android_log_print(ANDROID_LOG_INFO, TAG, _LOG_WRAP(__VA_ARGS__)); tgvoip_log_file_printf('I', __VA_ARGS__);}
+        ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./client/android/tg_voip_jni.cpp:24:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./client/android/../../../c_utils.h:10:9: warning: 'LOGD' macro redefined [-Wmacro-redefined]
+#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__)
+        ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./client/android/../../logging.h:29:9: note: previous definition is here
+#define LOGD(...) {__android_log_print(ANDROID_LOG_DEBUG, TAG, _LOG_WRAP(__VA_ARGS__)); tgvoip_log_file_printf('D', __VA_ARGS__);}
+        ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./client/android/tg_voip_jni.cpp:24:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./client/android/../../../c_utils.h:11:9: warning: 'LOGE' macro redefined [-Wmacro-redefined]
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, LOG_TAG, __VA_ARGS__)
+        ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./client/android/../../logging.h:32:9: note: previous definition is here
+#define LOGE(...) {__android_log_print(ANDROID_LOG_ERROR, TAG, _LOG_WRAP(__VA_ARGS__)); tgvoip_log_file_printf('E', __VA_ARGS__);}
+        ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./client/android/tg_voip_jni.cpp:24:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./client/android/../../../c_utils.h:12:9: warning: 'LOGV' macro redefined [-Wmacro-redefined]
+#define LOGV(...) __android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG, __VA_ARGS__)
+        ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./client/android/../../logging.h:28:9: note: previous definition is here
+#define LOGV(...) {__android_log_print(ANDROID_LOG_VERBOSE, TAG, _LOG_WRAP(__VA_ARGS__)); tgvoip_log_file_printf('V', __VA_ARGS__);}
+        ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./client/android/tg_voip_jni.cpp:521:10: warning: unused variable 'bufsize' [-Wunused-variable]
+                size_t bufsize=(size_t)env->GetDirectBufferCapacity(buffer);
+                       ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./client/android/org_telegram_messenger_voip_TgVoip.cpp:3:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/os/android/AudioOutputOpenSLES.h:13:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/os/android/../../audio/AudioOutput.h:14:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/os/android/../../audio/../MediaStreamItf.h:14:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+2 warnings generated.
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./client/android/tg_voip_jni.cpp:12:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./client/android/../../VoIPServerConfig.h:13:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip/./client/android/../../os/android/../../threading.h:110:8: warning: private field 'maxPriority' is not used [-Wunused-private-field]
+                bool maxPriority=false;
+                     ^
+1 warning generated.
+2 warnings generated.
+8 warnings generated.
+3 warnings generated.
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./TgVoip.cpp:5:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/VoIPController.h:37:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./logging.cpp:12:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/VoIPController.h:37:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./VoIPController.cpp:14:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/VoIPController.h:37:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./VoIPGroupController.cpp:7:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/VoIPController.h:37:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./TgVoip.cpp:190:10: warning: 'setOnStateUpdated' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    void setOnStateUpdated(std::function<void(TgVoipState)> onStateUpdated) {
+         ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/TgVoip.h:163:18: note: overridden virtual function is here
+    virtual void setOnStateUpdated(std::function<void(TgVoipState)> onStateUpdated) = 0;
+                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./TgVoip.cpp:195:10: warning: 'setOnSignalBarsUpdated' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    void setOnSignalBarsUpdated(std::function<void(int)> onSignalBarsUpdated) {
+         ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/TgVoip.h:164:18: note: overridden virtual function is here
+    virtual void setOnSignalBarsUpdated(std::function<void(int)> onSignalBarsUpdated) = 0;
+                 ^
+17 warnings generated.
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./VoIPGroupController.cpp:262:6: warning: '/*' within block comment [-Wcomment]
+                                        /*int32_t date=* /in.ReadInt32();
+                                        ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./VoIPGroupController.cpp:263:6: warning: '/*' within block comment [-Wcomment]
+                                        /*int64_t queryID=* /in.ReadInt64();
+                                        ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./VoIPGroupController.cpp:298:7: warning: '/*' within block comment [-Wcomment]
+                                                /*int32_t p=* /in.ReadInt32();
+                                                ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./VoIPGroupController.cpp:401:2: warning: '/*' within block comment [-Wcomment]
+        /*uint32_t seq=(uint32_t) * /in.ReadInt32();
+        ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./VoIPGroupController.cpp:411:3: warning: '/*' within block comment [-Wcomment]
+                /*oneMoreInnerLengthWhyDoWeEvenNeedThis=* /in.ReadTlLength();
+                ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./VoIPGroupController.cpp:443:4: warning: '/*' within block comment [-Wcomment]
+                        /*if(!audioOutStarted && audioOutput){
+                        ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/NetworkSocketPosix.cpp:7:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/NetworkSocketPosix.h:10:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./os/posix/../../NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./client/android/org_telegram_messenger_voip_TgVoip.cpp:156:88: warning: adding 'jint' (aka 'int') to a string does not append to the string [-Wstring-plus-int]
+            throwNewJavaIllegalArgumentException(env, "Unknown data saving constant: " + dataSaving);
+                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./client/android/org_telegram_messenger_voip_TgVoip.cpp:156:88: note: use array indexing to silence this warning
+            throwNewJavaIllegalArgumentException(env, "Unknown data saving constant: " + dataSaving);
+                                                                                       ^
+                                                      &                                [           ]
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./video/ScreamCongestionController.cpp:9:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./video/../VoIPController.h:37:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+19 warnings generated.
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./video/ScreamCongestionController.cpp:23:18: warning: unused variable 'BETA_ECN' [-Wunused-const-variable]
+        constexpr float BETA_ECN=0.9f;
+                        ^
+17 warnings generated.
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./client/android/tg_voip_jni.cpp:13:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./client/android/../../VoIPController.h:37:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:141:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket* GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:142:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:145:16: warning: 'Open' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Open();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:89:16: note: overridden virtual function is here
+                virtual void Open()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:146:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:147:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:148:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:150:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:151:16: warning: 'IsReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:100:16: note: overridden virtual function is here
+                virtual bool IsReadyToSend(){
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:169:16: warning: 'Close' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Close();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:90:16: note: overridden virtual function is here
+                virtual void Close()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:170:16: warning: 'Connect' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void Connect(const NetworkAddress address, uint16_t port);
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:92:16: note: overridden virtual function is here
+                virtual void Connect(const NetworkAddress address, uint16_t port)=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:171:26: warning: 'GetWrapped' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkSocket *GetWrapped();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:132:26: note: overridden virtual function is here
+                virtual NetworkSocket* GetWrapped()=0;
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:172:16: warning: 'InitConnection' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual void InitConnection();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:133:16: note: overridden virtual function is here
+                virtual void InitConnection()=0;
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:173:16: warning: 'IsFailed' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:99:16: note: overridden virtual function is here
+                virtual bool IsFailed();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:174:26: warning: 'GetConnectedAddress' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual NetworkAddress GetConnectedAddress();
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:95:26: note: overridden virtual function is here
+                virtual NetworkAddress GetConnectedAddress(){ return NetworkAddress::Empty(); };
+                                       ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:175:20: warning: 'GetConnectedPort' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual uint16_t GetConnectedPort();
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:96:20: note: overridden virtual function is here
+                virtual uint16_t GetConnectedPort(){ return 0; };
+                                 ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:176:16: warning: 'OnReadyToSend' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToSend();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:103:16: note: overridden virtual function is here
+                virtual bool OnReadyToSend(){ readyToSend=true; return true; };
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:177:16: warning: 'OnReadyToReceive' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+                virtual bool OnReadyToReceive();
+                             ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/NetworkSocket.h:104:16: note: overridden virtual function is here
+                virtual bool OnReadyToReceive(){ return true; };
+                             ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./client/android/tg_voip_jni.cpp:17:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./client/android/../../os/android/AudioOutputAndroid.h:20:15: warning: 'Start' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Start();
+                     ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/MediaStreamItf.h:25:18: note: overridden virtual function is here
+    virtual void Start() = 0;
+                 ^
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./client/android/tg_voip_jni.cpp:17:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/./client/android/../../os/android/AudioOutputAndroid.h:21:15: warning: 'Stop' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+        virtual void Stop();
+                     ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/libtgvoip2/MediaStreamItf.h:26:18: note: overridden virtual function is here
+    virtual void Stop() = 0;
+                 ^
+18 warnings generated.
+23 warnings generated.
+1 warning generated.
+19 warnings generated.
+17 warnings generated.
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/./rlottie/src/lottie/lottieparser.cpp:58:
+In file included from /home/marioman/Downloads/Telegram/TMessagesProj/jni/tgnet/FileLog.h:12:
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/tgnet/Defines.h:135:16: warning: 'ConnectiosManagerDelegate' has virtual functions but non-virtual destructor [-Wnon-virtual-dtor]
+typedef struct ConnectiosManagerDelegate {
+               ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/tgnet/Defines.h:151:16: warning: 'HandshakeDelegate' has virtual functions but non-virtual destructor [-Wnon-virtual-dtor]
+typedef struct HandshakeDelegate {
+               ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:223:93: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (currentProtocolType != ProtocolTypeDD && currentProtocolType != ProtocolTypeTLS && currentPacketLength % 4 != 0 || currentPacketLength > 2 * 1024 * 1024) {
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:223:93: note: place parentheses around the '&&' expression to silence this warning
+        if (currentProtocolType != ProtocolTypeDD && currentProtocolType != ProtocolTypeTLS && currentPacketLength % 4 != 0 || currentPacketLength > 2 * 1024 * 1024) {
+                                                                                            ^
+            (                                                                                                              )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:513:223: warning: '&&' within '||' [-Wlogical-op-parentheses]
+            if (currentProtocolType == ProtocolTypeTLS || bytes[0] != 0xef && val != 0x44414548 && val != 0x54534f50 && val != 0x20544547 && val != 0x4954504f && val != 0xeeeeeeee && val != 0xdddddddd && val != 0x02010316 && val2 != 0x00000000) {
+                                                       ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:513:223: note: place parentheses around the '&&' expression to silence this warning
+            if (currentProtocolType == ProtocolTypeTLS || bytes[0] != 0xef && val != 0x44414548 && val != 0x54534f50 && val != 0x20544547 && val != 0x4954504f && val != 0xeeeeeeee && val != 0xdddddddd && val != 0x02010316 && val2 != 0x00000000) {
+                                                                                                                                                                                                                              ^
+                                                          (                                                                                                                                                                                        )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:646:57: warning: '&&' within '||' [-Wlogical-op-parentheses]
+    bool switchToNextPort = reason == 2 && wasConnected && (!hasSomeDataSinceLastConnect || currentDatacenter->isCustomPort(currentAddressFlags)) || forceNextPort;
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:646:57: note: place parentheses around the '&&' expression to silence this warning
+    bool switchToNextPort = reason == 2 && wasConnected && (!hasSomeDataSinceLastConnect || currentDatacenter->isCustomPort(currentAddressFlags)) || forceNextPort;
+                                                        ^
+                            (                                                                                                                    )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:696:62: warning: '&&' within '||' [-Wlogical-op-parentheses]
+            if (connectionType == ConnectionTypeGenericMedia && currentDatacenter->isHandshaking(true) || connectionType == ConnectionTypeGeneric && (currentDatacenter->isHandshaking(false) || datacenterId == ConnectionsManager::getInstance(currentDatacenter->instanceNum).currentDatacenterId || datacenterId == ConnectionsManager::getInstance(currentDatacenter->instanceNum).movingToDatacenterId)) {
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:696:62: note: place parentheses around the '&&' expression to silence this warning
+            if (connectionType == ConnectionTypeGenericMedia && currentDatacenter->isHandshaking(true) || connectionType == ConnectionTypeGeneric && (currentDatacenter->isHandshaking(false) || datacenterId == ConnectionsManager::getInstance(currentDatacenter->instanceNum).currentDatacenterId || datacenterId == ConnectionsManager::getInstance(currentDatacenter->instanceNum).movingToDatacenterId)) {
+                                                             ^
+                (                                                                                     )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:696:147: warning: '&&' within '||' [-Wlogical-op-parentheses]
+            if (connectionType == ConnectionTypeGenericMedia && currentDatacenter->isHandshaking(true) || connectionType == ConnectionTypeGeneric && (currentDatacenter->isHandshaking(false) || datacenterId == ConnectionsManager::getInstance(currentDatacenter->instanceNum).currentDatacenterId || datacenterId == ConnectionsManager::getInstance(currentDatacenter->instanceNum).movingToDatacenterId)) {
+                                                                                                       ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Connection.cpp:696:147: note: place parentheses around the '&&' expression to silence this warning
+            if (connectionType == ConnectionTypeGenericMedia && currentDatacenter->isHandshaking(true) || connectionType == ConnectionTypeGeneric && (currentDatacenter->isHandshaking(false) || datacenterId == ConnectionsManager::getInstance(currentDatacenter->instanceNum).currentDatacenterId || datacenterId == ConnectionsManager::getInstance(currentDatacenter->instanceNum).movingToDatacenterId)) {
+                                                                                                                                                  ^
+                                                                                                          (                                                                                                                                                                                                                                                                                                  )
+5 warnings generated.
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:872:68: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (length < 24 + 32 || !connection->allowsCustomPadding() && (length - 24) % 16 != 0 || !datacenter->decryptServerResponse(keyId, data->bytes() + mark + 8, data->bytes() + mark + 24, length - 24, connection)) {
+                             ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:872:68: note: place parentheses around the '&&' expression to silence this warning
+        if (length < 24 + 32 || !connection->allowsCustomPadding() && (length - 24) % 16 != 0 || !datacenter->decryptServerResponse(keyId, data->bytes() + mark + 8, data->bytes() + mark + 24, length - 24, connection)) {
+                                                                   ^
+                                (                                                            )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:957:40: warning: '&&' within '||' [-Wlogical-op-parentheses]
+            if (connectionType == type && connectionNum == num || request->connectionToken == token) {
+                ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~ ~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:957:40: note: place parentheses around the '&&' expression to silence this warning
+            if (connectionType == type && connectionNum == num || request->connectionToken == token) {
+                                       ^
+                (                                             )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1784:101: warning: expression with side effects will be evaluated despite being used as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+        if (LOGS_ENABLED) DEBUG_D("send request wrapped %p - %s", request->rpcRequest.get(), typeid(*(request->rpcRequest.get())).name());
+                                                                                                    ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1876:24: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (token != 0 && request->requestToken == token || messageId != 0 && request->respondsToMessageId(messageId)) {
+            ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1876:24: note: place parentheses around the '&&' expression to silence this warning
+        if (token != 0 && request->requestToken == token || messageId != 0 && request->respondsToMessageId(messageId)) {
+                       ^
+            (                                           )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1876:76: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (token != 0 && request->requestToken == token || messageId != 0 && request->respondsToMessageId(messageId)) {
+                                                         ~~ ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1876:76: note: place parentheses around the '&&' expression to silence this warning
+        if (token != 0 && request->requestToken == token || messageId != 0 && request->respondsToMessageId(messageId)) {
+                                                                           ^
+                                                            (                                                        )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1889:24: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (token != 0 && request->requestToken == token || messageId != 0 && request->respondsToMessageId(messageId)) {
+            ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1889:24: note: place parentheses around the '&&' expression to silence this warning
+        if (token != 0 && request->requestToken == token || messageId != 0 && request->respondsToMessageId(messageId)) {
+                       ^
+            (                                           )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1889:76: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (token != 0 && request->requestToken == token || messageId != 0 && request->respondsToMessageId(messageId)) {
+                                                         ~~ ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:1889:76: note: place parentheses around the '&&' expression to silence this warning
+        if (token != 0 && request->requestToken == token || messageId != 0 && request->respondsToMessageId(messageId)) {
+                                                                           ^
+                                                            (                                                        )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionSocket.cpp:960:29: warning: '&&' within '||' [-Wlogical-op-parentheses]
+    if (proxyAuthState == 0 && (outgoingByteStream->hasData() || !onConnectedSent) || proxyAuthState == 1 || proxyAuthState == 3 || proxyAuthState == 5 || proxyAuthState == 10) {
+        ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionSocket.cpp:960:29: note: place parentheses around the '&&' expression to silence this warning
+    if (proxyAuthState == 0 && (outgoingByteStream->hasData() || !onConnectedSent) || proxyAuthState == 1 || proxyAuthState == 3 || proxyAuthState == 5 || proxyAuthState == 10) {
+                            ^
+        (                                                                         )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2040:101: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (type == HandshakeTypePerm || type == HandshakeTypeAll || type == HandshakeTypeMediaTemp && request->isMediaRequest() || type == HandshakeTypeTemp && !request->isMediaRequest()) {
+                                                                  ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2040:101: note: place parentheses around the '&&' expression to silence this warning
+        if (type == HandshakeTypePerm || type == HandshakeTypeAll || type == HandshakeTypeMediaTemp && request->isMediaRequest() || type == HandshakeTypeTemp && !request->isMediaRequest()) {
+                                                                                                    ^
+                                                                     (                                                          )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2040:159: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (type == HandshakeTypePerm || type == HandshakeTypeAll || type == HandshakeTypeMediaTemp && request->isMediaRequest() || type == HandshakeTypeTemp && !request->isMediaRequest()) {
+                                                                                                                                 ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2040:159: note: place parentheses around the '&&' expression to silence this warning
+        if (type == HandshakeTypePerm || type == HandshakeTypeAll || type == HandshakeTypeMediaTemp && request->isMediaRequest() || type == HandshakeTypeTemp && !request->isMediaRequest()) {
+                                                                                                                                                              ^
+                                                                                                                                    (                                                      )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2607:125: warning: expression with side effects will be evaluated despite being used as an operand to 'typeid' [-Wpotentially-evaluated-expression]
+                            if (LOGS_ENABLED) DEBUG_D("wrap body(%p, %s) to TL_invokeAfterMsg", message->body.get(), typeid(*(message->body.get())).name());
+                                                                                                                            ^
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2799:43: warning: array subscript is of type 'char' [-Wchar-subscripts]
+            auto value = url_char_to_value[base64.c_str()[i++]];
+                                          ^~~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2827:32: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (!(secret[i] >= '0' && secret[i] <= '9' || secret[i] >= 'a' && secret[i] <= 'f' || secret[i] >= 'A' && secret[i] <= 'F')) {
+              ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~ ~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2827:32: note: place parentheses around the '&&' expression to silence this warning
+        if (!(secret[i] >= '0' && secret[i] <= '9' || secret[i] >= 'a' && secret[i] <= 'f' || secret[i] >= 'A' && secret[i] <= 'F')) {
+                               ^
+              (                                   )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2827:72: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (!(secret[i] >= '0' && secret[i] <= '9' || secret[i] >= 'a' && secret[i] <= 'f' || secret[i] >= 'A' && secret[i] <= 'F')) {
+                                                   ~~ ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2827:72: note: place parentheses around the '&&' expression to silence this warning
+        if (!(secret[i] >= '0' && secret[i] <= '9' || secret[i] >= 'a' && secret[i] <= 'f' || secret[i] >= 'A' && secret[i] <= 'F')) {
+                                                                       ^
+                                                      (                                   )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2827:112: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (!(secret[i] >= '0' && secret[i] <= '9' || secret[i] >= 'a' && secret[i] <= 'f' || secret[i] >= 'A' && secret[i] <= 'F')) {
+                                                                                           ~~ ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2827:112: note: place parentheses around the '&&' expression to silence this warning
+        if (!(secret[i] >= '0' && secret[i] <= '9' || secret[i] >= 'a' && secret[i] <= 'f' || secret[i] >= 'A' && secret[i] <= 'F')) {
+                                                                                                               ^
+                                                                                              (                                   )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2861:25: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (!workaround && !updatingDcSettings || workaround && !updatingDcSettingsWorkaround) {
+            ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~ ~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2861:25: note: place parentheses around the '&&' expression to silence this warning
+        if (!workaround && !updatingDcSettings || workaround && !updatingDcSettingsWorkaround) {
+                        ^
+            (                                 )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2861:62: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (!workaround && !updatingDcSettings || workaround && !updatingDcSettingsWorkaround) {
+                                               ~~ ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/ConnectionsManager.cpp:2861:62: note: place parentheses around the '&&' expression to silence this warning
+        if (!workaround && !updatingDcSettings || workaround && !updatingDcSettingsWorkaround) {
+                                                             ^
+                                                  (                                          )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:199:62: warning: '&&' within '||' [-Wlogical-op-parentheses]
+    if (flags == 0 && (authKeyPerm == nullptr || PFS_ENABLED && authKeyTemp == nullptr) && !addressesIpv4Temp.empty()) {
+                                              ~~ ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:199:62: note: place parentheses around the '&&' expression to silence this warning
+    if (flags == 0 && (authKeyPerm == nullptr || PFS_ENABLED && authKeyTemp == nullptr) && !addressesIpv4Temp.empty()) {
+                                                 ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:257:62: warning: '&&' within '||' [-Wlogical-op-parentheses]
+    if (flags == 0 && (authKeyPerm == nullptr || PFS_ENABLED && authKeyTemp == nullptr) && !addressesIpv4Temp.empty()) {
+                                              ~~ ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:257:62: note: place parentheses around the '&&' expression to silence this warning
+    if (flags == 0 && (authKeyPerm == nullptr || PFS_ENABLED && authKeyTemp == nullptr) && !addressesIpv4Temp.empty()) {
+                                                 ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:377:62: warning: '&&' within '||' [-Wlogical-op-parentheses]
+    if (flags == 0 && (authKeyPerm == nullptr || PFS_ENABLED && authKeyTemp == nullptr) && !addressesIpv4Temp.empty()) {
+                                              ~~ ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:377:62: note: place parentheses around the '&&' expression to silence this warning
+    if (flags == 0 && (authKeyPerm == nullptr || PFS_ENABLED && authKeyTemp == nullptr) && !addressesIpv4Temp.empty()) {
+                                                 ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:445:62: warning: '&&' within '||' [-Wlogical-op-parentheses]
+    if (flags == 0 && (authKeyPerm == nullptr || PFS_ENABLED && authKeyTemp == nullptr) && !addressesIpv4Temp.empty()) {
+                                              ~~ ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:445:62: note: place parentheses around the '&&' expression to silence this warning
+    if (flags == 0 && (authKeyPerm == nullptr || PFS_ENABLED && authKeyTemp == nullptr) && !addressesIpv4Temp.empty()) {
+                                                 ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:885:64: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (handshake->getType() == HandshakeTypePerm || media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                      ~~ ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:885:64: note: place parentheses around the '&&' expression to silence this warning
+        if (handshake->getType() == HandshakeTypePerm || media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                               ^
+                                                         (                                                      )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:885:124: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (handshake->getType() == HandshakeTypePerm || media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                                                                 ~~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:885:124: note: place parentheses around the '&&' expression to silence this warning
+        if (handshake->getType() == HandshakeTypePerm || media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                                                                           ^
+                                                                                                                    (                                                       )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:944:19: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+            ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:944:19: note: place parentheses around the '&&' expression to silence this warning
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                  ^
+            (                                                      )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:944:79: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                    ~~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:944:79: note: place parentheses around the '&&' expression to silence this warning
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                              ^
+                                                                       (                                                       )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:957:19: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+            ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:957:19: note: place parentheses around the '&&' expression to silence this warning
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                  ^
+            (                                                      )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:957:79: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                    ~~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:957:79: note: place parentheses around the '&&' expression to silence this warning
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                              ^
+                                                                       (                                                       )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:988:19: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+            ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:988:19: note: place parentheses around the '&&' expression to silence this warning
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                  ^
+            (                                                      )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:988:79: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                    ~~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:988:79: note: place parentheses around the '&&' expression to silence this warning
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                              ^
+                                                                       (                                                       )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:1000:19: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+            ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:1000:19: note: place parentheses around the '&&' expression to silence this warning
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                  ^
+            (                                                      )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:1000:79: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                    ~~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:1000:79: note: place parentheses around the '&&' expression to silence this warning
+        if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() != HandshakeTypeMediaTemp) {
+                                                                              ^
+                                                                       (                                                       )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:1071:23: warning: '&&' within '||' [-Wlogical-op-parentheses]
+            if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() == HandshakeTypeTemp) {
+                ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:1071:23: note: place parentheses around the '&&' expression to silence this warning
+            if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() == HandshakeTypeTemp) {
+                      ^
+                (                                                      )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:1071:83: warning: '&&' within '||' [-Wlogical-op-parentheses]
+            if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() == HandshakeTypeTemp) {
+                                                                        ~~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Datacenter.cpp:1071:83: note: place parentheses around the '&&' expression to silence this warning
+            if (media && handshake->getType() == HandshakeTypeMediaTemp || !media && handshake->getType() == HandshakeTypeTemp) {
+                                                                                  ^
+                                                                           (                                                  )
+1 warning generated.
+2 warnings generated.
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Request.cpp:86:19: warning: '&&' within '||' [-Wlogical-op-parentheses]
+    return !media && datacenter->lastInitVersion != currentVersion || media && datacenter->lastInitMediaVersion != currentVersion;
+           ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Request.cpp:86:19: note: place parentheses around the '&&' expression to silence this warning
+    return !media && datacenter->lastInitVersion != currentVersion || media && datacenter->lastInitMediaVersion != currentVersion;
+                  ^
+           (                                                      )
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Request.cpp:86:77: warning: '&&' within '||' [-Wlogical-op-parentheses]
+    return !media && datacenter->lastInitVersion != currentVersion || media && datacenter->lastInitMediaVersion != currentVersion;
+                                                                   ~~ ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/marioman/Downloads/Telegram/TMessagesProj/jni/./tgnet/Request.cpp:86:77: note: place parentheses around the '&&' expression to silence this warning
+    return !media && datacenter->lastInitVersion != currentVersion || media && datacenter->lastInitMediaVersion != currentVersion;
+                                                                            ^
+                                                                      (                                                          )
+2 warnings generated.
+16 warnings generated.
+16 warnings generated.

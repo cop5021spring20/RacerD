@@ -1,0 +1,2156 @@
+Found 239 issues
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4979: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.autoFocus(CameraController$AutoFocusCallback,boolean)` reads with synchronization from `this.previewBuilder`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because this access may occur on a background thread.
+  4977.                   return;
+  4978.               }
+  4979. >             Integer focus_mode = previewBuilder.get(CaptureRequest.CONTROL_AF_MODE);
+  4980.               if( focus_mode == null ) {
+  4981.                   // we preserve the old Camera API where calling autoFocus() on a device without autofocus immediately calls the callback
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4972: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.autoFocus(CameraController$AutoFocusCallback,boolean)` reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because this access may occur on a background thread.
+  4970.           synchronized( background_camera_lock ) {
+  4971.               fake_precapture_torch_focus_performed = false;
+  4972. >             if( camera == null || captureSession == null ) {
+  4973.                   if( MyDebug.LOG )
+  4974.                       Log.d(TAG, "no camera or capture session");
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:5048: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.autoFocus(CameraController$AutoFocusCallback,boolean)` indirectly reads with synchronization from `this.handler`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because this access may occur on a background thread.
+  5046.                           test_fake_flash_focus++;
+  5047.                           fake_precapture_torch_focus_performed = true;
+  5048. >                         setRepeatingRequest(afBuilder.build());
+  5049.                           // We sleep for a short time as on some devices (e.g., OnePlus 3T), the torch will turn off when autofocus
+  5050.                           // completes even if we don't want that (because we'll be taking a photo).
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:5127: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.cancelAutoFocus()` indirectly reads with synchronization from `this.handler`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because this access may occur on a background thread.
+  5125.               // Camera2Basic does a capture then sets a repeating request - do the same here just to be safe
+  5126.               try {
+  5127. >                 capture();
+  5128.               }
+  5129.               catch(CameraAccessException e) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:5112: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.cancelAutoFocus()` reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because this access may occur on a background thread.
+  5110.               Log.d(TAG, "cancelAutoFocus");
+  5111.           synchronized( background_camera_lock ) {
+  5112. >             if( camera == null || captureSession == null ) {
+  5113.                   if( MyDebug.LOG )
+  5114.                       Log.d(TAG, "no camera or capture session");
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:5124: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.cancelAutoFocus()` reads with synchronization from `this.previewBuilder`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because this access may occur on a background thread.
+  5122.               }
+  5123.   
+  5124. >             previewBuilder.set(CaptureRequest.CONTROL_AF_TRIGGER, CameraMetadata.CONTROL_AF_TRIGGER_CANCEL);
+  5125.               // Camera2Basic does a capture then sets a repeating request - do the same here just to be safe
+  5126.               try {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4307: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.clearFocusAndMetering()` indirectly reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  4305.       @Override
+  4306.       public void clearFocusAndMetering() {
+  4307. >         Rect sensor_rect = getViewableRect();
+  4308.           boolean has_focus = false;
+  4309.           boolean has_metering = false;
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4335: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.clearFocusAndMetering()` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  4333.           if( has_focus || has_metering ) {
+  4334.               try {
+  4335. >                 setRepeatingRequest();
+  4336.               }
+  4337.               catch(CameraAccessException e) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3831: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2.clearPreviewFpsRange()` indirectly writes to field `this.camera_settings.default_edge_mode` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3829.               camera_settings.ae_target_fps_range = null;
+  3830.               camera_settings.sensor_frame_duration = 0;
+  3831. >             createPreviewRequest();
+  3832.               // createPreviewRequest() needed so that the values in the previewBuilder reset to default values, for
+  3833.               // CONTROL_AE_TARGET_FPS_RANGE and SENSOR_FRAME_DURATION
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3837: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.clearPreviewFpsRange()` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3835.               try {
+  3836.                   if( camera_settings.setAEMode(previewBuilder, false) ) {
+  3837. >                     setRepeatingRequest();
+  3838.                   }
+  3839.               }
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4401: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `boolean CameraController2.focusIsContinuous()` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  4399.       @Override
+  4400.       public boolean focusIsContinuous() {
+  4401. >         if( previewBuilder == null )
+  4402.               return false;
+  4403.           Integer focus_mode = previewBuilder.get(CaptureRequest.CONTROL_AF_MODE);
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4413: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `boolean CameraController2.focusIsVideo()` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  4411.       @Override
+  4412.       public boolean focusIsVideo() {
+  4413. >         if( previewBuilder == null )
+  4414.               return false;
+  4415.           Integer focus_mode = previewBuilder.get(CaptureRequest.CONTROL_AF_MODE);
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:2886: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `String CameraController2.getAntiBanding()` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  2884.       @Override
+  2885.       public String getAntiBanding() {
+  2886. >         if( previewBuilder.get(CaptureRequest.CONTROL_AE_ANTIBANDING_MODE) == null )
+  2887.               return null;
+  2888.           int value2 = previewBuilder.get(CaptureRequest.CONTROL_AE_ANTIBANDING_MODE);
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4117: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `boolean CameraController2.getAutoExposureLock()` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  4115.       @Override
+  4116.       public boolean getAutoExposureLock() {
+  4117. >         if( previewBuilder.get(CaptureRequest.CONTROL_AE_LOCK) == null )
+  4118.               return false;
+  4119.           return previewBuilder.get(CaptureRequest.CONTROL_AE_LOCK);
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4141: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `boolean CameraController2.getAutoWhiteBalanceLock()` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  4139.       @Override
+  4140.       public boolean getAutoWhiteBalanceLock() {
+  4141. >         if( previewBuilder.get(CaptureRequest.CONTROL_AWB_LOCK) == null )
+  4142.               return false;
+  4143.           return previewBuilder.get(CaptureRequest.CONTROL_AWB_LOCK);
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3395: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int CameraController2.getBurstTotal()` reads without synchronization from `this.n_burst_total`. Potentially races with write in method `CameraController2.takePicture(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3393.           if( burst_type == BurstType.BURSTTYPE_CONTINUOUS )
+  3394.               return 0; // total burst size is unknown
+  3395. >         return n_burst_total;
+  3396.       }
+  3397.       @Override
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:2619: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `String CameraController2.getColorEffect()` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  2617.       @Override
+  2618.       public String getColorEffect() {
+  2619. >         if( previewBuilder.get(CaptureRequest.CONTROL_EFFECT_MODE) == null )
+  2620.               return null;
+  2621.           int value2 = previewBuilder.get(CaptureRequest.CONTROL_EFFECT_MODE);
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:2985: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `String CameraController2.getEdgeMode()` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  2983.       @Override
+  2984.       public String getEdgeMode() {
+  2985. >         if( previewBuilder.get(CaptureRequest.EDGE_MODE) == null )
+  2986.               return null;
+  2987.           int value2 = previewBuilder.get(CaptureRequest.EDGE_MODE);
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3770: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int CameraController2.getExposureCompensation()` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3768.       @Override
+  3769.       public int getExposureCompensation() {
+  3770. >         if( previewBuilder.get(CaptureRequest.CONTROL_AE_EXPOSURE_COMPENSATION) == null )
+  3771.               return 0;
+  3772.           return previewBuilder.get(CaptureRequest.CONTROL_AE_EXPOSURE_COMPENSATION);
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4352: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `List CameraController2.getFocusAreas()` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  4350.           if( characteristics.get(CameraCharacteristics.CONTROL_MAX_REGIONS_AF) == 0 )
+  4351.               return null;
+  4352. >         MeteringRectangle [] metering_rectangles = previewBuilder.get(CaptureRequest.CONTROL_AF_REGIONS);
+  4353.           if( metering_rectangles == null )
+  4354.               return null;
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3947: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `String CameraController2.getFocusValue()` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3945.       @Override
+  3946.       public String getFocusValue() {
+  3947. >         Integer focus_mode = previewBuilder.get(CaptureRequest.CONTROL_AF_MODE);
+  3948.           if( focus_mode == null )
+  3949.               focus_mode = CaptureRequest.CONTROL_AF_MODE_AUTO;
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4372: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `List CameraController2.getMeteringAreas()` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  4370.           if( characteristics.get(CameraCharacteristics.CONTROL_MAX_REGIONS_AE) == 0 )
+  4371.               return null;
+  4372. >         MeteringRectangle [] metering_rectangles = previewBuilder.get(CaptureRequest.CONTROL_AE_REGIONS);
+  4373.           if( metering_rectangles == null )
+  4374.               return null;
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3388: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int CameraController2.getNBurstTaken()` reads without synchronization from `this.n_burst_taken`. Potentially races with write in method `CameraController2.takePicture(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3386.       @Override
+  3387.       public int getNBurstTaken() {
+  3388. >         return n_burst_taken;
+  3389.       }
+  3390.   
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3100: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `String CameraController2.getNoiseReductionMode()` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3098.       @Override
+  3099.       public String getNoiseReductionMode() {
+  3100. >         if( previewBuilder.get(CaptureRequest.NOISE_REDUCTION_MODE) == null )
+  3101.               return null;
+  3102.           int value2 = previewBuilder.get(CaptureRequest.NOISE_REDUCTION_MODE);
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:2495: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `String CameraController2.getSceneMode()` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  2493.       @Override
+  2494.       public String getSceneMode() {
+  2495. >         if( previewBuilder.get(CaptureRequest.CONTROL_SCENE_MODE) == null )
+  2496.               return null;
+  2497.           int value2 = previewBuilder.get(CaptureRequest.CONTROL_SCENE_MODE);
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:2759: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `String CameraController2.getWhiteBalance()` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  2757.       @Override
+  2758.       public String getWhiteBalance() {
+  2759. >         if( previewBuilder.get(CaptureRequest.CONTROL_AWB_MODE) == null )
+  2760.               return null;
+  2761.           int value2 = previewBuilder.get(CaptureRequest.CONTROL_AWB_MODE);
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:746: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `float ScriptC_process_hdr.get_W()` reads without synchronization from `this.mExportVar_W`. Potentially races with write in method `ScriptC_process_hdr.set_W(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  744.   
+  745.       public float get_W() {
+  746. >         return mExportVar_W;
+  747.       }
+  748.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:159: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `float ScriptC_process_avg.get_avg_factor()` reads without synchronization from `this.mExportVar_avg_factor`. Potentially races with write in method `ScriptC_process_avg.set_avg_factor(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  157.   
+  158.       public float get_avg_factor() {
+  159. >         return mExportVar_avg_factor;
+  160.       }
+  161.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_avg_brighten.java:62: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_avg_brighten.get_bitmap()` reads without synchronization from `this.mExportVar_bitmap`. Potentially races with write in method `ScriptC_avg_brighten.set_bitmap(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  60.   
+  61.       public Allocation get_bitmap() {
+  62. >         return mExportVar_bitmap;
+  63.       }
+  64.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_calculate_sharpness.java:59: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_calculate_sharpness.get_bitmap()` reads without synchronization from `this.mExportVar_bitmap`. Potentially races with write in method `ScriptC_calculate_sharpness.set_bitmap(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  57.   
+  58.       public Allocation get_bitmap() {
+  59. >         return mExportVar_bitmap;
+  60.       }
+  61.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_feature_detector.java:76: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_feature_detector.get_bitmap()` reads without synchronization from `this.mExportVar_bitmap`. Potentially races with write in method `ScriptC_feature_detector.set_bitmap(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  74.   
+  75.       public Allocation get_bitmap() {
+  76. >         return mExportVar_bitmap;
+  77.       }
+  78.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_histogram_compute.java:141: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_histogram_compute.get_bitmap()` reads without synchronization from `this.mExportVar_bitmap`. Potentially races with write in method `ScriptC_histogram_compute.set_bitmap(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  139.   
+  140.       public Allocation get_bitmap() {
+  141. >         return mExportVar_bitmap;
+  142.       }
+  143.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_pyramid_blending.java:64: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_pyramid_blending.get_bitmap()` reads without synchronization from `this.mExportVar_bitmap`. Potentially races with write in method `ScriptC_pyramid_blending.set_bitmap(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  62.   
+  63.       public Allocation get_bitmap() {
+  64. >         return mExportVar_bitmap;
+  65.       }
+  66.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_align_mtb.java:62: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_align_mtb.get_bitmap0()` reads without synchronization from `this.mExportVar_bitmap0`. Potentially races with write in method `ScriptC_align_mtb.set_bitmap0(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  60.   
+  61.       public Allocation get_bitmap0() {
+  62. >         return mExportVar_bitmap0;
+  63.       }
+  64.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:103: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_process_hdr.get_bitmap0()` reads without synchronization from `this.mExportVar_bitmap0`. Potentially races with write in method `ScriptC_process_hdr.set_bitmap0(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  101.   
+  102.       public Allocation get_bitmap0() {
+  103. >         return mExportVar_bitmap0;
+  104.       }
+  105.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_align_mtb.java:77: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_align_mtb.get_bitmap1()` reads without synchronization from `this.mExportVar_bitmap1`. Potentially races with write in method `ScriptC_align_mtb.set_bitmap1(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  75.   
+  76.       public Allocation get_bitmap1() {
+  77. >         return mExportVar_bitmap1;
+  78.       }
+  79.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:204: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_process_avg.get_bitmap1()` reads without synchronization from `this.mExportVar_bitmap1`. Potentially races with write in method `ScriptC_process_avg.set_bitmap1(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  202.   
+  203.       public Allocation get_bitmap1() {
+  204. >         return mExportVar_bitmap1;
+  205.       }
+  206.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:118: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_process_hdr.get_bitmap1()` reads without synchronization from `this.mExportVar_bitmap1`. Potentially races with write in method `ScriptC_process_hdr.set_bitmap1(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  116.   
+  117.       public Allocation get_bitmap1() {
+  118. >         return mExportVar_bitmap1;
+  119.       }
+  120.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:219: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_process_avg.get_bitmap2()` reads without synchronization from `this.mExportVar_bitmap2`. Potentially races with write in method `ScriptC_process_avg.set_bitmap2(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  217.   
+  218.       public Allocation get_bitmap2() {
+  219. >         return mExportVar_bitmap2;
+  220.       }
+  221.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:133: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_process_hdr.get_bitmap2()` reads without synchronization from `this.mExportVar_bitmap2`. Potentially races with write in method `ScriptC_process_hdr.set_bitmap2(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  131.   
+  132.       public Allocation get_bitmap2() {
+  133. >         return mExportVar_bitmap2;
+  134.       }
+  135.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:234: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_process_avg.get_bitmap3()` reads without synchronization from `this.mExportVar_bitmap3`. Potentially races with write in method `ScriptC_process_avg.set_bitmap3(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  232.   
+  233.       public Allocation get_bitmap3() {
+  234. >         return mExportVar_bitmap3;
+  235.       }
+  236.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:148: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_process_hdr.get_bitmap3()` reads without synchronization from `this.mExportVar_bitmap3`. Potentially races with write in method `ScriptC_process_hdr.set_bitmap3(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  146.   
+  147.       public Allocation get_bitmap3() {
+  148. >         return mExportVar_bitmap3;
+  149.       }
+  150.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:249: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_process_avg.get_bitmap4()` reads without synchronization from `this.mExportVar_bitmap4`. Potentially races with write in method `ScriptC_process_avg.set_bitmap4(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  247.   
+  248.       public Allocation get_bitmap4() {
+  249. >         return mExportVar_bitmap4;
+  250.       }
+  251.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:163: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_process_hdr.get_bitmap4()` reads without synchronization from `this.mExportVar_bitmap4`. Potentially races with write in method `ScriptC_process_hdr.set_bitmap4(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  161.   
+  162.       public Allocation get_bitmap4() {
+  163. >         return mExportVar_bitmap4;
+  164.       }
+  165.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:264: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_process_avg.get_bitmap5()` reads without synchronization from `this.mExportVar_bitmap5`. Potentially races with write in method `ScriptC_process_avg.set_bitmap5(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  262.   
+  263.       public Allocation get_bitmap5() {
+  264. >         return mExportVar_bitmap5;
+  265.       }
+  266.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:178: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_process_hdr.get_bitmap5()` reads without synchronization from `this.mExportVar_bitmap5`. Potentially races with write in method `ScriptC_process_hdr.set_bitmap5(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  176.   
+  177.       public Allocation get_bitmap5() {
+  178. >         return mExportVar_bitmap5;
+  179.       }
+  180.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:279: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_process_avg.get_bitmap6()` reads without synchronization from `this.mExportVar_bitmap6`. Potentially races with write in method `ScriptC_process_avg.set_bitmap6(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  277.   
+  278.       public Allocation get_bitmap6() {
+  279. >         return mExportVar_bitmap6;
+  280.       }
+  281.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:193: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_process_hdr.get_bitmap6()` reads without synchronization from `this.mExportVar_bitmap6`. Potentially races with write in method `ScriptC_process_hdr.set_bitmap6(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  191.   
+  192.       public Allocation get_bitmap6() {
+  193. >         return mExportVar_bitmap6;
+  194.       }
+  195.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:294: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_process_avg.get_bitmap7()` reads without synchronization from `this.mExportVar_bitmap7`. Potentially races with write in method `ScriptC_process_avg.set_bitmap7(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  292.   
+  293.       public Allocation get_bitmap7() {
+  294. >         return mExportVar_bitmap7;
+  295.       }
+  296.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_feature_detector.java:91: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_feature_detector.get_bitmap_Ix()` reads without synchronization from `this.mExportVar_bitmap_Ix`. Potentially races with write in method `ScriptC_feature_detector.set_bitmap_Ix(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  89.   
+  90.       public Allocation get_bitmap_Ix() {
+  91. >         return mExportVar_bitmap_Ix;
+  92.       }
+  93.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_feature_detector.java:106: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_feature_detector.get_bitmap_Iy()` reads without synchronization from `this.mExportVar_bitmap_Iy`. Potentially races with write in method `ScriptC_feature_detector.set_bitmap_Iy(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  104.   
+  105.       public Allocation get_bitmap_Iy() {
+  106. >         return mExportVar_bitmap_Iy;
+  107.       }
+  108.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:99: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_process_avg.get_bitmap_align_new()` reads without synchronization from `this.mExportVar_bitmap_align_new`. Potentially races with write in method `ScriptC_process_avg.set_bitmap_align_new(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  97.   
+  98.       public Allocation get_bitmap_align_new() {
+  99. >         return mExportVar_bitmap_align_new;
+  100.       }
+  101.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:84: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_process_avg.get_bitmap_new()` reads without synchronization from `this.mExportVar_bitmap_new`. Potentially races with write in method `ScriptC_process_avg.set_bitmap_new(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  82.   
+  83.       public Allocation get_bitmap_new() {
+  84. >         return mExportVar_bitmap_new;
+  85.       }
+  86.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_histogram_adjust.java:66: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_histogram_adjust.get_c_histogram()` reads without synchronization from `this.mExportVar_c_histogram`. Potentially races with write in method `ScriptC_histogram_adjust.set_c_histogram(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  64.   
+  65.       public Allocation get_c_histogram() {
+  66. >         return mExportVar_c_histogram;
+  67.       }
+  68.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_feature_detector.java:61: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `float ScriptC_feature_detector.get_corner_threshold()` reads without synchronization from `this.mExportVar_corner_threshold`. Potentially races with write in method `ScriptC_feature_detector.set_corner_threshold(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  59.   
+  60.       public float get_corner_threshold() {
+  61. >         return mExportVar_corner_threshold;
+  62.       }
+  63.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_histogram_adjust.java:81: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `float ScriptC_histogram_adjust.get_hdr_alpha()` reads without synchronization from `this.mExportVar_hdr_alpha`. Potentially races with write in method `ScriptC_histogram_adjust.set_hdr_alpha(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  79.   
+  80.       public float get_hdr_alpha() {
+  81. >         return mExportVar_hdr_alpha;
+  82.       }
+  83.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_histogram_adjust.java:126: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_histogram_adjust.get_height()` reads without synchronization from `this.mExportVar_height`. Potentially races with write in method `ScriptC_histogram_adjust.set_height(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  124.   
+  125.       public int get_height() {
+  126. >         return mExportVar_height;
+  127.       }
+  128.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:761: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `float ScriptC_process_hdr.get_linear_scale()` reads without synchronization from `this.mExportVar_linear_scale`. Potentially races with write in method `ScriptC_process_hdr.set_linear_scale(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  759.   
+  760.       public float get_linear_scale() {
+  761. >         return mExportVar_linear_scale;
+  762.       }
+  763.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_avg_brighten.java:77: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `float ScriptC_avg_brighten.get_median_filter_strength()` reads without synchronization from `this.mExportVar_median_filter_strength`. Potentially races with write in method `ScriptC_avg_brighten.set_median_filter_strength(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  75.   
+  76.       public float get_median_filter_strength() {
+  77. >         return mExportVar_median_filter_strength;
+  78.       }
+  79.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_create_mtb.java:79: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_create_mtb.get_median_value()` reads without synchronization from `this.mExportVar_median_value`. Potentially races with write in method `ScriptC_create_mtb.set_median_value(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  77.   
+  78.       public int get_median_value() {
+  79. >         return mExportVar_median_value;
+  80.       }
+  81.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:776: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_hdr.get_n_bitmaps_g()` reads without synchronization from `this.mExportVar_n_bitmaps_g`. Potentially races with write in method `ScriptC_process_hdr.set_n_bitmaps_g(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  774.   
+  775.       public int get_n_bitmaps_g() {
+  776. >         return mExportVar_n_bitmaps_g;
+  777.       }
+  778.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_histogram_adjust.java:96: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_histogram_adjust.get_n_tiles()` reads without synchronization from `this.mExportVar_n_tiles`. Potentially races with write in method `ScriptC_histogram_adjust.set_n_tiles(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  94.   
+  95.       public int get_n_tiles() {
+  96. >         return mExportVar_n_tiles;
+  97.       }
+  98.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_align_mtb.java:107: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_align_mtb.get_off_x()` reads without synchronization from `this.mExportVar_off_x`. Potentially races with write in method `ScriptC_align_mtb.set_off_x(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  105.   
+  106.       public int get_off_x() {
+  107. >         return mExportVar_off_x;
+  108.       }
+  109.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_align_mtb.java:122: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_align_mtb.get_off_y()` reads without synchronization from `this.mExportVar_off_y`. Potentially races with write in method `ScriptC_align_mtb.set_off_y(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  120.   
+  121.       public int get_off_y() {
+  122. >         return mExportVar_off_y;
+  123.       }
+  124.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:208: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_hdr.get_offset_x0()` reads without synchronization from `this.mExportVar_offset_x0`. Potentially races with write in method `ScriptC_process_hdr.set_offset_x0(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  206.   
+  207.       public int get_offset_x0() {
+  208. >         return mExportVar_offset_x0;
+  209.       }
+  210.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:309: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_avg.get_offset_x1()` reads without synchronization from `this.mExportVar_offset_x1`. Potentially races with write in method `ScriptC_process_avg.set_offset_x1(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  307.   
+  308.       public int get_offset_x1() {
+  309. >         return mExportVar_offset_x1;
+  310.       }
+  311.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:238: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_hdr.get_offset_x1()` reads without synchronization from `this.mExportVar_offset_x1`. Potentially races with write in method `ScriptC_process_hdr.set_offset_x1(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  236.   
+  237.       public int get_offset_x1() {
+  238. >         return mExportVar_offset_x1;
+  239.       }
+  240.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:339: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_avg.get_offset_x2()` reads without synchronization from `this.mExportVar_offset_x2`. Potentially races with write in method `ScriptC_process_avg.set_offset_x2(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  337.   
+  338.       public int get_offset_x2() {
+  339. >         return mExportVar_offset_x2;
+  340.       }
+  341.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:268: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_hdr.get_offset_x2()` reads without synchronization from `this.mExportVar_offset_x2`. Potentially races with write in method `ScriptC_process_hdr.set_offset_x2(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  266.   
+  267.       public int get_offset_x2() {
+  268. >         return mExportVar_offset_x2;
+  269.       }
+  270.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:369: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_avg.get_offset_x3()` reads without synchronization from `this.mExportVar_offset_x3`. Potentially races with write in method `ScriptC_process_avg.set_offset_x3(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  367.   
+  368.       public int get_offset_x3() {
+  369. >         return mExportVar_offset_x3;
+  370.       }
+  371.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:298: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_hdr.get_offset_x3()` reads without synchronization from `this.mExportVar_offset_x3`. Potentially races with write in method `ScriptC_process_hdr.set_offset_x3(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  296.   
+  297.       public int get_offset_x3() {
+  298. >         return mExportVar_offset_x3;
+  299.       }
+  300.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:399: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_avg.get_offset_x4()` reads without synchronization from `this.mExportVar_offset_x4`. Potentially races with write in method `ScriptC_process_avg.set_offset_x4(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  397.   
+  398.       public int get_offset_x4() {
+  399. >         return mExportVar_offset_x4;
+  400.       }
+  401.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:328: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_hdr.get_offset_x4()` reads without synchronization from `this.mExportVar_offset_x4`. Potentially races with write in method `ScriptC_process_hdr.set_offset_x4(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  326.   
+  327.       public int get_offset_x4() {
+  328. >         return mExportVar_offset_x4;
+  329.       }
+  330.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:429: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_avg.get_offset_x5()` reads without synchronization from `this.mExportVar_offset_x5`. Potentially races with write in method `ScriptC_process_avg.set_offset_x5(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  427.   
+  428.       public int get_offset_x5() {
+  429. >         return mExportVar_offset_x5;
+  430.       }
+  431.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:358: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_hdr.get_offset_x5()` reads without synchronization from `this.mExportVar_offset_x5`. Potentially races with write in method `ScriptC_process_hdr.set_offset_x5(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  356.   
+  357.       public int get_offset_x5() {
+  358. >         return mExportVar_offset_x5;
+  359.       }
+  360.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:459: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_avg.get_offset_x6()` reads without synchronization from `this.mExportVar_offset_x6`. Potentially races with write in method `ScriptC_process_avg.set_offset_x6(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  457.   
+  458.       public int get_offset_x6() {
+  459. >         return mExportVar_offset_x6;
+  460.       }
+  461.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:388: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_hdr.get_offset_x6()` reads without synchronization from `this.mExportVar_offset_x6`. Potentially races with write in method `ScriptC_process_hdr.set_offset_x6(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  386.   
+  387.       public int get_offset_x6() {
+  388. >         return mExportVar_offset_x6;
+  389.       }
+  390.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:489: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_avg.get_offset_x7()` reads without synchronization from `this.mExportVar_offset_x7`. Potentially races with write in method `ScriptC_process_avg.set_offset_x7(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  487.   
+  488.       public int get_offset_x7() {
+  489. >         return mExportVar_offset_x7;
+  490.       }
+  491.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:114: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_avg.get_offset_x_new()` reads without synchronization from `this.mExportVar_offset_x_new`. Potentially races with write in method `ScriptC_process_avg.set_offset_x_new(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  112.   
+  113.       public int get_offset_x_new() {
+  114. >         return mExportVar_offset_x_new;
+  115.       }
+  116.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:223: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_hdr.get_offset_y0()` reads without synchronization from `this.mExportVar_offset_y0`. Potentially races with write in method `ScriptC_process_hdr.set_offset_y0(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  221.   
+  222.       public int get_offset_y0() {
+  223. >         return mExportVar_offset_y0;
+  224.       }
+  225.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:324: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_avg.get_offset_y1()` reads without synchronization from `this.mExportVar_offset_y1`. Potentially races with write in method `ScriptC_process_avg.set_offset_y1(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  322.   
+  323.       public int get_offset_y1() {
+  324. >         return mExportVar_offset_y1;
+  325.       }
+  326.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:253: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_hdr.get_offset_y1()` reads without synchronization from `this.mExportVar_offset_y1`. Potentially races with write in method `ScriptC_process_hdr.set_offset_y1(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  251.   
+  252.       public int get_offset_y1() {
+  253. >         return mExportVar_offset_y1;
+  254.       }
+  255.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:354: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_avg.get_offset_y2()` reads without synchronization from `this.mExportVar_offset_y2`. Potentially races with write in method `ScriptC_process_avg.set_offset_y2(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  352.   
+  353.       public int get_offset_y2() {
+  354. >         return mExportVar_offset_y2;
+  355.       }
+  356.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:283: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_hdr.get_offset_y2()` reads without synchronization from `this.mExportVar_offset_y2`. Potentially races with write in method `ScriptC_process_hdr.set_offset_y2(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  281.   
+  282.       public int get_offset_y2() {
+  283. >         return mExportVar_offset_y2;
+  284.       }
+  285.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:384: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_avg.get_offset_y3()` reads without synchronization from `this.mExportVar_offset_y3`. Potentially races with write in method `ScriptC_process_avg.set_offset_y3(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  382.   
+  383.       public int get_offset_y3() {
+  384. >         return mExportVar_offset_y3;
+  385.       }
+  386.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:313: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_hdr.get_offset_y3()` reads without synchronization from `this.mExportVar_offset_y3`. Potentially races with write in method `ScriptC_process_hdr.set_offset_y3(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  311.   
+  312.       public int get_offset_y3() {
+  313. >         return mExportVar_offset_y3;
+  314.       }
+  315.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:414: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_avg.get_offset_y4()` reads without synchronization from `this.mExportVar_offset_y4`. Potentially races with write in method `ScriptC_process_avg.set_offset_y4(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  412.   
+  413.       public int get_offset_y4() {
+  414. >         return mExportVar_offset_y4;
+  415.       }
+  416.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:343: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_hdr.get_offset_y4()` reads without synchronization from `this.mExportVar_offset_y4`. Potentially races with write in method `ScriptC_process_hdr.set_offset_y4(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  341.   
+  342.       public int get_offset_y4() {
+  343. >         return mExportVar_offset_y4;
+  344.       }
+  345.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:444: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_avg.get_offset_y5()` reads without synchronization from `this.mExportVar_offset_y5`. Potentially races with write in method `ScriptC_process_avg.set_offset_y5(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  442.   
+  443.       public int get_offset_y5() {
+  444. >         return mExportVar_offset_y5;
+  445.       }
+  446.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:373: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_hdr.get_offset_y5()` reads without synchronization from `this.mExportVar_offset_y5`. Potentially races with write in method `ScriptC_process_hdr.set_offset_y5(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  371.   
+  372.       public int get_offset_y5() {
+  373. >         return mExportVar_offset_y5;
+  374.       }
+  375.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:474: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_avg.get_offset_y6()` reads without synchronization from `this.mExportVar_offset_y6`. Potentially races with write in method `ScriptC_process_avg.set_offset_y6(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  472.   
+  473.       public int get_offset_y6() {
+  474. >         return mExportVar_offset_y6;
+  475.       }
+  476.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:403: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_hdr.get_offset_y6()` reads without synchronization from `this.mExportVar_offset_y6`. Potentially races with write in method `ScriptC_process_hdr.set_offset_y6(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  401.   
+  402.       public int get_offset_y6() {
+  403. >         return mExportVar_offset_y6;
+  404.       }
+  405.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:504: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_avg.get_offset_y7()` reads without synchronization from `this.mExportVar_offset_y7`. Potentially races with write in method `ScriptC_process_avg.set_offset_y7(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  502.   
+  503.       public int get_offset_y7() {
+  504. >         return mExportVar_offset_y7;
+  505.       }
+  506.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:129: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_avg.get_offset_y_new()` reads without synchronization from `this.mExportVar_offset_y_new`. Potentially races with write in method `ScriptC_process_avg.set_offset_y_new(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  127.   
+  128.       public int get_offset_y_new() {
+  129. >         return mExportVar_offset_y_new;
+  130.       }
+  131.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_create_mtb.java:64: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `Allocation ScriptC_create_mtb.get_out_bitmap()` reads without synchronization from `this.mExportVar_out_bitmap`. Potentially races with write in method `ScriptC_create_mtb.set_out_bitmap(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  62.   
+  63.       public Allocation get_out_bitmap() {
+  64. >         return mExportVar_out_bitmap;
+  65.       }
+  66.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:418: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `float ScriptC_process_hdr.get_parameter_A0()` reads without synchronization from `this.mExportVar_parameter_A0`. Potentially races with write in method `ScriptC_process_hdr.set_parameter_A0(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  416.   
+  417.       public float get_parameter_A0() {
+  418. >         return mExportVar_parameter_A0;
+  419.       }
+  420.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:448: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `float ScriptC_process_hdr.get_parameter_A1()` reads without synchronization from `this.mExportVar_parameter_A1`. Potentially races with write in method `ScriptC_process_hdr.set_parameter_A1(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  446.   
+  447.       public float get_parameter_A1() {
+  448. >         return mExportVar_parameter_A1;
+  449.       }
+  450.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:478: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `float ScriptC_process_hdr.get_parameter_A2()` reads without synchronization from `this.mExportVar_parameter_A2`. Potentially races with write in method `ScriptC_process_hdr.set_parameter_A2(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  476.   
+  477.       public float get_parameter_A2() {
+  478. >         return mExportVar_parameter_A2;
+  479.       }
+  480.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:508: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `float ScriptC_process_hdr.get_parameter_A3()` reads without synchronization from `this.mExportVar_parameter_A3`. Potentially races with write in method `ScriptC_process_hdr.set_parameter_A3(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  506.   
+  507.       public float get_parameter_A3() {
+  508. >         return mExportVar_parameter_A3;
+  509.       }
+  510.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:538: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `float ScriptC_process_hdr.get_parameter_A4()` reads without synchronization from `this.mExportVar_parameter_A4`. Potentially races with write in method `ScriptC_process_hdr.set_parameter_A4(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  536.   
+  537.       public float get_parameter_A4() {
+  538. >         return mExportVar_parameter_A4;
+  539.       }
+  540.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:568: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `float ScriptC_process_hdr.get_parameter_A5()` reads without synchronization from `this.mExportVar_parameter_A5`. Potentially races with write in method `ScriptC_process_hdr.set_parameter_A5(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  566.   
+  567.       public float get_parameter_A5() {
+  568. >         return mExportVar_parameter_A5;
+  569.       }
+  570.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:598: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `float ScriptC_process_hdr.get_parameter_A6()` reads without synchronization from `this.mExportVar_parameter_A6`. Potentially races with write in method `ScriptC_process_hdr.set_parameter_A6(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  596.   
+  597.       public float get_parameter_A6() {
+  598. >         return mExportVar_parameter_A6;
+  599.       }
+  600.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:433: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `float ScriptC_process_hdr.get_parameter_B0()` reads without synchronization from `this.mExportVar_parameter_B0`. Potentially races with write in method `ScriptC_process_hdr.set_parameter_B0(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  431.   
+  432.       public float get_parameter_B0() {
+  433. >         return mExportVar_parameter_B0;
+  434.       }
+  435.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:463: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `float ScriptC_process_hdr.get_parameter_B1()` reads without synchronization from `this.mExportVar_parameter_B1`. Potentially races with write in method `ScriptC_process_hdr.set_parameter_B1(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  461.   
+  462.       public float get_parameter_B1() {
+  463. >         return mExportVar_parameter_B1;
+  464.       }
+  465.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:493: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `float ScriptC_process_hdr.get_parameter_B2()` reads without synchronization from `this.mExportVar_parameter_B2`. Potentially races with write in method `ScriptC_process_hdr.set_parameter_B2(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  491.   
+  492.       public float get_parameter_B2() {
+  493. >         return mExportVar_parameter_B2;
+  494.       }
+  495.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:523: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `float ScriptC_process_hdr.get_parameter_B3()` reads without synchronization from `this.mExportVar_parameter_B3`. Potentially races with write in method `ScriptC_process_hdr.set_parameter_B3(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  521.   
+  522.       public float get_parameter_B3() {
+  523. >         return mExportVar_parameter_B3;
+  524.       }
+  525.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:553: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `float ScriptC_process_hdr.get_parameter_B4()` reads without synchronization from `this.mExportVar_parameter_B4`. Potentially races with write in method `ScriptC_process_hdr.set_parameter_B4(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  551.   
+  552.       public float get_parameter_B4() {
+  553. >         return mExportVar_parameter_B4;
+  554.       }
+  555.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:583: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `float ScriptC_process_hdr.get_parameter_B5()` reads without synchronization from `this.mExportVar_parameter_B5`. Potentially races with write in method `ScriptC_process_hdr.set_parameter_B5(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  581.   
+  582.       public float get_parameter_B5() {
+  583. >         return mExportVar_parameter_B5;
+  584.       }
+  585.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:613: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `float ScriptC_process_hdr.get_parameter_B6()` reads without synchronization from `this.mExportVar_parameter_B6`. Potentially races with write in method `ScriptC_process_hdr.set_parameter_B6(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  611.   
+  612.       public float get_parameter_B6() {
+  613. >         return mExportVar_parameter_B6;
+  614.       }
+  615.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:144: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_avg.get_scale_align_size()` reads without synchronization from `this.mExportVar_scale_align_size`. Potentially races with write in method `ScriptC_process_avg.set_scale_align_size(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  142.   
+  143.       public int get_scale_align_size() {
+  144. >         return mExportVar_scale_align_size;
+  145.       }
+  146.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_create_mtb.java:94: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_create_mtb.get_start_x()` reads without synchronization from `this.mExportVar_start_x`. Potentially races with write in method `ScriptC_create_mtb.set_start_x(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  92.   
+  93.       public int get_start_x() {
+  94. >         return mExportVar_start_x;
+  95.       }
+  96.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_create_mtb.java:109: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_create_mtb.get_start_y()` reads without synchronization from `this.mExportVar_start_y`. Potentially races with write in method `ScriptC_create_mtb.set_start_y(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  107.   
+  108.       public int get_start_y() {
+  109. >         return mExportVar_start_y;
+  110.       }
+  111.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_align_mtb.java:92: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_align_mtb.get_step_size()` reads without synchronization from `this.mExportVar_step_size`. Potentially races with write in method `ScriptC_align_mtb.set_step_size(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  90.   
+  91.       public int get_step_size() {
+  92. >         return mExportVar_step_size;
+  93.       }
+  94.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:694: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_process_hdr.get_tonemap_algorithm()` reads without synchronization from `this.mExportVar_tonemap_algorithm`. Potentially races with write in method `ScriptC_process_hdr.set_tonemap_algorithm(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  692.   
+  693.       public int get_tonemap_algorithm() {
+  694. >         return mExportVar_tonemap_algorithm;
+  695.       }
+  696.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_hdr.java:720: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `float ScriptC_process_hdr.get_tonemap_scale()` reads without synchronization from `this.mExportVar_tonemap_scale`. Potentially races with write in method `ScriptC_process_hdr.set_tonemap_scale(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  718.   
+  719.       public float get_tonemap_scale() {
+  720. >         return mExportVar_tonemap_scale;
+  721.       }
+  722.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_calculate_sharpness.java:86: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_calculate_sharpness.get_width()` reads without synchronization from `this.mExportVar_width`. Potentially races with write in method `ScriptC_calculate_sharpness.set_width(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  84.   
+  85.       public int get_width() {
+  86. >         return mExportVar_width;
+  87.       }
+  88.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_histogram_adjust.java:111: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_histogram_adjust.get_width()` reads without synchronization from `this.mExportVar_width`. Potentially races with write in method `ScriptC_histogram_adjust.set_width(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  109.   
+  110.       public int get_width() {
+  111. >         return mExportVar_width;
+  112.       }
+  113.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:174: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `float ScriptC_process_avg.get_wiener_C()` reads without synchronization from `this.mExportVar_wiener_C`. Potentially races with write in method `ScriptC_process_avg.set_wiener_C(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  172.   
+  173.       public float get_wiener_C() {
+  174. >         return mExportVar_wiener_C;
+  175.       }
+  176.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_process_avg.java:189: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `float ScriptC_process_avg.get_wiener_C_cutoff()` reads without synchronization from `this.mExportVar_wiener_C_cutoff`. Potentially races with write in method `ScriptC_process_avg.set_wiener_C_cutoff(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  187.   
+  188.       public float get_wiener_C_cutoff() {
+  189. >         return mExportVar_wiener_C_cutoff;
+  190.       }
+  191.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_histogram_compute.java:111: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_histogram_compute.get_zebra_stripes_threshold()` reads without synchronization from `this.mExportVar_zebra_stripes_threshold`. Potentially races with write in method `ScriptC_histogram_compute.set_zebra_stripes_threshold(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  109.   
+  110.       public int get_zebra_stripes_threshold() {
+  111. >         return mExportVar_zebra_stripes_threshold;
+  112.       }
+  113.   
+
+app/build/generated/renderscript_source_output_dir/debug/compileDebugRenderscript/out/net/sourceforge/opencamera/ScriptC_histogram_compute.java:126: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `int ScriptC_histogram_compute.get_zebra_stripes_width()` reads without synchronization from `this.mExportVar_zebra_stripes_width`. Potentially races with write in method `ScriptC_histogram_compute.set_zebra_stripes_width(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  124.   
+  125.       public int get_zebra_stripes_width() {
+  126. >         return mExportVar_zebra_stripes_width;
+  127.       }
+  128.   
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:6525: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2.initVideoRecorderPostPrepare(MediaRecorder,boolean)` writes to field `this.previewBuilder` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  6523.               if( MyDebug.LOG )
+  6524.                   Log.d(TAG, "obtain video_recorder surface");
+  6525. >             previewBuilder = camera.createCaptureRequest(CameraDevice.TEMPLATE_RECORD);
+  6526.               if( MyDebug.LOG )
+  6527.                   Log.d(TAG, "done");
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:6528: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2.initVideoRecorderPostPrepare(MediaRecorder,boolean)` writes to field `this.previewIsVideoMode` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  6526.               if( MyDebug.LOG )
+  6527.                   Log.d(TAG, "done");
+  6528. >             previewIsVideoMode = true;
+  6529.               previewBuilder.set(CaptureRequest.CONTROL_CAPTURE_INTENT, CaptureRequest.CONTROL_CAPTURE_INTENT_VIDEO_RECORD);
+  6530.               camera_settings.setupBuilder(previewBuilder, false);
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:6529: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.initVideoRecorderPostPrepare(MediaRecorder,boolean)` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  6527.                   Log.d(TAG, "done");
+  6528.               previewIsVideoMode = true;
+  6529. >             previewBuilder.set(CaptureRequest.CONTROL_CAPTURE_INTENT, CaptureRequest.CONTROL_CAPTURE_INTENT_VIDEO_RECORD);
+  6530.               camera_settings.setupBuilder(previewBuilder, false);
+  6531.               createCaptureSession(video_recorder, want_photo_video_recording);
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:6530: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2.initVideoRecorderPostPrepare(MediaRecorder,boolean)` indirectly writes to field `this.camera_settings.default_edge_mode` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  6528.               previewIsVideoMode = true;
+  6529.               previewBuilder.set(CaptureRequest.CONTROL_CAPTURE_INTENT, CaptureRequest.CONTROL_CAPTURE_INTENT_VIDEO_RECORD);
+  6530. >             camera_settings.setupBuilder(previewBuilder, false);
+  6531.               createCaptureSession(video_recorder, want_photo_video_recording);
+  6532.           }
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:6531: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.initVideoRecorderPostPrepare(MediaRecorder,boolean)` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  6529.               previewBuilder.set(CaptureRequest.CONTROL_CAPTURE_INTENT, CaptureRequest.CONTROL_CAPTURE_INTENT_VIDEO_RECORD);
+  6530.               camera_settings.setupBuilder(previewBuilder, false);
+  6531. >             createCaptureSession(video_recorder, want_photo_video_recording);
+  6532.           }
+  6533.           catch(CameraAccessException e) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3382: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `boolean CameraController2.isCapturingBurst()` reads without synchronization from `this.continuous_burst_in_progress`. Potentially races with write in method `CameraController2.takePicture(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3380.               return false;
+  3381.           if( burst_type == BurstType.BURSTTYPE_CONTINUOUS )
+  3382. >             return continuous_burst_in_progress || n_burst > 0 || n_burst_raw > 0;
+  3383.           return getBurstTotal() > 1 && getNBurstTaken() < getBurstTotal();
+  3384.       }
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3383: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `boolean CameraController2.isCapturingBurst()` indirectly reads without synchronization from `this.n_burst_taken`. Potentially races with write in method `CameraController2.takePicture(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3381.           if( burst_type == BurstType.BURSTTYPE_CONTINUOUS )
+  3382.               return continuous_burst_in_progress || n_burst > 0 || n_burst_raw > 0;
+  3383. >         return getBurstTotal() > 1 && getNBurstTaken() < getBurstTotal();
+  3384.       }
+  3385.   
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3433: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `boolean CameraController2.isContinuousBurstInProgress()` reads without synchronization from `this.continuous_burst_in_progress`. Potentially races with write in method `CameraController2.takePicture(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3431.       @Override
+  3432.       public boolean isContinuousBurstInProgress() {
+  3433. >         return continuous_burst_in_progress;
+  3434.       }
+  3435.   
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1532: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2$1MyStateCallback.onClosed(CameraDevice)` writes to field `this.first_callback` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  1530.                   // caller should ensure camera variables are set to null
+  1531.                   if( first_callback ) {
+  1532. >                     first_callback = false;
+  1533.                   }
+  1534.               }
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1531: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2$1MyStateCallback.onClosed(CameraDevice)` reads without synchronization from `this.first_callback`. Potentially races with write in method `CameraController2$1MyStateCallback.onError(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  1529.                       Log.d(TAG, "camera closed, first_callback? " + first_callback);
+  1530.                   // caller should ensure camera variables are set to null
+  1531. >                 if( first_callback ) {
+  1532.                       first_callback = false;
+  1533.                   }
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1541: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2$1MyStateCallback.onDisconnected(CameraDevice)` writes to field `this.first_callback` outside of synchronization.
+ Reporting because this access may occur on a background thread.
+  1539.                       Log.d(TAG, "camera disconnected, first_callback? " + first_callback);
+  1540.                   if( first_callback ) {
+  1541. >                     first_callback = false;
+  1542.                       // must call close() if disconnected before camera was opened
+  1543.                       // need to set the camera to null first, as closing the camera may take some time, and we don't want any other operations to continue (if called from main thread)
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1544: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2$1MyStateCallback.onDisconnected(CameraDevice)` writes to field `this.this$0.camera` outside of synchronization.
+ Reporting because this access may occur on a background thread.
+  1542.                       // must call close() if disconnected before camera was opened
+  1543.                       // need to set the camera to null first, as closing the camera may take some time, and we don't want any other operations to continue (if called from main thread)
+  1544. >                     CameraController2.this.camera = null;
+  1545.                       if( MyDebug.LOG )
+  1546.                           Log.d(TAG, "onDisconnected: camera is now set to null");
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1540: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2$1MyStateCallback.onDisconnected(CameraDevice)` reads without synchronization from `this.first_callback`. Potentially races with write in method `CameraController2$1MyStateCallback.onError(...)`.
+ Reporting because this access may occur on a background thread.
+  1538.                   if( MyDebug.LOG )
+  1539.                       Log.d(TAG, "camera disconnected, first_callback? " + first_callback);
+  1540. >                 if( first_callback ) {
+  1541.                       first_callback = false;
+  1542.                       // must call close() if disconnected before camera was opened
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1420: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2.onError()` indirectly writes to field `this.camera` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  1418.           Log.e(TAG, "onError");
+  1419.           if( camera != null ) {
+  1420. >             onError(camera);
+  1421.           }
+  1422.       }
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1419: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.onError()` reads without synchronization from `this.camera`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  1417.       public void onError() {
+  1418.           Log.e(TAG, "onError");
+  1419. >         if( camera != null ) {
+  1420.               onError(camera);
+  1421.           }
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1575: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2$1MyStateCallback.onError(CameraDevice,int)` indirectly writes to field `this.this$0.camera` outside of synchronization.
+ Reporting because this access may occur on a background thread.
+  1573.                       first_callback = false;
+  1574.                   }
+  1575. >                 CameraController2.this.onError(cam);
+  1576.                   if( MyDebug.LOG )
+  1577.                       Log.d(TAG, "about to synchronize to say callback done");
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1572: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2$1MyStateCallback.onError(CameraDevice,int)` reads without synchronization from `this.first_callback`. Potentially races with write in method `CameraController2$1MyStateCallback.onError(...)`.
+ Reporting because this access may occur on a background thread.
+  1570.                       Log.d(TAG, "first_callback? " + first_callback);
+  1571.                   }
+  1572. >                 if( first_callback ) {
+  1573.                       first_callback = false;
+  1574.                   }
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1573: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2$1MyStateCallback.onError(CameraDevice,int)` writes to field `this.first_callback` outside of synchronization.
+ Reporting because this access may occur on a background thread.
+  1571.                   }
+  1572.                   if( first_callback ) {
+  1573. >                     first_callback = false;
+  1574.                   }
+  1575.                   CameraController2.this.onError(cam);
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1023: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2$OnImageAvailableListener.onImageAvailable(ImageReader)` reads without synchronization from `this.this$0.picture_cb`. Potentially races with write in method `CameraController2$OnImageAvailableListener.onImageAvailable(...)`.
+ Reporting because this access may occur on a background thread.
+  1021.               // need to call without a lock
+  1022.               if( single_burst_complete_images != null ) {
+  1023. >                 picture_cb.onBurstPictureTaken(single_burst_complete_images);
+  1024.               }
+  1025.               else if( !burst_single_request ) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:967: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2$OnImageAvailableListener.onImageAvailable(ImageReader)` reads without synchronization from `this.this$0.jpeg_todo`. Potentially races with write in method `CameraController2$OnImageAvailableListener.onImageAvailable(...)`.
+ Reporting because this access may occur on a background thread.
+  965.               if( MyDebug.LOG )
+  966.                   Log.d(TAG, "new still image available");
+  967. >             if( picture_cb == null || !jpeg_todo ) {
+  968.                   // in theory this shouldn't happen - but if this happens, still free the image to avoid risk of memory leak,
+  969.                   // or strange behaviour where an old image appears when the user next takes a photo
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1061: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2$OnImageAvailableListener.onImageAvailable(ImageReader)` indirectly writes to field `this.this$0.pending_raw_image` outside of synchronization.
+ Reporting because this access may occur on a background thread.
+  1059.               }
+  1060.               else if( call_takePhotoCompleted ) {
+  1061. >                 takePhotoCompleted();
+  1062.               }
+  1063.   
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1389: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2$OnRawImageAvailableListener.onImageAvailable(ImageReader)` reads without synchronization from `this.this$0.picture_cb`. Potentially races with write in method `CameraController2$OnRawImageAvailableListener.onImageAvailable(...)`.
+ Reporting because this access may occur on a background thread.
+  1387.               if( MyDebug.LOG )
+  1388.                   Log.d(TAG, "new still raw image available");
+  1389. >             if( picture_cb == null || !raw_todo ) {
+  1390.                   // in theory this shouldn't happen - but if this happens, still free the image to avoid risk of memory leak,
+  1391.                   // or strange behaviour where an old image appears when the user next takes a photo
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1402: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2$OnRawImageAvailableListener.onImageAvailable(ImageReader)` indirectly writes to field `this.this$0.pending_raw_image` outside of synchronization.
+ Reporting because this access may occur on a background thread.
+  1400.                   images.add(image);
+  1401.               }
+  1402. >             processImage();
+  1403.               if( MyDebug.LOG )
+  1404.                   Log.d(TAG, "done (RAW) onImageAvailable");
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1498: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2$1MyStateCallback.onOpened(CameraDevice)` writes to field `this.this$0.camera` outside of synchronization.
+ Reporting because this access may occur on a background thread.
+  1496.                           }
+  1497.   
+  1498. >                         CameraController2.this.camera = cam;
+  1499.   
+  1500.                           // note, this won't start the preview yet, but we create the previewBuilder in order to start setting camera parameters
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1491: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2$1MyStateCallback.onOpened(CameraDevice)` reads without synchronization from `this.this$0.characteristics`. Potentially races with write in method `CameraController2$1MyStateCallback.onOpened(...)`.
+ Reporting because this access may occur on a background thread.
+  1489.                               Log.d(TAG, "successfully obtained camera characteristics");
+  1490.                           // now read cached values
+  1491. >                         characteristics_sensor_orientation = characteristics.get(CameraCharacteristics.SENSOR_ORIENTATION);
+  1492.                           characteristics_is_front_facing = characteristics.get(CameraCharacteristics.LENS_FACING) == CameraCharacteristics.LENS_FACING_FRONT;
+  1493.                           if( MyDebug.LOG ) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1487: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2$1MyStateCallback.onOpened(CameraDevice)` writes to field `this.this$0.characteristics` outside of synchronization.
+ Reporting because this access may occur on a background thread.
+  1485.                           if( MyDebug.LOG )
+  1486.                               Log.d(TAG, "try to get camera characteristics");
+  1487. >                         characteristics = manager.getCameraCharacteristics(cameraIdS);
+  1488.                           if( MyDebug.LOG )
+  1489.                               Log.d(TAG, "successfully obtained camera characteristics");
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1481: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2$1MyStateCallback.onOpened(CameraDevice)` writes to field `this.first_callback` outside of synchronization.
+ Reporting because this access may occur on a background thread.
+  1479.                       return;*/
+  1480.                   if( first_callback ) {
+  1481. >                     first_callback = false;
+  1482.   
+  1483.                       try {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1480: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2$1MyStateCallback.onOpened(CameraDevice)` reads without synchronization from `this.first_callback`. Potentially races with write in method `CameraController2$1MyStateCallback.onError(...)`.
+ Reporting because this access may occur on a background thread.
+  1478.                   /*if( true ) // uncomment to test timeout code
+  1479.                       return;*/
+  1480. >                 if( first_callback ) {
+  1481.                       first_callback = false;
+  1482.   
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1501: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2$1MyStateCallback.onOpened(CameraDevice)` indirectly reads without synchronization from `this.this$0.camera`. Potentially races with write in method `CameraController2$1MyStateCallback.onError(...)`.
+ Reporting because this access may occur on a background thread.
+  1499.   
+  1500.                           // note, this won't start the preview yet, but we create the previewBuilder in order to start setting camera parameters
+  1501. >                         createPreviewRequest();
+  1502.                       }
+  1503.                       catch(CameraAccessException e) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:6551: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.reconnect()` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  6549.           playSound(MediaActionSound.STOP_VIDEO_RECORDING);
+  6550.           createPreviewRequest();
+  6551. >         createCaptureSession(null, false);
+  6552.           /*if( MyDebug.LOG )
+  6553.               Log.d(TAG, "add preview surface to previewBuilder");
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:6550: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2.reconnect()` indirectly writes to field `this.camera_settings.default_edge_mode` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  6548.           // if we change where we play the STOP_VIDEO_RECORDING sound, make sure it can't be heard in resultant video
+  6549.           playSound(MediaActionSound.STOP_VIDEO_RECORDING);
+  6550. >         createPreviewRequest();
+  6551.           createCaptureSession(null, false);
+  6552.           /*if( MyDebug.LOG )
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1750: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2.release()` writes to field `this.handler` outside of synchronization.
+ Reporting because this access may occur on a background thread.
+  1748.                   thread.join();
+  1749.                   thread = null;
+  1750. >                 handler = null;
+  1751.               }
+  1752.               catch(InterruptedException e) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1738: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2.release()` indirectly writes to field `this.imageReader` outside of synchronization.
+ Reporting because this access may occur on a background thread.
+  1736.               camera = null;
+  1737.           }
+  1738. >         closePictureImageReader();
+  1739.           /*if( previewImageReader != null ) {
+  1740.               previewImageReader.close();
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1736: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2.release()` writes to field `this.camera` outside of synchronization.
+ Reporting because this access may occur on a background thread.
+  1734.           if( camera != null ) {
+  1735.               camera.close();
+  1736. >             camera = null;
+  1737.           }
+  1738.           closePictureImageReader();
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1743: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.release()` reads without synchronization from `this.thread`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because this access may occur on a background thread.
+  1741.               previewImageReader = null;
+  1742.           }*/
+  1743. >         if( thread != null ) {
+  1744.               // should only close thread after closing the camera, otherwise we get messages "sending message to a Handler on a dead thread"
+  1745.               // see https://sourceforge.net/p/opencamera/discussion/general/thread/32c2b01b/?limit=25
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1733: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2.release()` writes to field `this.previewIsVideoMode` outside of synchronization.
+ Reporting because this access may occur on a background thread.
+  1731.           }
+  1732.           previewBuilder = null;
+  1733. >         previewIsVideoMode = false;
+  1734.           if( camera != null ) {
+  1735.               camera.close();
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1732: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2.release()` writes to field `this.previewBuilder` outside of synchronization.
+ Reporting because this access may occur on a background thread.
+  1730.               }
+  1731.           }
+  1732. >         previewBuilder = null;
+  1733.           previewIsVideoMode = false;
+  1734.           if( camera != null ) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1734: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.release()` reads without synchronization from `this.camera`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because this access may occur on a background thread.
+  1732.           previewBuilder = null;
+  1733.           previewIsVideoMode = false;
+  1734. >         if( camera != null ) {
+  1735.               camera.close();
+  1736.               camera = null;
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:1749: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2.release()` writes to field `this.thread` outside of synchronization.
+ Reporting because this access may occur on a background thread.
+  1747.               try {
+  1748.                   thread.join();
+  1749. >                 thread = null;
+  1750.                   handler = null;
+  1751.               }
+
+app/src/main/java/net/sourceforge/opencamera/AudioListener.java:165: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void AudioListener.release(boolean)` writes to field `this.thread` outside of synchronization.
+ Reporting because this access may occur on a background thread.
+  163.           }
+  164.           is_running = false;
+  165. >         thread = null;
+  166.           if( wait_until_done ) {
+  167.               if( MyDebug.LOG )
+
+app/src/main/java/net/sourceforge/opencamera/AudioListener.java:88: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void AudioListener$1.run()` reads without synchronization from `this.this$0.ar`. Potentially races with write in method `AudioListener$1.run()`.
+ Reporting because this access may occur on a background thread.
+  86.                       }*/
+  87.                       try {
+  88. >                         int n_read = ar.read(buffer, 0, buffer_size);
+  89.                           if( n_read > 0 ) {
+  90.                               int average_noise = 0;
+
+app/src/main/java/net/sourceforge/opencamera/MyApplicationInterface.java:1922: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void MyApplicationInterface$1SubtitleVideoTimerTask.run()` reads without synchronization from `this.min_video_time_from`. Potentially races with write in method `MyApplicationInterface$1SubtitleVideoTimerTask.run()`.
+ Reporting because this access may occur on a background thread.
+  1920.                       // https://forum.xda-developers.com/showpost.php?p=74827802&postcount=345 for pause video where we ended up
+  1921.                       // with overlapping times when resuming
+  1922. >                     if( video_time_from < min_video_time_from )
+  1923.                           video_time_from = min_video_time_from;
+  1924.                       min_video_time_from = video_time_to + 1;
+
+app/src/main/java/net/sourceforge/opencamera/MyApplicationInterface.java:1924: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void MyApplicationInterface$1SubtitleVideoTimerTask.run()` writes to field `this.min_video_time_from` outside of synchronization.
+ Reporting because this access may occur on a background thread.
+  1922.                       if( video_time_from < min_video_time_from )
+  1923.                           video_time_from = min_video_time_from;
+  1924. >                     min_video_time_from = video_time_to + 1;
+  1925.                       String subtitle_time_from = TextFormatter.formatTimeMS(video_time_from);
+  1926.                       String subtitle_time_to = TextFormatter.formatTimeMS(video_time_to);
+
+app/src/main/java/net/sourceforge/opencamera/MyApplicationInterface.java:1946: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void MyApplicationInterface$1SubtitleVideoTimerTask.run()` reads with synchronization from `this.count`. Potentially races with unsynchronized write in method `MyApplicationInterface$1SubtitleVideoTimerTask.run()`.
+ Reporting because this access may occur on a background thread.
+  1944.                               }
+  1945.                               if( writer != null ) {
+  1946. >                                 writer.append(Integer.toString(count));
+  1947.                                   writer.append('\n');
+  1948.                                   writer.append(subtitle_time_from);
+
+app/src/main/java/net/sourceforge/opencamera/MyApplicationInterface.java:1958: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void MyApplicationInterface$1SubtitleVideoTimerTask.run()` writes to field `this.count` outside of synchronization.
+ Reporting because this access may occur on a background thread.
+  1956.                               }
+  1957.                           }
+  1958. >                         count++;
+  1959.                       }
+  1960.                       catch(IOException e) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:7432: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2$5$1.run()` indirectly writes to field `this.this$1.this$0.pending_raw_image` outside of synchronization.
+ Reporting because this access may occur on a background thread.
+  7430.                               Log.d(TAG, "done all captures");
+  7431.                       }
+  7432. >                     checkImagesCompleted();
+  7433.                   }
+  7434.               });
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:2868: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `CameraController$SupportedValues CameraController2.setAntiBanding(String)` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  2866.                   if( camera_settings.setAntiBanding(previewBuilder) ) {
+  2867.                       try {
+  2868. >                         setRepeatingRequest();
+  2869.                       }
+  2870.                       catch(CameraAccessException e) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:2866: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `CameraController$SupportedValues CameraController2.setAntiBanding(String)` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  2864.                   camera_settings.has_antibanding = true;
+  2865.                   camera_settings.antibanding = selected_value2;
+  2866. >                 if( camera_settings.setAntiBanding(previewBuilder) ) {
+  2867.                       try {
+  2868.                           setRepeatingRequest();
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4103: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setAutoExposureLock(boolean)` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  4101.           camera_settings.setAutoExposureLock(previewBuilder);
+  4102.           try {
+  4103. >             setRepeatingRequest();
+  4104.           }
+  4105.           catch(CameraAccessException e) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4101: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setAutoExposureLock(boolean)` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  4099.       public void setAutoExposureLock(boolean enabled) {
+  4100.           camera_settings.ae_lock = enabled;
+  4101. >         camera_settings.setAutoExposureLock(previewBuilder);
+  4102.           try {
+  4103.               setRepeatingRequest();
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4127: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setAutoWhiteBalanceLock(boolean)` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  4125.           camera_settings.setAutoWhiteBalanceLock(previewBuilder);
+  4126.           try {
+  4127. >             setRepeatingRequest();
+  4128.           }
+  4129.           catch(CameraAccessException e) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4125: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setAutoWhiteBalanceLock(boolean)` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  4123.       public void setAutoWhiteBalanceLock(boolean enabled) {
+  4124.           camera_settings.wb_lock = enabled;
+  4125. >         camera_settings.setAutoWhiteBalanceLock(previewBuilder);
+  4126.           try {
+  4127.               setRepeatingRequest();
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3312: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setBurstType(CameraController$BurstType)` reads without synchronization from `this.camera`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3310.           if( MyDebug.LOG )
+  3311.               Log.d(TAG, "setBurstType: " + burst_type);
+  3312. >         if( camera == null ) {
+  3313.               if( MyDebug.LOG )
+  3314.                   Log.e(TAG, "no camera");
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3328: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setBurstType(CameraController$BurstType)` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3326.           this.burst_type = burst_type;
+  3327.           updateUseFakePrecaptureMode(camera_settings.flash_value);
+  3328. >         camera_settings.setAEMode(previewBuilder, false); // may need to set the ae mode, as flash is disabled for burst modes
+  3329.       }
+  3330.   
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:2602: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `CameraController$SupportedValues CameraController2.setColorEffect(String)` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  2600.               if( camera_settings.setColorEffect(previewBuilder) ) {
+  2601.                   try {
+  2602. >                     setRepeatingRequest();
+  2603.                   }
+  2604.                   catch(CameraAccessException e) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:2600: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `CameraController$SupportedValues CameraController2.setColorEffect(String)` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  2598.   
+  2599.               camera_settings.color_effect = selected_value2;
+  2600. >             if( camera_settings.setColorEffect(previewBuilder) ) {
+  2601.                   try {
+  2602.                       setRepeatingRequest();
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:2966: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `CameraController$SupportedValues CameraController2.setEdgeMode(String)` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  2964.                       if( camera_settings.setEdgeMode(previewBuilder) ) {
+  2965.                           try {
+  2966. >                             setRepeatingRequest();
+  2967.                           }
+  2968.                           catch(CameraAccessException e) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:2964: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `CameraController$SupportedValues CameraController2.setEdgeMode(String)` indirectly writes to field `this.camera_settings.default_edge_mode` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  2962.                       camera_settings.has_edge_mode = has_edge_mode;
+  2963.                       camera_settings.edge_mode = selected_value2;
+  2964. >                     if( camera_settings.setEdgeMode(previewBuilder) ) {
+  2965.                           try {
+  2966.                               setRepeatingRequest();
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3782: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `boolean CameraController2.setExposureCompensation(int)` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3780.           if( camera_settings.setExposureCompensation(previewBuilder) ) {
+  3781.               try {
+  3782. >                 setRepeatingRequest();
+  3783.               }
+  3784.               catch(CameraAccessException e) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3780: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `boolean CameraController2.setExposureCompensation(int)` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3778.           camera_settings.has_ae_exposure_compensation = true;
+  3779.           camera_settings.ae_exposure_compensation = new_exposure;
+  3780. >         if( camera_settings.setExposureCompensation(previewBuilder) ) {
+  3781.               try {
+  3782.                   setRepeatingRequest();
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3219: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `boolean CameraController2.setExposureTime(long)` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3217.               camera_settings.exposure_time = exposure_time;
+  3218.               if( camera_settings.setAEMode(previewBuilder, false) ) {
+  3219. >                 setRepeatingRequest();
+  3220.               }
+  3221.           }
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3218: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `boolean CameraController2.setExposureTime(long)` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3216.           try {
+  3217.               camera_settings.exposure_time = exposure_time;
+  3218. >             if( camera_settings.setAEMode(previewBuilder, false) ) {
+  3219.                   setRepeatingRequest();
+  3220.               }
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4070: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setFlashValue(String)` indirectly reads with synchronization from `this.handler`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  4068.                   camera_settings.flash_value = flash_value;
+  4069.                   if( camera_settings.setAEMode(previewBuilder, false) ) {
+  4070. >                     setRepeatingRequest();
+  4071.                   }
+  4072.               }
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4056: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setFlashValue(String)` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  4054.                   // hack - if switching to something other than flash_off, we first need to turn torch off, otherwise torch remains on (at least on Nexus 6 and Nokia 8)
+  4055.                   camera_settings.flash_value = "flash_off";
+  4056. >                 camera_settings.setAEMode(previewBuilder, false);
+  4057.                   CaptureRequest request = previewBuilder.build();
+  4058.       
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4065: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setFlashValue(String)` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  4063.                   push_repeating_request_when_torch_off_id = request;
+  4064.       
+  4065. >                 setRepeatingRequest(request);
+  4066.               }
+  4067.               else {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4262: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `boolean CameraController2.setFocusAndMeteringArea(List)` indirectly reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  4260.       @Override
+  4261.       public boolean setFocusAndMeteringArea(List<Area> areas) {
+  4262. >         Rect sensor_rect = getViewableRect();
+  4263.           if( MyDebug.LOG )
+  4264.               Log.d(TAG, "sensor_rect: " + sensor_rect.left + " , " + sensor_rect.top + " x " + sensor_rect.right + " , " + sensor_rect.bottom);
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4291: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `boolean CameraController2.setFocusAndMeteringArea(List)` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  4289.           if( has_focus || has_metering ) {
+  4290.               try {
+  4291. >                 setRepeatingRequest();
+  4292.               }
+  4293.               catch(CameraAccessException e) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3969: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `boolean CameraController2.setFocusDistance(float)` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3967.           camera_settings.focus_distance = focus_distance;
+  3968.           camera_settings.focus_distance_manual = focus_distance;
+  3969. >         camera_settings.setFocusDistance(previewBuilder);
+  3970.           try {
+  3971.               setRepeatingRequest();
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3971: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `boolean CameraController2.setFocusDistance(float)` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3969.           camera_settings.setFocusDistance(previewBuilder);
+  3970.           try {
+  3971. >             setRepeatingRequest();
+  3972.           }
+  3973.           catch(CameraAccessException e) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3903: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setFocusValue(String)` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3901.           camera_settings.has_af_mode = true;
+  3902.           camera_settings.af_mode = focus_mode;
+  3903. >         camera_settings.setFocusMode(previewBuilder);
+  3904.           camera_settings.setFocusDistance(previewBuilder); // also need to set distance, in case changed between infinity, manual or other modes
+  3905.           try {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3906: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setFocusValue(String)` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3904.           camera_settings.setFocusDistance(previewBuilder); // also need to set distance, in case changed between infinity, manual or other modes
+  3905.           try {
+  3906. >             setRepeatingRequest();
+  3907.           }
+  3908.           catch(CameraAccessException e) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3178: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `boolean CameraController2.setISO(int)` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3176.           try {
+  3177.               camera_settings.iso = iso;
+  3178. >             if( camera_settings.setAEMode(previewBuilder, false) ) {
+  3179.                   setRepeatingRequest();
+  3180.               }
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3179: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `boolean CameraController2.setISO(int)` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3177.               camera_settings.iso = iso;
+  3178.               if( camera_settings.setAEMode(previewBuilder, false) ) {
+  3179. >                 setRepeatingRequest();
+  3180.               }
+  3181.           }
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3110: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `CameraController$SupportedValues CameraController2.setISO(String)` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3108.           // not supported for CameraController2 - but Camera2 devices that don't support manual ISO can call this,
+  3109.           // so assume this is for auto ISO
+  3110. >         this.setManualISO(false, 0);
+  3111.           return null;
+  3112.       }
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3661: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2.setLogProfile(boolean,float)` indirectly writes to field `this.camera_settings.default_tonemap_mode` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3659.           else
+  3660.               camera_settings.log_profile_strength = 0.0f;
+  3661. >         camera_settings.setLogProfile(previewBuilder);
+  3662.           try {
+  3663.               setRepeatingRequest();
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3663: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setLogProfile(boolean,float)` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3661.           camera_settings.setLogProfile(previewBuilder);
+  3662.           try {
+  3663. >             setRepeatingRequest();
+  3664.           }
+  3665.           catch(CameraAccessException e) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3147: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setManualISO(boolean,int)` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3145.   
+  3146.               if( camera_settings.setAEMode(previewBuilder, false) ) {
+  3147. >                 setRepeatingRequest();
+  3148.               }
+  3149.           }
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3146: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setManualISO(boolean,int)` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3144.               }
+  3145.   
+  3146. >             if( camera_settings.setAEMode(previewBuilder, false) ) {
+  3147.                   setRepeatingRequest();
+  3148.               }
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3079: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `CameraController$SupportedValues CameraController2.setNoiseReductionMode(String)` indirectly writes to field `this.camera_settings.default_noise_reduction_mode` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3077.                       camera_settings.has_noise_reduction_mode = has_noise_reduction_mode;
+  3078.                       camera_settings.noise_reduction_mode = selected_value2;
+  3079. >                     if( camera_settings.setNoiseReductionMode(previewBuilder) ) {
+  3080.                           try {
+  3081.                               setRepeatingRequest();
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3081: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `CameraController$SupportedValues CameraController2.setNoiseReductionMode(String)` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3079.                       if( camera_settings.setNoiseReductionMode(previewBuilder) ) {
+  3080.                           try {
+  3081. >                             setRepeatingRequest();
+  3082.                           }
+  3083.                           catch(CameraAccessException e) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3247: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setPictureSize(int,int)` reads without synchronization from `this.captureSession`. Potentially races with write in method `CameraController2.startPreview()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3245.               return;
+  3246.           }
+  3247. >         if( captureSession != null ) {
+  3248.               // can only call this when captureSession not created - as the surface of the imageReader we create has to match the surface we pass to the captureSession
+  3249.               if( MyDebug.LOG )
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3242: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setPictureSize(int,int)` reads without synchronization from `this.camera`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3240.           if( MyDebug.LOG )
+  3241.               Log.d(TAG, "setPictureSize: " + width + " x " + height);
+  3242. >         if( camera == null ) {
+  3243.               if( MyDebug.LOG )
+  3244.                   Log.e(TAG, "no camera");
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3808: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setPreviewFpsRange(int,int)` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3806.           try {
+  3807.               if( camera_settings.setAEMode(previewBuilder, false) ) {
+  3808. >                 setRepeatingRequest();
+  3809.               }
+  3810.           }
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3807: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setPreviewFpsRange(int,int)` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3805.   
+  3806.           try {
+  3807. >             if( camera_settings.setAEMode(previewBuilder, false) ) {
+  3808.                   setRepeatingRequest();
+  3809.               }
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3263: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setRaw(boolean,int)` reads without synchronization from `this.camera`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3261.               Log.d(TAG, "max_raw_images: " + max_raw_images);
+  3262.           }
+  3263. >         if( camera == null ) {
+  3264.               if( MyDebug.LOG )
+  3265.                   Log.e(TAG, "no camera");
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3276: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setRaw(boolean,int)` reads without synchronization from `this.captureSession`. Potentially races with write in method `CameraController2.startPreview()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3274.               return;
+  3275.           }
+  3276. >         if( captureSession != null ) {
+  3277.               // can only call this when captureSession not created - as it affects how we create the imageReader
+  3278.               if( MyDebug.LOG )
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:2478: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `CameraController$SupportedValues CameraController2.setSceneMode(String)` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  2476.               if( camera_settings.setSceneMode(previewBuilder) ) {
+  2477.                   try {
+  2478. >                     setRepeatingRequest();
+  2479.                   }
+  2480.                   catch(CameraAccessException e) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:2476: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `CameraController$SupportedValues CameraController2.setSceneMode(String)` indirectly reads without synchronization from `this.camera_settings.has_face_detect_mode`. Potentially races with write in method `CameraController2.stopPreview()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  2474.   
+  2475.               camera_settings.scene_mode = selected_value2;
+  2476. >             if( camera_settings.setSceneMode(previewBuilder) ) {
+  2477.                   try {
+  2478.                       setRepeatingRequest();
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3459: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setUseCamera2FakeFlash(boolean)` reads without synchronization from `this.camera`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3457.           if( MyDebug.LOG )
+  3458.               Log.d(TAG, "setUseCamera2FakeFlash: " + use_fake_precapture);
+  3459. >         if( camera == null ) {
+  3460.               if( MyDebug.LOG )
+  3461.                   Log.e(TAG, "no camera");
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3298: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setVideoHighSpeed(boolean)` reads without synchronization from `this.captureSession`. Potentially races with write in method `CameraController2.startPreview()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3296.               return;
+  3297.           }
+  3298. >         if( captureSession != null ) {
+  3299.               // can only call this when captureSession not created - as it affects how we create the session
+  3300.               if( MyDebug.LOG )
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3305: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2.setVideoHighSpeed(boolean)` writes to field `this.is_video_high_speed` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3303.           }
+  3304.           this.want_video_high_speed = want_video_high_speed;
+  3305. >         this.is_video_high_speed = false; // reset just to be safe
+  3306.       }
+  3307.   
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3290: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setVideoHighSpeed(boolean)` reads without synchronization from `this.camera`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3288.           if( MyDebug.LOG )
+  3289.               Log.d(TAG, "setVideoHighSpeed: " + want_video_high_speed);
+  3290. >         if( camera == null ) {
+  3291.               if( MyDebug.LOG )
+  3292.                   Log.e(TAG, "no camera");
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3629: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setVideoStabilization(boolean)` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3627.       public void setVideoStabilization(boolean enabled) {
+  3628.           camera_settings.video_stabilization = enabled;
+  3629. >         camera_settings.setVideoStabilization(previewBuilder);
+  3630.           try {
+  3631.               setRepeatingRequest();
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3631: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setVideoStabilization(boolean)` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3629.           camera_settings.setVideoStabilization(previewBuilder);
+  3630.           try {
+  3631. >             setRepeatingRequest();
+  3632.           }
+  3633.           catch(CameraAccessException e) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:2742: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `CameraController$SupportedValues CameraController2.setWhiteBalance(String)` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  2740.               if( camera_settings.setWhiteBalance(previewBuilder) ) {
+  2741.                   try {
+  2742. >                     setRepeatingRequest();
+  2743.                   }
+  2744.                   catch(CameraAccessException e) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:2740: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `CameraController$SupportedValues CameraController2.setWhiteBalance(String)` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  2738.   
+  2739.               camera_settings.white_balance = selected_value2;
+  2740. >             if( camera_settings.setWhiteBalance(previewBuilder) ) {
+  2741.                   try {
+  2742.                       setRepeatingRequest();
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:2779: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `boolean CameraController2.setWhiteBalanceTemperature(int)` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  2777.               temperature = Math.min(temperature, max_white_balance_temperature_c);
+  2778.               camera_settings.white_balance_temperature = temperature;
+  2779. >             if( camera_settings.setWhiteBalance(previewBuilder) ) {
+  2780.                   setRepeatingRequest();
+  2781.               }
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:2780: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `boolean CameraController2.setWhiteBalanceTemperature(int)` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  2778.               camera_settings.white_balance_temperature = temperature;
+  2779.               if( camera_settings.setWhiteBalance(previewBuilder) ) {
+  2780. >                 setRepeatingRequest();
+  2781.               }
+  2782.           }
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3756: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setZoom(int)` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3754.           this.current_zoom_value = value;
+  3755.           try {
+  3756. >             setRepeatingRequest();
+  3757.           }
+  3758.           catch(CameraAccessException e) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3753: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.setZoom(int)` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3751.           }
+  3752.           camera_settings.scalar_crop_region = new Rect(left, top, right, bottom);
+  3753. >         camera_settings.setCropRegion(previewBuilder);
+  3754.           this.current_zoom_value = value;
+  3755.           try {
+
+app/src/main/java/net/sourceforge/opencamera/AudioListener.java:151: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void AudioListener.start()` reads without synchronization from `this.thread`. Potentially races with write in method `AudioListener.release(...)`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  149.           if( MyDebug.LOG )
+  150.               Log.d(TAG, "start");
+  151. >         if( thread != null ) {
+  152.               thread.start();
+  153.           }
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4917: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `boolean CameraController2.startFaceDetection()` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  4915.           camera_settings.setSceneMode(previewBuilder); // also need to set the scene mode
+  4916.           try {
+  4917. >             setRepeatingRequest();
+  4918.           }
+  4919.           catch(CameraAccessException e) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4893: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `boolean CameraController2.startFaceDetection()` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  4891.           if( MyDebug.LOG )
+  4892.               Log.d(TAG, "startFaceDetection");
+  4893. >         if( previewBuilder.get(CaptureRequest.STATISTICS_FACE_DETECT_MODE) != null && previewBuilder.get(CaptureRequest.STATISTICS_FACE_DETECT_MODE) != CaptureRequest.STATISTICS_FACE_DETECT_MODE_OFF ) {
+  4894.               if( MyDebug.LOG )
+  4895.                   Log.d(TAG, "face detection already enabled");
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4907: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `boolean CameraController2.startFaceDetection()` writes to field `this.camera_settings.has_face_detect_mode` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  4905.               if( MyDebug.LOG )
+  4906.                   Log.d(TAG, "use simple face detection");
+  4907. >             camera_settings.has_face_detect_mode = true;
+  4908.               camera_settings.face_detect_mode = CaptureRequest.STATISTICS_FACE_DETECT_MODE_SIMPLE;
+  4909.           }
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4914: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `boolean CameraController2.startFaceDetection()` indirectly reads without synchronization from `this.camera_settings.has_face_detect_mode`. Potentially races with write in method `CameraController2.stopPreview()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  4912.               return false;
+  4913.           }
+  4914. >         camera_settings.setFaceDetectMode(previewBuilder);
+  4915.           camera_settings.setSceneMode(previewBuilder); // also need to set the scene mode
+  4916.           try {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4823: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.startPreview()` indirectly reads with synchronization from `this.handler`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because this access may occur on a background thread.
+  4821.               if( captureSession != null ) {
+  4822.                   try {
+  4823. >                     setRepeatingRequest();
+  4824.                   }
+  4825.                   catch(CameraAccessException e) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4838: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.startPreview()` indirectly reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because this access may occur on a background thread.
+  4836.               }
+  4837.           }
+  4838. >         createCaptureSession(null, false);
+  4839.       }
+  4840.   
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3440: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2.stopContinuousBurst()` writes to field `this.continuous_burst_in_progress` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3438.           if( MyDebug.LOG )
+  3439.               Log.d(TAG, "stopContinuousBurst");
+  3440. >         continuous_burst_in_progress = false;
+  3441.       }
+  3442.   
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3448: warning: THREAD_SAFETY_VIOLATION
+  Unprotected write. Non-private method `void CameraController2.stopFocusBracketingBurst()` writes to field `this.focus_bracketing_in_progress` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3446.               Log.d(TAG, "stopFocusBracketingBurst");
+  3447.           if( burst_type == BurstType.BURSTTYPE_FOCUS ) {
+  3448. >             focus_bracketing_in_progress = false;
+  3449.           }
+  3450.           else {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4883: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.stopPreview()` reads with synchronization from `this.previewBuilder`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because this access may occur on a background thread.
+  4881.                       Log.d(TAG, "cancel face detection");
+  4882.                   camera_settings.has_face_detect_mode = false;
+  4883. >                 camera_settings.setFaceDetectMode(previewBuilder);
+  4884.                   // no need to call setRepeatingRequest(), we're just setting the camera_settings for when we restart the preview
+  4885.               }
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4846: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.stopPreview()` reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because this access may occur on a background thread.
+  4844.               Log.d(TAG, "stopPreview: " + this);
+  4845.           synchronized( background_camera_lock ) {
+  4846. >             if( camera == null || captureSession == null ) {
+  4847.                   if( MyDebug.LOG )
+  4848.                       Log.d(TAG, "no camera or capture session");
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:4389: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `boolean CameraController2.supportsAutoFocus()` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  4387.       @Override
+  4388.       public boolean supportsAutoFocus() {
+  4389. >         if( previewBuilder == null )
+  4390.               return false;
+  4391.           Integer focus_mode = previewBuilder.get(CaptureRequest.CONTROL_AF_MODE);
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:6371: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.takePicture(CameraController$PictureCallback,CameraController$ErrorCallback)` reads with synchronization from `this.camera`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because this access may occur on a background thread.
+  6369.   
+  6370.           synchronized( background_camera_lock ) {
+  6371. >             if( camera == null || captureSession == null ) {
+  6372.                   if( MyDebug.LOG )
+  6373.                       Log.d(TAG, "no camera or capture session");
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:6463: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.takePicture(CameraController$PictureCallback,CameraController$ErrorCallback)` indirectly reads without synchronization from `this.burst_type`. Potentially races with write in method `CameraController2.setBurstType(...)`.
+ Reporting because this access may occur on a background thread.
+  6461.           // important to call functions outside of locks, so that they can in turn call callbacks without a lock
+  6462.           if( call_takePictureAfterPrecapture ) {
+  6463. >             takePictureAfterPrecapture();
+  6464.           }
+  6465.           else if( call_runFakePrecapture ) {
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:6379: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.takePicture(CameraController$PictureCallback,CameraController$ErrorCallback)` reads with synchronization from `this.imageReaderRaw`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because this access may occur on a background thread.
+  6377.               this.picture_cb = picture;
+  6378.               this.jpeg_todo = true;
+  6379. >             this.raw_todo = imageReaderRaw != null;
+  6380.               this.done_all_captures = false;
+  6381.               this.take_picture_error_cb = error;
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:6404: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `void CameraController2.takePicture(CameraController$PictureCallback,CameraController$ErrorCallback)` reads with synchronization from `this.previewBuilder`. Potentially races with unsynchronized write in method `CameraController2.release()`.
+ Reporting because this access may occur on a background thread.
+  6402.                       // instead we check the current ISO value
+  6403.                       boolean auto_flash = camera_settings.flash_value.equals("flash_auto") || camera_settings.flash_value.equals("flash_frontscreen_auto");
+  6404. >                     Integer flash_mode = previewBuilder.get(CaptureRequest.FLASH_MODE);
+  6405.                       if( MyDebug.LOG )
+  6406.                           Log.d(TAG, "flash_mode: " + flash_mode);
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3683: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `CaptureRequest$Builder CameraController2.testGetPreviewBuilder()` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3681.        */
+  3682.       public CaptureRequest.Builder testGetPreviewBuilder() {
+  3683. >         return previewBuilder;
+  3684.       }
+  3685.   
+
+app/src/main/java/net/sourceforge/opencamera/cameracontroller/CameraController2.java:3687: warning: THREAD_SAFETY_VIOLATION
+  Read/Write race. Non-private method `TonemapCurve CameraController2.testGetTonemapCurve()` reads without synchronization from `this.previewBuilder`. Potentially races with write in method `CameraController2.release()`.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+  3685.   
+  3686.       public TonemapCurve testGetTonemapCurve() {
+  3687. >         return previewBuilder.get(CaptureRequest.TONEMAP_CURVE);
+  3688.       }
+  3689.   
+
+Summary of the reports
+
+  THREAD_SAFETY_VIOLATION: 239

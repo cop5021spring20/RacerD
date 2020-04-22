@@ -1,0 +1,1 @@
+/home/marioman/Downloads/vlc-android/application/tools/build/generated/source/buildConfig/debug/videolan/org/commontools/BuildConfig.java

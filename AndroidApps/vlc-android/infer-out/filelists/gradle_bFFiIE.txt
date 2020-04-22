@@ -1,0 +1,2 @@
+/home/marioman/Downloads/vlc-android/application/app/build/generated/source/dataBinding/trigger/debug/org/videolan/mobile/app/DataBindingInfo.java
+/home/marioman/Downloads/vlc-android/application/app/build/generated/source/buildConfig/debug/org/videolan/mobile/app/BuildConfig.java
