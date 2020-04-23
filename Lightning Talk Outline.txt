@@ -1,0 +1,45 @@
+3-5 minute talks.
+
+RacerD:
+    High-confidence compositional static data race detector for Java code.
+    Part of the Infer static analysis suite.
+    Performs analysis during the build process.
+    Provides a drop-in solution for analysis, hooking directly into Java compiler tools.
+
+Experimental Setup:
+Infer v0.17.0
+Ubuntu 18.04.4 LTS 64-bit virtual machine
+Android Apps:
+    Telegram
+    VLC
+    Firefox Focus
+    Open Camera
+Multithreaded Example Programs:
+    Companion materials from The Art of Multiprocessor Programming
+    9 programs
+
+Results:
+Android Apps:
+    Identified 909 potential data races in testing.
+    Build time overhead varied from 1% to 120% longer runtime.
+    Firefox Focus: No bugs reported
+        Only 3%, a fraction of the overall codebase, is Java. Most of the project is written in Kotlin, which cannot be evaluated by RacerD.
+        If Kotlin calls Java code concurrently, RacerD may be unable to infer that it runs in a concurrent context, and thus may not be analyzed.
+        Mozilla is a partner with Facebook using Infer, so its likely devs found and fixed these data races.
+    Telegram: generates an error when building with Infer.
+        Internal error that doesn't happen without using the tool.
+        Largest project tested.
+        Shows that, although RacerD is touted as being a drop-in analyzer, and normally is, sometimes it will still fail.
+Example Programs:
+    Toy programs meant to illustrate concurrent programming approaches.
+    Compiled code consists exclusively of Java.
+    Identified 18 possible data races.
+    Almost all of them are real data races.
+Queue uses mutual exclusion locks to enqueue and dequeue. The code forgets to lock before enqueueing, then releases the lock at the end.
+Priority has a function that reads shared variables without acquiring the lock.
+Same with TinyTM.
+Monitor:
+    RacerD doesn't understand monitors.
+    Expectation is for RacerD to ignore monitors, but this custom implementation seems to confuse it.
+    Thus, we find some rare false positives.
+    The real data races involve unsynchronized reads and writes on a Java HashMap. 
